@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Auto Writer</title>
+
+  <style>
+    body {
+      margin: 0;
+      width: 320px;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    .container {
+      padding: 14px;
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .logo img {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 16px;
+      margin: 0 0 10px;
+      color: #38bdf8;
+    }
+
+    textarea {
+      width: 100%;
+      height: 140px;
+      resize: none;
+      border: none;
+      border-radius: 8px;
+      padding: 10px;
+      background: #1e293b;
+      color: white;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 8px;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .start { background: #22c55e; color: white; }
+    .start:hover { background: #16a34a; }
+
+    .clear { background: #ef4444; color: white; }
+
+    .back { background: #3b82f6; color: white; }
+    .back:hover { background: #2563eb; }
+
+    .screen { display: none; }
+    .active { display: block; }
+
+    .hint {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="logo">
+      <img src="icons/icon128.png" alt="logo">
+    </div>
+
+    <h1>Auto Writer</h1>
+
+    <!-- TELA 1 -->
+    <div id="editScreen" class="screen active">
+
+      <textarea id="text" placeholder="Cole seu texto aqui..."></textarea>
+
+      <button class="start" id="start">▶ Iniciar</button>
+      <button class="clear" id="clear">🧹 Limpar</button>
+
+    </div>
+
+    <!-- TELA 2 -->
+    <div id="waitScreen" class="screen">
+
+      <p class="hint">
+        Vá até a aba onde deseja digitar o texto.<br><br>
+        Clique no campo de texto antes de continuar.
+      </p>
+
+      <button class="back" id="back">⬅ Voltar</button>
+
+    </div>
+
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
