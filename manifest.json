@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Escritor Baiano Simulator",
   "version": "1.0",
-  "description": "Ajuda pessoas que necessitam",
+  "description": "{ Escritor Baiano } - v1.5",
 
   "permissions": [
     "activeTab",
