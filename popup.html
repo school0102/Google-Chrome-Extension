@@ -1,117 +1,120 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Auto Writer</title>
+<meta charset="UTF-8">
+<title>Escritor Baiano</title>
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,Helvetica,sans-serif;
+}
 
-  <style>
-    body {
-      margin: 0;
-      width: 320px;
-      font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #e2e8f0;
-    }
+body{
+  width:320px;
+  min-height:190px;
+  background:#07142d;
+  color:white;
+  overflow:hidden;
+}
 
-    .container {
-      padding: 14px;
-    }
+.wrap{
+  padding:16px;
+  background:linear-gradient(145deg,#07142d,#081b3d);
+  border:1px solid rgba(62,154,255,.22);
+}
 
-    .logo {
-      text-align: center;
-      margin-bottom: 8px;
-    }
+.top{
+  display:flex;
+  align-items:center;
+  gap:13px;
+  margin-bottom:18px;
+}
 
-    .logo img {
-      width: 64px;
-      height: 64px;
-      border-radius: 12px;
-    }
+.avatar{
+  width:68px;
+  height:68px;
+  border-radius:18px;
+  border:2px solid #33a3ff;
+  object-fit:cover;
+  box-shadow:0 0 20px rgba(51,163,255,.35);
+}
 
-    h1 {
-      text-align: center;
-      font-size: 16px;
-      margin: 0 0 10px;
-      color: #38bdf8;
-    }
+.title{
+  flex:1;
+  text-align:left;
+}
 
-    textarea {
-      width: 100%;
-      height: 140px;
-      resize: none;
-      border: none;
-      border-radius: 8px;
-      padding: 10px;
-      background: #1e293b;
-      color: white;
-      outline: none;
-      box-sizing: border-box;
-    }
+.title h1{
+  font-size:19px;
+  line-height:22px;
+  color:#32a4ff;
+}
 
-    button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-    }
+.title b{
+  color:white;
+}
 
-    .start { background: #22c55e; color: white; }
-    .start:hover { background: #16a34a; }
+.desc{
+  color:#b9c8df;
+  font-size:12px;
+  margin-top:5px;
+}
 
-    .clear { background: #ef4444; color: white; }
+.inject{
+  width:100%;
+  height:42px;
+  border:none;
+  border-radius:10px;
+  background:#24c763;
+  color:white;
+  font-size:15px;
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:0 8px 20px rgba(36,199,99,.24);
+}
 
-    .back { background: #3b82f6; color: white; }
-    .back:hover { background: #2563eb; }
+.inject:hover{
+  filter:brightness(1.08);
+}
 
-    .screen { display: none; }
-    .active { display: block; }
+.hint{
+  text-align:center;
+  font-size:11px;
+  color:#8fa9ca;
+  margin-top:10px;
+}
 
-    .hint {
-      font-size: 11px;
-      color: #94a3b8;
-      margin-top: 10px;
-      text-align: center;
-    }
-  </style>
+.status{
+  text-align:center;
+  font-size:12px;
+  color:#35a2ff;
+  margin-top:8px;
+  min-height:15px;
+}
+</style>
 </head>
 
 <body>
-  <div class="container">
-
-    <div class="logo">
-      <img src="icons/icon128.png" alt="logo">
+<div class="wrap">
+  <div class="top">
+    <img class="avatar" src="icons/icon128.png">
+    <div class="title">
+      <h1>Escritor <b>Baiano</b></h1>
+      <div class="desc">Auto Writer injetável</div>
     </div>
-
-    <h1>Auto Writer</h1>
-
-    <!-- TELA 1 -->
-    <div id="editScreen" class="screen active">
-
-      <textarea id="text" placeholder="Cole seu texto aqui..."></textarea>
-
-      <button class="start" id="start">▶ Iniciar</button>
-      <button class="clear" id="clear">🧹 Limpar</button>
-
-    </div>
-
-    <!-- TELA 2 -->
-    <div id="waitScreen" class="screen">
-
-      <p class="hint">
-        Vá até a aba onde deseja digitar o texto.<br><br>
-        Clique no campo de texto antes de continuar.
-      </p>
-
-      <button class="back" id="back">⬅ Voltar</button>
-
-    </div>
-
   </div>
 
-  <script src="popup.js"></script>
+  <button class="inject" id="inject">⚙ Injetar código</button>
+
+  <div class="hint">
+    Injete na página atual. Depois use o botão Painel que aparece na página.
+  </div>
+
+  <div class="status" id="status"></div>
+</div>
+
+<script src="popup.js"></script>
 </body>
 </html>
