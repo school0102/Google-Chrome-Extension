@@ -880,7 +880,7 @@
               <div class="eb-stat-icon">✅</div>
               <div>
                 <div class="eb-stat-label">Hugo lindo?</div>
-                <div class="eb-stat-value">simm</div>
+                <div class="eb-stat-value">Simm</div>
               </div>
             </div>
 
@@ -962,13 +962,13 @@
                   <h1>CONFIGURAÇÕES</h1>
                 </div>
               </div>
-              <p class="eb-desc">Ajustes do painel. Não seja um babaca.</p>
+              <p class="eb-desc">Ajustes do painel. Não seja ganancioso.</p>
 
               <div class="eb-settings-grid">
                 <div class="eb-config-row">
                   <label>Velocidade de escrita: <span id="eb-speed-value">Normal</span></label>
                   <input id="eb-speed" type="range" min="1" max="100" value="50">
-                  <div class="eb-config-muted">Não cometa o mesmo erro que o joão.</div>
+                  <div class="eb-config-muted">Não cometa o mesmo erro que o João.</div>
                 </div>
 
                 <div class="eb-config-row">
