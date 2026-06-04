@@ -829,12 +829,12 @@
     <button id="eb-open-panel">Painel</button>
 
     <div id="eb-panel">
-      <div class="eb-dragbar" id="eb-dragbar">ARRASTE PARA MOVER</div>
+      <div class="eb-dragbar" id="eb-dragbar">ARRASTE PARA MOVER O PAINEL</div>
 
       <div class="eb-app" id="eb-app">
         <aside class="eb-sidebar">
           <div class="eb-brand">
-            <div class="eb-feather">🪶</div>
+            <div class="eb-feather">🤠</div>
             <div class="eb-brand-text"><span>ESCRITOR</span><br>BAIANO</div>
           </div>
 
@@ -850,7 +850,7 @@
             <img class="eb-avatar-big" id="eb-avatar" src="">
             <div class="eb-profile-name">Escritor Baiano</div>
             <div class="eb-badge">Auto Writer</div>
-            <div class="eb-profile-desc">Extensão para digitação automática inteligente.</div>
+            <div class="eb-profile-desc">Extensão para digitação automática e muito top 😝</div>
 
             <div class="eb-stat-card">
               <div class="eb-stat-icon">⚡</div>
@@ -879,8 +879,8 @@
             <div class="eb-stat-card">
               <div class="eb-stat-icon">✅</div>
               <div>
-                <div class="eb-stat-label">Modo</div>
-                <div class="eb-stat-value">Normal</div>
+                <div class="eb-stat-label">Hugo lindo?</div>
+                <div class="eb-stat-value">simm</div>
               </div>
             </div>
 
@@ -892,14 +892,13 @@
             <div class="eb-page eb-page-active" id="eb-page-writer">
               <div class="eb-header">
                 <div class="eb-heading">
-                  <div class="eb-heading-icon">🪶</div>
+                  <div class="eb-heading-icon">😎</div>
                   <h1>AUTO WRITER</h1>
                 </div>
               </div>
 
               <p class="eb-desc">
-                Cole ou digite o texto abaixo. Clique primeiro no campo da página onde deseja escrever,
-                depois volte aqui e pressione Iniciar.
+                Clique onde você deseja digitar o texto, cole ele aqui e inicie.
               </p>
 
               <textarea id="eb-text" placeholder="Cole seu texto aqui..."></textarea>
@@ -952,30 +951,30 @@
                 </div>
                 <button class="eb-history-clear-btn" id="eb-clear-history">Limpar histórico</button>
               </div>
-              <p class="eb-desc">Textos iniciados aparecem aqui. Clique em um card para carregar no Auto Writer.</p>
+              <p class="eb-desc">Textos iniciados aparecem aqui. Eles não ficam salvo de sessão em sessão !</p>
               <div class="eb-history-list" id="eb-history-list"></div>
             </div>
 
             <div class="eb-page" id="eb-page-settings">
               <div class="eb-header">
                 <div class="eb-heading">
-                  <div class="eb-heading-icon">⚙️</div>
+                  <div class="eb-heading-icon">😎</div>
                   <h1>CONFIGURAÇÕES</h1>
                 </div>
               </div>
-              <p class="eb-desc">Ajuste o painel, resete a posição e limpe seus dados salvos.</p>
+              <p class="eb-desc">Ajustes do painel. Não seja um babaca.</p>
 
               <div class="eb-settings-grid">
                 <div class="eb-config-row">
                   <label>Velocidade de escrita: <span id="eb-speed-value">Normal</span></label>
                   <input id="eb-speed" type="range" min="1" max="100" value="50">
-                  <div class="eb-config-muted">Opções: extremamente lenta, muito lenta, lenta, levemente lenta, normal, levemente rápida, rápida, muito rápida e insana.</div>
+                  <div class="eb-config-muted">Não cometa o mesmo erro que o joão.</div>
                 </div>
 
                 <div class="eb-config-row">
                   <label>Escala do painel: <span id="eb-scale-value">88%</span></label>
                   <input id="eb-scale" type="range" min="70" max="105" value="88">
-                  <div class="eb-config-muted">Diminui ou aumenta o painel inteiro.</div>
+                  <div class="eb-config-muted">Dimensione o painel com a ajuda deste slider.</div>
                 </div>
               </div>
             </div>
@@ -983,7 +982,7 @@
 
           <div class="eb-notice">
             <span>ⓘ Importante:</span>
-            O painel pode ser movido e redimensionado. Clique no botão Painel novamente para fechar.
+            TrickTrack baraboom
           </div>
         </main>
       </div>
