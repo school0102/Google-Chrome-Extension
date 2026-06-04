@@ -1,78 +1,22 @@
-const textArea = document.getElementById("text");
+const statusBox = document.getElementById("status");
 
-const editScreen = document.getElementById("editScreen");
-const waitScreen = document.getElementById("waitScreen");
+document.getElementById("inject").addEventListener("click", async () => {
+  statusBox.textContent = "Injetando...";
 
-// carregar texto salvo
-chrome.storage.local.get(["savedText"], (res) => {
-  if (res.savedText) textArea.value = res.savedText;
-});
+  try {
+    const [tab] = await chrome.tabs.query({
+      active: true,
+      currentWindow: true
+    });
 
-// auto-save
-textArea.addEventListener("input", () => {
-  chrome.storage.local.set({ savedText: textArea.value });
-});
+    await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      files: ["content.js"]
+    });
 
-// iniciar
-document.getElementById("start").addEventListener("click", async () => {
-
-  // troca tela
-  editScreen.classList.remove("active");
-  waitScreen.classList.add("active");
-
-  const text = textArea.value;
-
-  const [tab] = await chrome.tabs.query({
-    active: true,
-    currentWindow: true
-  });
-
-  await chrome.scripting.executeScript({
-    target: { tabId: tab.id },
-    args: [text],
-    func: async (text) => {
-
-      const sleep = (ms) => new Promise(r => setTimeout(r, ms));
-
-      function setValue(el, value) {
-        if (!el) return;
-        const proto = Object.getPrototypeOf(el);
-        const setter = Object.getOwnPropertyDescriptor(proto, "value")?.set;
-        setter?.call(el, value);
-      }
-
-      function trigger(el) {
-        el.dispatchEvent(new Event("input", { bubbles: true }));
-      }
-
-      async function typeText() {
-        const el = document.activeElement;
-        if (!el) return;
-
-        let v = "";
-
-        for (let i = 0; i < text.length; i++) {
-          v += text[i];
-          setValue(el, v);
-          trigger(el);
-
-          await sleep(Math.random() * 80 + 20);
-        }
-      }
-
-      setTimeout(typeText, 5000);
-    }
-  });
-});
-
-// voltar
-document.getElementById("back").addEventListener("click", () => {
-  waitScreen.classList.remove("active");
-  editScreen.classList.add("active");
-});
-
-// limpar
-document.getElementById("clear").addEventListener("click", () => {
-  textArea.value = "";
-  chrome.storage.local.remove("savedText");
+    statusBox.textContent = "Código injetado!";
+  } catch (err) {
+    console.error(err);
+    statusBox.textContent = "Erro ao injetar.";
+  }
 });
