@@ -13,43 +13,60 @@
 
 body{
   width:320px;
-  min-height:190px;
-  background:#07142d;
+  min-height:205px;
+  background:#020817;
   color:white;
   overflow:hidden;
+  border-radius:22px;
 }
 
 .wrap{
-  padding:16px;
-  background:linear-gradient(145deg,#07142d,#081b3d);
-  border:1px solid rgba(62,154,255,.22);
+  position:relative;
+  padding:18px;
+  border-radius:22px;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at top left,rgba(59,156,255,.28),transparent 42%),
+    radial-gradient(circle at bottom right,rgba(34,197,94,.13),transparent 38%),
+    linear-gradient(145deg,#07142d,#081b3d);
+  border:1px solid rgba(62,154,255,.28);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.wrap::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,.05),transparent);
+  pointer-events:none;
 }
 
 .top{
   display:flex;
   align-items:center;
-  gap:13px;
+  gap:14px;
   margin-bottom:18px;
 }
 
 .avatar{
-  width:68px;
-  height:68px;
-  border-radius:18px;
-  border:2px solid #33a3ff;
+  width:70px;
+  height:70px;
+  border-radius:20px;
+  border:2px solid #38bdf8;
   object-fit:cover;
-  box-shadow:0 0 20px rgba(51,163,255,.35);
+  box-shadow:
+    0 0 22px rgba(56,189,248,.35),
+    0 10px 25px rgba(0,0,0,.25);
 }
 
 .title{
   flex:1;
-  text-align:left;
 }
 
 .title h1{
-  font-size:19px;
+  font-size:20px;
   line-height:22px;
-  color:#32a4ff;
+  color:#38bdf8;
 }
 
 .title b{
@@ -59,60 +76,81 @@ body{
 .desc{
   color:#b9c8df;
   font-size:12px;
-  margin-top:5px;
+  margin-top:6px;
 }
 
 .inject{
+  position:relative;
   width:100%;
-  height:42px;
+  height:44px;
   border:none;
-  border-radius:10px;
-  background:#24c763;
+  border-radius:12px;
+  background:linear-gradient(135deg,#22c55e,#16a34a);
   color:white;
   font-size:15px;
-  font-weight:800;
+  font-weight:900;
   cursor:pointer;
-  box-shadow:0 8px 20px rgba(36,199,99,.24);
+  overflow:hidden;
+  transition:.18s ease;
+  box-shadow:
+    0 12px 25px rgba(34,197,94,.25),
+    inset 0 1px 0 rgba(255,255,255,.18);
 }
 
 .inject:hover{
   filter:brightness(1.08);
+  transform:translateY(-1px);
+}
+
+.inject:active{
+  transform:scale(.98);
 }
 
 .hint{
   text-align:center;
   font-size:11px;
-  color:#8fa9ca;
-  margin-top:10px;
+  line-height:16px;
+  color:#9fb6d3;
+  margin-top:12px;
+  padding:10px;
+  border-radius:10px;
+  background:rgba(2,8,23,.26);
+  border:1px solid rgba(148,163,184,.12);
 }
 
 .status{
+  display:none;
   text-align:center;
   font-size:12px;
-  color:#35a2ff;
-  margin-top:8px;
-  min-height:15px;
+  color:#38bdf8;
+  margin-top:10px;
+  font-weight:800;
 }
 </style>
 </head>
 
 <body>
 <div class="wrap">
+
   <div class="top">
     <img class="avatar" src="icons/icon128.png">
+
     <div class="title">
       <h1>Escritor <b>Baiano</b></h1>
       <div class="desc">Auto Writer injetável</div>
     </div>
   </div>
 
-  <button class="inject" id="inject">⚙ Injetar código</button>
+  <button class="inject" id="inject">
+    ⚙ Injetar código
+  </button>
 
   <div class="hint">
     Injete na página atual. Depois use o botão Painel que aparece na página.
   </div>
 
   <div class="status" id="status"></div>
+
 </div>
 
 <script src="popup.js"></script>
