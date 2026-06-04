@@ -1,15 +1,13 @@
 {
   "manifest_version": 3,
   "name": "Escritor Baiano Simulator",
-  "version": "1.0",
-  "description": "{ Escritor Baiano } - v1.5",
-
+  "version": "2.0",
+  "description": "{ Escritor Baiano }",
   "permissions": [
     "activeTab",
     "scripting",
     "storage"
   ],
-
   "action": {
     "default_popup": "popup.html",
     "default_icon": {
@@ -18,10 +16,19 @@
       "128": "icons/icon128.png"
     }
   },
-
   "icons": {
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "icons/*"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ]
 }
