@@ -16,6 +16,9 @@
   let typingSpeed = Number(localStorage.getItem("eb_typing_speed") || "50");
   let panelPos = JSON.parse(localStorage.getItem("eb_panel_pos") || "null");
 
+  const GEMINI_API_KEY = "AQ.Ab8RN6I3J_JV585EyD2Gq3bgFzy4p6Q-1vl0sJ3mQ5ZR2UjZhg";
+  const GEMINI_MODEL = "gemini-2.5-flash-lite";
+
   function isEditable(el) {
     if (!el) return false;
     const tag = el.tagName ? el.tagName.toLowerCase() : "";
@@ -657,6 +660,56 @@
       }
 
 
+
+      #eb-ai-prompt,
+      #eb-ai-result {
+        width: 100% !important;
+        resize: none !important;
+        outline: none !important;
+        border-radius: 12px !important;
+        border: 1.5px solid #2e96ff !important;
+        color: white !important;
+        background: linear-gradient(145deg,rgba(11,29,59,.9),rgba(8,21,45,.95)) !important;
+        padding: 13px !important;
+        font-size: 14px !important;
+        line-height: 21px !important;
+        transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease !important;
+      }
+
+      #eb-ai-prompt {
+        height: 115px !important;
+      }
+
+      #eb-ai-result {
+        height: 150px !important;
+        margin-top: 10px !important;
+      }
+
+      #eb-ai-prompt:focus,
+      #eb-ai-result:focus {
+        border-color: #60b5ff !important;
+        box-shadow: 0 0 0 3px rgba(59,156,255,.16), inset 0 0 28px rgba(0,0,0,.18) !important;
+      }
+
+      #eb-ai-prompt::placeholder,
+      #eb-ai-result::placeholder {
+        color: #8494aa !important;
+      }
+
+      .eb-ai-label {
+        color: #dbeafe !important;
+        font-size: 12px !important;
+        font-weight: 900 !important;
+        margin: 8px 0 7px !important;
+      }
+
+      .eb-ai-actions {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 14px !important;
+        margin-top: 14px !important;
+      }
+
       .eb-history-clear-btn {
         height: 32px !important;
         padding: 0 13px !important;
@@ -839,6 +892,7 @@
           </div>
 
           <div class="eb-nav-item eb-active" data-page="writer"><div class="eb-nav-icon">🏠</div><div>Auto Writer</div></div>
+          <div class="eb-nav-item" data-page="ai"><div class="eb-nav-icon">🤖</div><div>IA</div></div>
           <div class="eb-nav-item" data-page="history"><div class="eb-nav-icon">📄</div><div>Histórico</div></div>
           <div class="eb-nav-item" data-page="settings"><div class="eb-nav-icon">⚙️</div><div>Configurações</div></div>
 
@@ -943,6 +997,36 @@
               </div>
             </div>
 
+
+            <div class="eb-page" id="eb-page-ai">
+              <div class="eb-header">
+                <div class="eb-heading">
+                  <div class="eb-heading-icon">🤖</div>
+                  <h1>IA</h1>
+                </div>
+              </div>
+
+              <p class="eb-desc">
+                Escreva o prompt, gere o texto e envie o resultado direto para o Auto Writer.
+              </p>
+
+              <div class="eb-ai-label">Prompt</div>
+              <textarea id="eb-ai-prompt" placeholder="Ex: Faça um conto curto sobre uma janela misteriosa..."></textarea>
+
+              <div class="eb-ai-actions">
+                <button class="eb-action-btn eb-start" id="eb-ai-generate">✨ &nbsp; Gerar texto</button>
+                <button class="eb-action-btn eb-clear" id="eb-ai-clear">🗑 &nbsp; Limpar</button>
+              </div>
+
+              <div class="eb-ai-label">Resultado</div>
+              <textarea id="eb-ai-result" placeholder="O texto gerado pela IA aparecerá aqui..."></textarea>
+
+              <div class="eb-ai-actions">
+                <button class="eb-action-btn eb-start" id="eb-ai-use">➡ &nbsp; Usar no Auto Writer</button>
+                <button class="eb-action-btn eb-clear" id="eb-ai-copy">📋 &nbsp; Copiar</button>
+              </div>
+            </div>
+
             <div class="eb-page" id="eb-page-history">
               <div class="eb-header">
                 <div class="eb-heading">
@@ -1007,6 +1091,12 @@
   const profile = root.querySelector("#eb-profile");
   const dragbar = root.querySelector("#eb-dragbar");
   const textArea = root.querySelector("#eb-text");
+  const aiPrompt = root.querySelector("#eb-ai-prompt");
+  const aiResult = root.querySelector("#eb-ai-result");
+  const aiGenerate = root.querySelector("#eb-ai-generate");
+  const aiClear = root.querySelector("#eb-ai-clear");
+  const aiUse = root.querySelector("#eb-ai-use");
+  const aiCopy = root.querySelector("#eb-ai-copy");
 
   const sideStatus = root.querySelector("#eb-side-status");
   const bottomStatus = root.querySelector("#eb-bottom-status");
@@ -1212,6 +1302,121 @@
     history = [];
     localStorage.removeItem("eb_history");
     renderHistory();
+  });
+
+
+  async function generateGeminiText(prompt) {
+    const res = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          contents: [
+            {
+              parts: [
+                {
+                  text: prompt
+                }
+              ]
+            }
+          ],
+          generationConfig: {
+            temperature: 0.8,
+            topP: 0.95,
+            maxOutputTokens: 1200
+          }
+        })
+      }
+    );
+
+    if (!res.ok) {
+      const errText = await res.text();
+      throw new Error(errText || "Erro ao gerar texto.");
+    }
+
+    const data = await res.json();
+
+    const generated =
+      data?.candidates?.[0]?.content?.parts
+        ?.map(part => part.text || "")
+        .join("")
+        .trim() || "";
+
+    if (!generated) {
+      throw new Error("A IA não retornou texto.");
+    }
+
+    return generated;
+  }
+
+  aiGenerate.addEventListener("click", async () => {
+    const prompt = aiPrompt.value.trim();
+
+    if (!prompt) {
+      showToast("Digite um prompt antes de gerar.");
+      return;
+    }
+
+    if (!GEMINI_API_KEY || GEMINI_API_KEY === "COLOQUE_SUA_CHAVE_GEMINI_AQUI") {
+      showToast("Configure sua chave Gemini no content.js.");
+      return;
+    }
+
+    aiGenerate.disabled = true;
+    aiGenerate.textContent = "Gerando...";
+    showToast("Gerando texto com IA...");
+
+    try {
+      const generated = await generateGeminiText(prompt);
+      aiResult.value = generated;
+      showToast("Texto gerado!");
+    } catch (err) {
+      console.error(err);
+      showToast("Erro ao gerar com IA.");
+    } finally {
+      aiGenerate.disabled = false;
+      aiGenerate.textContent = "✨  Gerar texto";
+    }
+  });
+
+  aiClear.addEventListener("click", () => {
+    aiPrompt.value = "";
+    aiResult.value = "";
+  });
+
+  aiUse.addEventListener("click", () => {
+    const generated = aiResult.value.trim();
+
+    if (!generated) {
+      showToast("Nenhum texto gerado ainda.");
+      return;
+    }
+
+    textArea.value = generated;
+    localStorage.setItem("eb_saved_text", textArea.value);
+    updateChars();
+    goPage("writer");
+    showToast("Texto enviado para o Auto Writer.");
+  });
+
+  aiCopy.addEventListener("click", async () => {
+    const generated = aiResult.value.trim();
+
+    if (!generated) {
+      showToast("Nenhum texto para copiar.");
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(generated);
+      showToast("Texto copiado.");
+    } catch (err) {
+      console.error(err);
+      showToast("Não foi possível copiar.");
+    }
   });
 
   let dragging = false;
