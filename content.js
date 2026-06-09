@@ -16,7 +16,7 @@
   let typingSpeed = Number(localStorage.getItem("eb_typing_speed") || "50");
   let panelPos = JSON.parse(localStorage.getItem("eb_panel_pos") || "null");
 
-  const GEMINI_API_KEY = "AQ.Ab8RN6JlnYjkQaCVPUsGXBSKoreWkC--AXIUahW_pAegjxW91w";
+  const GEMINI_API_KEY = "AQ.Ab8RN6K1mq1WJ1POlCRWOz8d1-pwrb7np0IVoALPoqYJF5J8Mw";
   const GEMINI_MODEL = "gemini-2.5-flash-lite";
 
   function isEditable(el) {
