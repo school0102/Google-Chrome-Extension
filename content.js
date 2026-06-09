@@ -16,7 +16,7 @@
   let typingSpeed = Number(localStorage.getItem("eb_typing_speed") || "50");
   let panelPos = JSON.parse(localStorage.getItem("eb_panel_pos") || "null");
 
-  const GEMINI_API_KEY = "AQ.Ab8RN6K1mq1WJ1POlCRWOz8d1-pwrb7np0IVoALPoqYJF5J8Mw";
+  const GEMINI_API_KEY = "AQ.Ab8RN6Ih-rXQvDXG50vpZ3f5Wz-ZvSVyL6vJVB_a3UOh84j73Q";
   const GEMINI_MODEL = "gemini-2.5-flash-lite";
 
   function isEditable(el) {
@@ -659,8 +659,6 @@
         gap: 14px !important;
       }
 
-
-
       #eb-ai-prompt,
       #eb-ai-result {
         width: 100% !important;
@@ -852,6 +850,7 @@
         display: block !important;
         animation: ebToastIn .2s ease-out !important;
       }
+
 
       #eb-toast.eb-toast-hide {
         display: block !important;
@@ -1306,51 +1305,55 @@
 
 
   async function generateGeminiText(prompt) {
-    const res = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          contents: [
-            {
-              parts: [
-                {
-                  text: prompt
-                }
-              ]
-            }
-          ],
-          generationConfig: {
-            temperature: 0.8,
-            topP: 0.95,
-            maxOutputTokens: 1200
+  const res = await fetch(
+    `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-goog-api-key": GEMINI_API_KEY
+      },
+      body: JSON.stringify({
+        contents: [
+          {
+            parts: [
+              { text: prompt }
+            ]
           }
-        })
-      }
-    );
-
-    if (!res.ok) {
-      const errText = await res.text();
-      throw new Error(errText || "Erro ao gerar texto.");
+        ],
+        generationConfig: {
+          temperature: 0.8,
+          topP: 0.95,
+          maxOutputTokens: 1200
+        }
+      })
     }
+  );
 
-    const data = await res.json();
+  const responseText = await res.text();
 
-    const generated =
-      data?.candidates?.[0]?.content?.parts
-        ?.map(part => part.text || "")
-        .join("")
-        .trim() || "";
-
-    if (!generated) {
-      throw new Error("A IA não retornou texto.");
-    }
-
-    return generated;
+  if (!res.ok) {
+    console.error("Gemini erro:", responseText);
+    throw new Error(responseText);
   }
+
+  const data = JSON.parse(responseText);
+
+  const generated =
+    data?.candidates?.[0]?.content?.parts
+      ?.map(part => part.text || "")
+      .join("")
+      .trim() || "";
+
+  if (!generated) {
+    throw new Error("A IA não retornou texto.");
+  }
+
+  return generated
+    .replace(/\r\n/g, "\n")
+    .replace(/\r/g, "\n")
+    .replace(/\n{3,}/g, "\n\n");
+}
 
   aiGenerate.addEventListener("click", async () => {
     const prompt = aiPrompt.value.trim();
