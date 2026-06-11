@@ -17,7 +17,7 @@
   let panelPos = JSON.parse(localStorage.getItem("eb_panel_pos") || "null");
 
   const OPENROUTER_API_KEY = "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";
-  const OPENROUTER_MODEL = "qwen/qwen3-235b-a22b:free";
+  const OPENROUTER_MODEL = "qwen/qwen3-235b-a22b-2507:free";
 
   function isEditable(el) {
     if (!el) return false;
