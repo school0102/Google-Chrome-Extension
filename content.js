@@ -16,8 +16,8 @@
   let typingSpeed = Number(localStorage.getItem("eb_typing_speed") || "50");
   let panelPos = JSON.parse(localStorage.getItem("eb_panel_pos") || "null");
 
-  const GEMINI_API_KEY = "AQ.Ab8RN6Ih-rXQvDXG50vpZ3f5Wz-ZvSVyL6vJVB_a3UOh84j73Q";
-  const GEMINI_MODEL = "gemini-2.5-flash-lite";
+  const OPENROUTER_API_KEY = "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";
+  const OPENROUTER_MODEL = "deepseek/deepseek-chat-v3-0324";
 
   function isEditable(el) {
     if (!el) return false;
@@ -1305,54 +1305,72 @@
 
 
   async function generateGeminiText(prompt) {
+
   const res = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`,
+    "https://openrouter.ai/api/v1/chat/completions",
     {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-goog-api-key": GEMINI_API_KEY
+        "Authorization": `Bearer ${OPENROUTER_API_KEY}`
       },
       body: JSON.stringify({
-        contents: [
+        model: OPENROUTER_MODEL,
+
+        messages: [
           {
-            parts: [
-              { text: prompt }
-            ]
+            role: "system",
+            content: `Você é um escritor profissional.
+
+Escreva sempre em português brasileiro.
+
+Regras:
+- Humanize o texto.
+- Use parágrafos naturais.
+- Não use markdown.
+- Não use listas a menos que o usuário peça.
+- Não use títulos desnecessários.
+- Não pule duas linhas entre os parágrafos.
+- Escreva como uma pessoa real.
+- Mantenha boa gramática.
+- Produza textos completos e bem desenvolvidos.`
+          },
+
+          {
+            role: "user",
+            content: prompt
           }
         ],
-        generationConfig: {
-          temperature: 0.8,
-          topP: 0.95,
-          maxOutputTokens: 1200
-        }
+
+        temperature: 0.8,
+        max_tokens: 1200
       })
     }
   );
 
-  const responseText = await res.text();
+  const data = await res.json();
 
   if (!res.ok) {
-    console.error("Gemini erro:", responseText);
-    throw new Error(responseText);
+    console.error(data);
+
+    throw new Error(
+      data?.error?.message ||
+      "Erro ao gerar texto."
+    );
   }
 
-  const data = JSON.parse(responseText);
-
   const generated =
-    data?.candidates?.[0]?.content?.parts
-      ?.map(part => part.text || "")
-      .join("")
-      .trim() || "";
+    data?.choices?.[0]?.message?.content?.trim() || "";
 
   if (!generated) {
     throw new Error("A IA não retornou texto.");
   }
 
   return generated
-    .replace(/\r\n/g, "\n")
-    .replace(/\r/g, "\n")
-    .replace(/\n{3,}/g, "\n\n");
+  .replace(/\r\n/g, "\n")
+  .replace(/\r/g, "\n")
+  .replace(/\n{2,}/g, "\n")
+  .trim();
 }
 
   aiGenerate.addEventListener("click", async () => {
@@ -1363,10 +1381,10 @@
       return;
     }
 
-    if (!GEMINI_API_KEY || GEMINI_API_KEY === "COLOQUE_SUA_CHAVE_GEMINI_AQUI") {
-      showToast("Configure sua chave Gemini no content.js.");
-      return;
-    }
+    if (!OPENROUTER_API_KEY) {
+  showToast("Configure sua chave OpenRouter no content.js.");
+  return;
+}
 
     aiGenerate.disabled = true;
     aiGenerate.textContent = "Gerando...";
@@ -1378,7 +1396,7 @@
       showToast("Texto gerado!");
     } catch (err) {
       console.error(err);
-      showToast("Erro ao gerar com IA.");
+      showToast(err.message || "Erro ao gerar com IA.");
     } finally {
       aiGenerate.disabled = false;
       aiGenerate.textContent = "✨  Gerar texto";
