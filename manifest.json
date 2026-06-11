@@ -9,7 +9,7 @@
     "storage"
   ],
   "host_permissions": [
-    "https://generativelanguage.googleapis.com/*"
+  "https://openrouter.ai/*"
   ],
   "action": {
     "default_popup": "popup.html",
