@@ -17,7 +17,32 @@
   let panelPos = JSON.parse(localStorage.getItem("eb_panel_pos") || "null");
 
   const OPENROUTER_API_KEY = "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";
-  const OPENROUTER_MODEL = "nex-agi/nex-n2-pro:free";
+
+  const OPENROUTER_MODELS = [
+    "nex-agi/nex-n2-pro:free",
+    "mistralai/mistral-small-3.2-24b-instruct:free",
+    "google/gemma-3-27b-it:free"
+  ];
+
+  const DEFAULT_AI_INSTRUCTIONS = [
+    { id: "ptbr", label: "Português brasileiro", text: "Escreva sempre em português brasileiro." },
+    { id: "humanizado", label: "Humanizar texto", text: "Humanize o texto e escreva como uma pessoa real." },
+    { id: "paragrafos", label: "Parágrafos naturais", text: "Use parágrafos naturais, sem pular duas linhas entre os parágrafos." },
+    { id: "sem_markdown", label: "Sem markdown", text: "Não use markdown, títulos desnecessários, listas ou tópicos a menos que o usuário peça." },
+    { id: "redacao", label: "Modo redação", text: "Quando o usuário pedir uma redação, faça introdução, desenvolvimento e conclusão de forma natural." },
+    { id: "gramatica", label: "Boa gramática", text: "Mantenha boa gramática e desenvolva bem as ideias." }
+  ];
+
+  let aiInstructionStates = JSON.parse(localStorage.getItem("eb_ai_instruction_states") || "null")
+    || Object.fromEntries(DEFAULT_AI_INSTRUCTIONS.map(item => [item.id, true]));
+
+  let aiCustomInstructions = localStorage.getItem("eb_ai_custom_instructions") || "";
+
+  let selectedModelIndex = Number(localStorage.getItem("eb_selected_model_index") || "0");
+  if (!OPENROUTER_MODELS[selectedModelIndex]) selectedModelIndex = 0;
+
+  let lastUsedModel = localStorage.getItem("eb_last_used_model") || "Nenhum ainda";
+  let lastFallbackInfo = localStorage.getItem("eb_last_fallback_info") || "Modelo principal";
 
   function isEditable(el) {
     if (!el) return false;
@@ -545,6 +570,26 @@
         transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease !important;
       }
 
+      #eb-text {
+        scrollbar-width: thin !important;
+        scrollbar-color: rgba(59,156,255,.58) transparent !important;
+      }
+
+      #eb-text::-webkit-scrollbar {
+        width: 9px !important;
+      }
+
+      #eb-text::-webkit-scrollbar-thumb {
+        background: rgba(59,156,255,.58) !important;
+        border-radius: 999px !important;
+        border: 2px solid rgba(8,24,53,.82) !important;
+      }
+
+      #eb-text::-webkit-scrollbar-track {
+        background: rgba(255,255,255,.04) !important;
+        border-radius: 999px !important;
+      }
+
       #eb-text:focus {
         border-color: #60b5ff !important;
         box-shadow: 0 0 0 3px rgba(59,156,255,.16), inset 0 0 28px rgba(0,0,0,.18) !important;
@@ -652,6 +697,28 @@
         animation: ebFadeUp .22s ease both !important;
       }
 
+      #eb-page-ai {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        padding-right: 8px !important;
+      }
+
+      #eb-page-ai::-webkit-scrollbar,
+      .eb-settings-one-card::-webkit-scrollbar {
+        width: 8px !important;
+      }
+
+      #eb-page-ai::-webkit-scrollbar-thumb,
+      .eb-settings-one-card::-webkit-scrollbar-thumb {
+        background: rgba(59,156,255,.45) !important;
+        border-radius: 999px !important;
+      }
+
+      #eb-page-ai::-webkit-scrollbar-track,
+      .eb-settings-one-card::-webkit-scrollbar-track {
+        background: transparent !important;
+      }
+
       .eb-wide-content {
         flex: 1 !important;
         min-height: 0 !important;
@@ -675,11 +742,11 @@
       }
 
       #eb-ai-prompt {
-        height: 115px !important;
+        height: 210px !important;
       }
 
       #eb-ai-result {
-        height: 150px !important;
+        height: 300px !important;
         margin-top: 10px !important;
       }
 
@@ -707,6 +774,68 @@
         gap: 14px !important;
         margin-top: 14px !important;
       }
+
+
+      .eb-ai-model-info {
+        margin: 8px 0 12px !important;
+        padding: 8px 10px !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(81,143,223,.22) !important;
+        background: rgba(8,24,53,.72) !important;
+        color: #dfe7f3 !important;
+        font-size: 11px !important;
+        line-height: 15px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+
+      .eb-ai-model-info b { color: #62b3ff !important; }
+
+      .eb-ai-check-list {
+        display: grid !important;
+        gap: 8px !important;
+      }
+
+      .eb-ai-check {
+        display: flex !important;
+        align-items: center !important;
+        gap: 9px !important;
+        padding: 9px 10px !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(81,143,223,.18) !important;
+        background: rgba(7,20,44,.72) !important;
+        color: #e7eefb !important;
+        font-size: 12px !important;
+        font-weight: 800 !important;
+        cursor: pointer !important;
+      }
+
+      .eb-ai-check input {
+        width: 15px !important;
+        height: 15px !important;
+        accent-color: #3b9cff !important;
+      }
+
+      #eb-ai-custom-instructions,
+      #eb-ai-model-select {
+        width: 100% !important;
+        outline: none !important;
+        border-radius: 10px !important;
+        border: 1.5px solid #2e96ff !important;
+        color: white !important;
+        background: rgba(8,21,45,.95) !important;
+        padding: 10px !important;
+        font-size: 12px !important;
+      }
+
+      #eb-ai-custom-instructions {
+        height: 90px !important;
+        resize: vertical !important;
+        line-height: 17px !important;
+      }
+
+      #eb-ai-reset-instructions { margin-top: 10px !important; }
 
       .eb-history-clear-btn {
         height: 32px !important;
@@ -856,6 +985,213 @@
         display: block !important;
         animation: ebToastOut .22s ease forwards !important;
       }
+
+      #eb-page-settings {
+        overflow: hidden !important;
+        min-height: 0 !important;
+      }
+
+      #eb-page-settings .eb-header {
+        flex: 0 0 auto !important;
+      }
+
+      #eb-page-settings .eb-desc {
+        flex: 0 0 auto !important;
+      }
+
+      .eb-settings-one-card {
+        height: calc(100% - 92px) !important;
+        max-height: calc(100% - 92px) !important;
+        min-height: 0 !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        padding: 16px !important;
+        padding-right: 10px !important;
+        border-radius: 14px !important;
+        border: 1px solid rgba(81,143,223,.26) !important;
+        background: linear-gradient(180deg,rgba(9,25,53,.82),rgba(6,18,40,.82)) !important;
+        scrollbar-width: thin !important;
+        scrollbar-color: rgba(59,156,255,.55) transparent !important;
+      }
+
+      .eb-settings-one-card::-webkit-scrollbar {
+        width: 9px !important;
+      }
+
+      .eb-settings-one-card::-webkit-scrollbar-thumb {
+        background: rgba(59,156,255,.58) !important;
+        border-radius: 999px !important;
+        border: 2px solid rgba(8,24,53,.82) !important;
+      }
+
+      .eb-settings-one-card::-webkit-scrollbar-track {
+        background: rgba(255,255,255,.04) !important;
+        border-radius: 999px !important;
+      }
+
+      .eb-settings-title {
+        font-size: 13px !important;
+        font-weight: 950 !important;
+        color: #49a8ff !important;
+        letter-spacing: .2px !important;
+        margin: 2px 0 10px !important;
+        font-family: Inter, Arial, Helvetica, sans-serif !important;
+      }
+
+      .eb-settings-line label,
+      .eb-ai-check span,
+      .eb-ai-check,
+      #eb-ai-model-select,
+      #eb-ai-custom-instructions {
+        font-family: Inter, Arial, Helvetica, sans-serif !important;
+        font-weight: 850 !important;
+      }
+
+      .eb-ai-check {
+        min-height: 38px !important;
+        border-radius: 11px !important;
+        padding: 9px 11px !important;
+        background: rgba(7,20,44,.74) !important;
+        border: 1px solid rgba(81,143,223,.25) !important;
+      }
+
+      .eb-ai-check span {
+        color: #f4f8ff !important;
+        font-size: 12px !important;
+      }
+
+      .eb-ai-check input {
+        appearance: auto !important;
+        width: 15px !important;
+        height: 15px !important;
+        accent-color: #3b9cff !important;
+        flex: 0 0 auto !important;
+      }
+
+      #eb-ai-model-select {
+        height: 36px !important;
+        font-size: 12px !important;
+      }
+
+      #eb-ai-custom-instructions {
+        min-height: 105px !important;
+        font-size: 12px !important;
+        color: #f4f8ff !important;
+      }
+
+
+      /* ===== FIX FINAL: scroll da IA + fonte das configurações ===== */
+
+      #eb-page-ai.eb-page-active {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 0 !important;
+        overflow: hidden !important;
+      }
+
+      #eb-page-ai .eb-header,
+      #eb-page-ai .eb-desc,
+      #eb-page-ai .eb-ai-model-info {
+        flex: 0 0 auto !important;
+      }
+
+      .eb-page-ai-scroll {
+        flex: 1 1 auto !important;
+        min-height: 0 !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        padding-right: 9px !important;
+        scrollbar-width: thin !important;
+        scrollbar-color: rgba(59,156,255,.58) transparent !important;
+      }
+
+      .eb-page-ai-scroll::-webkit-scrollbar {
+        width: 9px !important;
+      }
+
+      .eb-page-ai-scroll::-webkit-scrollbar-thumb {
+        background: rgba(59,156,255,.58) !important;
+        border-radius: 999px !important;
+        border: 2px solid rgba(8,24,53,.82) !important;
+      }
+
+      .eb-page-ai-scroll::-webkit-scrollbar-track {
+        background: rgba(255,255,255,.04) !important;
+        border-radius: 999px !important;
+      }
+
+      #eb-ai-prompt {
+        height: 220px !important;
+        min-height: 220px !important;
+      }
+
+      #eb-ai-result {
+        height: 320px !important;
+        min-height: 320px !important;
+      }
+
+      #eb-page-ai .eb-ai-model-info {
+        margin: 8px 0 12px !important;
+        padding: 6px 10px !important;
+        min-height: 28px !important;
+        font-size: 11px !important;
+        line-height: 14px !important;
+      }
+
+      #eb-page-settings,
+      #eb-page-settings *,
+      .eb-settings-one-card,
+      .eb-settings-one-card *,
+      .eb-ai-check,
+      .eb-ai-check span,
+      #eb-ai-model-select,
+      #eb-ai-custom-instructions {
+        font-family: inherit !important;
+      }
+
+      .eb-ai-check span {
+        color: white !important;
+        font-size: 12px !important;
+        font-weight: 900 !important;
+        letter-spacing: 0 !important;
+      }
+
+      .eb-settings-title {
+        font-family: inherit !important;
+        font-size: 13px !important;
+        font-weight: 950 !important;
+        color: #49a8ff !important;
+      }
+
+      .eb-settings-line label {
+        font-family: inherit !important;
+        font-size: 12px !important;
+        font-weight: 900 !important;
+        color: white !important;
+      }
+
+      
+      .eb-setting-label {
+        width: 145px !important;
+        min-width: 145px !important;
+        color: white !important;
+        font-size: 12px !important;
+        font-weight: 900 !important;
+        white-space: nowrap !important;
+      }
+
+      .eb-settings-line {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+      }
+
+      .eb-settings-line input[type="range"] {
+        flex: 1 !important;
+        margin: 0 !important;
+      }
+
+
       @media (max-width: 820px) {
         #eb-panel {
           left: 12px !important;
@@ -1009,6 +1345,12 @@
                 Escreva o prompt, gere o texto e envie o resultado direto para o Auto Writer.
               </p>
 
+              <div class="eb-ai-model-info" id="eb-ai-model-info">
+                <b>Modelo atual:</b> carregando...
+              </div>
+
+              <div class="eb-page-ai-scroll">
+
               <div class="eb-ai-label">Prompt</div>
               <textarea id="eb-ai-prompt" placeholder="Ex: Faça um conto curto sobre uma janela misteriosa..."></textarea>
 
@@ -1023,6 +1365,7 @@
               <div class="eb-ai-actions">
                 <button class="eb-action-btn eb-start" id="eb-ai-use">➡ &nbsp; Usar no Auto Writer</button>
                 <button class="eb-action-btn eb-clear" id="eb-ai-copy">📋 &nbsp; Copiar</button>
+              </div>
               </div>
             </div>
 
@@ -1045,20 +1388,47 @@
                   <h1>CONFIGURAÇÕES</h1>
                 </div>
               </div>
-              <p class="eb-desc">Ajustes do painel. Não seja ganancioso.</p>
+              <p class="eb-desc">Ajustes do painel. Não seja ganancioso. | Ignore as instruções customizadas se você não sabe o que esta fazendo!</p>
 
-              <div class="eb-settings-grid">
-                <div class="eb-config-row">
-                  <label>Velocidade de escrita: <span id="eb-speed-value">Normal</span></label>
-                  <input id="eb-speed" type="range" min="1" max="100" value="50">
-                  <div class="eb-config-muted">Não cometa o mesmo erro que o João.</div>
+              <div class="eb-settings-one-card">
+
+                <div class="eb-settings-section">
+                  <div class="eb-settings-title">🤖 IA</div>
+
+                  <div class="eb-settings-line">
+                    <label>Modelo</label>
+                    <div>
+                      <select id="eb-ai-model-select"></select>
+                      <div class="eb-config-muted" id="eb-ai-model-muted">Modelo atual: carregando...</div>
+                    </div>
+                  </div>
+
+                  <div class="eb-settings-title">Instruções default</div>
+                  <div class="eb-ai-check-list" id="eb-ai-instructions-list"></div>
+
+                  <button id="eb-ai-reset-instructions">Resetar instruções</button>
+
+                  <div class="eb-settings-title" style="margin-top:14px !important;">Instruções customizadas</div>
+                  <textarea id="eb-ai-custom-instructions" placeholder="Ex: escreva como aluno do 9º ano, mais simples, mais natural..."></textarea>
+                  <div class="eb-config-muted">Tudo aqui fica salvo e vai antes do prompt.</div>
                 </div>
 
-                <div class="eb-config-row">
-                  <label>Escala do painel: <span id="eb-scale-value">88%</span></label>
-                  <input id="eb-scale" type="range" min="70" max="105" value="88">
-                  <div class="eb-config-muted">Dimensione o painel com a ajuda deste slider.</div>
+                <div class="eb-settings-section">
+                  <div class="eb-settings-title">⌨️ Auto Writer</div>
+
+                  <div class="eb-settings-line">
+                    <div class="eb-setting-label">Velocidade: <span id="eb-speed-value">Normal</span></div>
+                    <input id="eb-speed" type="range" min="1" max="100" value="50">
+                  </div>
+
+                  <div class="eb-settings-line">
+                    <div class="eb-setting-label">Escala: <span id="eb-scale-value">88%</span></div>
+                    <input id="eb-scale" type="range" min="70" max="105" value="88">
+                  </div>
+
+                  <div class="eb-config-muted">Não cometa o mesmo erro que o joão</div>
                 </div>
+
               </div>
             </div>
           </section>
@@ -1109,6 +1479,12 @@
   const scaleValue = root.querySelector("#eb-scale-value");
   const speedInput = root.querySelector("#eb-speed");
   const speedValue = root.querySelector("#eb-speed-value");
+  const aiModelInfo = root.querySelector("#eb-ai-model-info");
+  const aiModelSelect = root.querySelector("#eb-ai-model-select");
+  const aiModelMuted = root.querySelector("#eb-ai-model-muted");
+  const aiInstructionsList = root.querySelector("#eb-ai-instructions-list");
+  const aiCustomInstructionsBox = root.querySelector("#eb-ai-custom-instructions");
+  const aiResetInstructions = root.querySelector("#eb-ai-reset-instructions");
 
   function applyScale() {
     panel.style.zoom = panelScale;
@@ -1118,14 +1494,14 @@
   }
 
   function getSpeedLabel(value) {
-    if (value <= 10) return "Extremamente lenta";
-    if (value <= 22) return "Muito lenta";
-    if (value <= 35) return "Lenta";
-    if (value <= 48) return "Levemente lenta";
+    if (value <= 10) return "🐢";
+    if (value <= 22) return "Muy lenta";
+    if (value <= 35) return "Lentinha";
+    if (value <= 48) return "Lenta";
     if (value <= 62) return "Normal";
-    if (value <= 75) return "Levemente rápida";
-    if (value <= 87) return "Rápida";
-    if (value <= 96) return "Muito rápida";
+    if (value <= 75) return "Rápida";
+    if (value <= 87) return "Rapidinha";
+    if (value <= 96) return "Muy rápida";
     return "Insana";
   }
 
@@ -1151,9 +1527,96 @@
     panel.style.bottom = "auto";
   }
 
+
+  function getPrimaryModel() {
+    return OPENROUTER_MODELS[selectedModelIndex] || OPENROUTER_MODELS[0];
+  }
+
+  function getModelFallbackList() {
+    const primary = getPrimaryModel();
+    return [primary, ...OPENROUTER_MODELS.filter(model => model !== primary)];
+  }
+
+  function updateAiModelInfo(extra = "") {
+    const current = getPrimaryModel();
+
+    if (aiModelInfo) {
+      const suffix = lastFallbackInfo && lastFallbackInfo !== "Modelo principal"
+        ? ` • ${lastFallbackInfo}`
+        : "";
+      aiModelInfo.innerHTML = `<b>🤖 Modelo:</b> ${lastUsedModel === "Nenhum ainda" ? current : lastUsedModel}${suffix}`;
+      if (extra) aiModelInfo.innerHTML += ` • ${extra.replace(/<[^>]+>/g, "")}`;
+    }
+
+    if (aiModelMuted) {
+      aiModelMuted.textContent = `Atual: ${current} | Usado: ${lastUsedModel} | ${lastFallbackInfo}`;
+    }
+  }
+
+  function renderAiModelSelect() {
+    aiModelSelect.innerHTML = "";
+
+    OPENROUTER_MODELS.forEach((model, index) => {
+      const option = document.createElement("option");
+      option.value = String(index);
+      option.textContent = model;
+      aiModelSelect.appendChild(option);
+    });
+
+    aiModelSelect.value = String(selectedModelIndex);
+    updateAiModelInfo();
+  }
+
+  function renderAiInstructionSettings() {
+    aiInstructionsList.innerHTML = "";
+
+    DEFAULT_AI_INSTRUCTIONS.forEach((item) => {
+      const label = document.createElement("label");
+      label.className = "eb-ai-check";
+
+      const input = document.createElement("input");
+      input.type = "checkbox";
+      input.checked = aiInstructionStates[item.id] !== false;
+
+      input.addEventListener("change", () => {
+        aiInstructionStates[item.id] = input.checked;
+        localStorage.setItem("eb_ai_instruction_states", JSON.stringify(aiInstructionStates));
+      });
+
+      const span = document.createElement("span");
+      span.textContent = item.label;
+
+      label.appendChild(input);
+      label.appendChild(span);
+      aiInstructionsList.appendChild(label);
+    });
+
+    aiCustomInstructionsBox.value = aiCustomInstructions;
+  }
+
+  function buildSystemInstructions() {
+    const activeDefaultInstructions = DEFAULT_AI_INSTRUCTIONS
+      .filter(item => aiInstructionStates[item.id] !== false)
+      .map(item => "- " + item.text)
+      .join("\n");
+
+    const custom = aiCustomInstructions.trim()
+      ? "\n\nInstruções customizadas do usuário:\n" + aiCustomInstructions.trim()
+      : "";
+
+    return `Você é um escritor profissional no estilo Escritor Baiano.
+
+Instruções ativas:
+${activeDefaultInstructions || "- Nenhuma instrução default ativa."}${custom}`;
+  }
+
+
+
   applyScale();
   applySpeed();
   applyPosition();
+  renderAiModelSelect();
+  renderAiInstructionSettings();
 
   let toastTimer = null;
 
@@ -1304,74 +1767,114 @@
   });
 
 
+  aiModelSelect.addEventListener("change", () => {
+    selectedModelIndex = Number(aiModelSelect.value);
+    localStorage.setItem("eb_selected_model_index", String(selectedModelIndex));
+    lastFallbackInfo = "Modelo principal";
+    localStorage.setItem("eb_last_fallback_info", lastFallbackInfo);
+    updateAiModelInfo();
+    showToast("Modelo da IA atualizado.");
+  });
+
+  aiCustomInstructionsBox.addEventListener("input", () => {
+    aiCustomInstructions = aiCustomInstructionsBox.value;
+    localStorage.setItem("eb_ai_custom_instructions", aiCustomInstructions);
+  });
+
+  aiResetInstructions.addEventListener("click", () => {
+    aiInstructionStates = Object.fromEntries(DEFAULT_AI_INSTRUCTIONS.map(item => [item.id, true]));
+    aiCustomInstructions = "";
+    localStorage.setItem("eb_ai_instruction_states", JSON.stringify(aiInstructionStates));
+    localStorage.removeItem("eb_ai_custom_instructions");
+    renderAiInstructionSettings();
+    showToast("Instruções da IA resetadas.");
+  });
+
+
+
+
   async function generateGeminiText(prompt) {
+    const modelsToTry = getModelFallbackList();
+    const errors = [];
 
-  const res = await fetch(
-    "https://openrouter.ai/api/v1/chat/completions",
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${OPENROUTER_API_KEY}`
-      },
-      body: JSON.stringify({
-        model: OPENROUTER_MODEL,
+    for (let i = 0; i < modelsToTry.length; i++) {
+      const model = modelsToTry[i];
 
-        messages: [
+      try {
+        if (i > 0) {
+          showToast(`A IA ${modelsToTry[i - 1]} não foi. Tentando fallback...`);
+          updateAiModelInfo(`<b>Fallback:</b> tentando ${model}`);
+        }
+
+        const res = await fetch(
+          "https://openrouter.ai/api/v1/chat/completions",
           {
-            role: "system",
-            content: `Você é um escritor profissional.
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
+              "HTTP-Referer": location.origin,
+              "X-Title": "Escritor Baiano Simulator"
+            },
+            body: JSON.stringify({
+              model,
 
-Escreva sempre em português brasileiro.
+              messages: [
+                {
+                  role: "system",
+                  content: buildSystemInstructions()
+                },
+                {
+                  role: "user",
+                  content: prompt
+                }
+              ],
 
-Regras:
-- Humanize o texto.
-- Use parágrafos naturais.
-- Não use markdown.
-- Não use listas a menos que o usuário peça.
-- Não use títulos desnecessários.
-- Não pule duas linhas entre os parágrafos.
-- Escreva como uma pessoa real.
-- Mantenha boa gramática.
-- Produza textos completos e bem desenvolvidos.`
-          },
-
-          {
-            role: "user",
-            content: prompt
+              temperature: 0.8,
+              max_tokens: 6000
+            })
           }
-        ],
+        );
 
-        temperature: 0.8,
-        max_tokens: 6000
-      })
+        const data = await res.json();
+
+        if (!res.ok) {
+          throw new Error(data?.error?.message || `Erro no modelo ${model}.`);
+        }
+
+        const generated =
+          data?.choices?.[0]?.message?.content?.trim() || "";
+
+        if (!generated) {
+          throw new Error(`O modelo ${model} não retornou texto.`);
+        }
+
+        lastUsedModel = model;
+        lastFallbackInfo = i === 0 ? "Modelo principal" : `Fallback #${i}`;
+        localStorage.setItem("eb_last_used_model", lastUsedModel);
+        localStorage.setItem("eb_last_fallback_info", lastFallbackInfo);
+        updateAiModelInfo();
+
+        return generated
+          .replace(/\r\n/g, "\n")
+          .replace(/\r/g, "\n")
+          .replace(/\n{2,}/g, "\n")
+          .trim();
+      } catch (err) {
+        console.error(`Erro no modelo ${model}:`, err);
+        errors.push(`${model}: ${err.message}`);
+      }
     }
-  );
 
-  const data = await res.json();
-
-  if (!res.ok) {
-    console.error(data);
+    lastFallbackInfo = "Todos os modelos falharam";
+    localStorage.setItem("eb_last_fallback_info", lastFallbackInfo);
+    updateAiModelInfo();
 
     throw new Error(
-      data?.error?.message ||
-      "Erro ao gerar texto."
+      "Nenhuma IA funcionou agora. Último erro: " +
+      (errors[errors.length - 1] || "erro desconhecido")
     );
   }
-
-  const generated =
-    data?.choices?.[0]?.message?.content?.trim() || "";
-
-  if (!generated) {
-    throw new Error("A IA não retornou texto.");
-  }
-
-  return generated
-  .replace(/\r\n/g, "\n")
-  .replace(/\r/g, "\n")
-  .replace(/\n{2,}/g, "\n")
-  .trim();
-}
 
   aiGenerate.addEventListener("click", async () => {
     const prompt = aiPrompt.value.trim();
@@ -1381,10 +1884,10 @@ Regras:
       return;
     }
 
-    if (!OPENROUTER_API_KEY) {
-  showToast("Configure sua chave OpenRouter no content.js.");
-  return;
-}
+    if (!OPENROUTER_API_KEY || OPENROUTER_API_KEY === "nada" || OPENROUTER_API_KEY === "SUA_CHAVE_OPENROUTER") {
+      showToast("Configure sua chave OpenRouter no content.js.");
+      return;
+    }
 
     aiGenerate.disabled = true;
     aiGenerate.textContent = "Gerando...";
