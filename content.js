@@ -1343,7 +1343,7 @@ Regras:
         ],
 
         temperature: 0.8,
-        max_tokens: 1200
+        max_tokens: 6000
       })
     }
   );
