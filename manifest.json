@@ -9,7 +9,8 @@
     "storage"
   ],
   "host_permissions": [
-  "https://openrouter.ai/*"
+  "https://openrouter.ai/*",
+  "https://*.onrender.com/*"
   ],
   "action": {
     "default_popup": "popup.html",
