@@ -16,7 +16,7 @@
   let typingSpeed = Number(localStorage.getItem("eb_typing_speed") || "50");
   let panelPos = JSON.parse(localStorage.getItem("eb_panel_pos") || "null");
 
-  const OPENROUTER_API_KEY = "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";
+  const BACKEND_URL = "https://meulindobackend.onrender.com/generate";
 
   const OPENROUTER_MODELS = [
     "nex-agi/nex-n2-pro:free",
@@ -1794,86 +1794,49 @@ ${activeDefaultInstructions || "- Nenhuma instrução default ativa."}${custom}`
 
 
   async function generateGeminiText(prompt) {
-    const modelsToTry = getModelFallbackList();
-    const errors = [];
+    const selectedModel = getPrimaryModel();
 
-    for (let i = 0; i < modelsToTry.length; i++) {
-      const model = modelsToTry[i];
+    const res = await fetch(BACKEND_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        prompt,
+        system: buildSystemInstructions(),
+        model: selectedModel
+      })
+    });
 
-      try {
-        if (i > 0) {
-          showToast(`A IA ${modelsToTry[i - 1]} não foi. Tentando fallback...`);
-          updateAiModelInfo(`<b>Fallback:</b> tentando ${model}`);
-        }
+    const data = await res.json();
 
-        const res = await fetch(
-          "https://openrouter.ai/api/v1/chat/completions",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-              "Authorization": `Bearer ${OPENROUTER_API_KEY}`,
-              "HTTP-Referer": location.origin,
-              "X-Title": "Escritor Baiano Simulator"
-            },
-            body: JSON.stringify({
-              model,
-
-              messages: [
-                {
-                  role: "system",
-                  content: buildSystemInstructions()
-                },
-                {
-                  role: "user",
-                  content: prompt
-                }
-              ],
-
-              temperature: 0.8,
-              max_tokens: 6000
-            })
-          }
-        );
-
-        const data = await res.json();
-
-        if (!res.ok) {
-          throw new Error(data?.error?.message || `Erro no modelo ${model}.`);
-        }
-
-        const generated =
-          data?.choices?.[0]?.message?.content?.trim() || "";
-
-        if (!generated) {
-          throw new Error(`O modelo ${model} não retornou texto.`);
-        }
-
-        lastUsedModel = model;
-        lastFallbackInfo = i === 0 ? "Modelo principal" : `Fallback #${i}`;
-        localStorage.setItem("eb_last_used_model", lastUsedModel);
-        localStorage.setItem("eb_last_fallback_info", lastFallbackInfo);
-        updateAiModelInfo();
-
-        return generated
-          .replace(/\r\n/g, "\n")
-          .replace(/\r/g, "\n")
-          .replace(/\n{2,}/g, "\n")
-          .trim();
-      } catch (err) {
-        console.error(`Erro no modelo ${model}:`, err);
-        errors.push(`${model}: ${err.message}`);
-      }
+    if (!res.ok) {
+      throw new Error(data?.error || "Erro ao gerar texto pelo backend.");
     }
 
-    lastFallbackInfo = "Todos os modelos falharam";
+    const generated = data?.text?.trim() || "";
+
+    if (!generated) {
+      throw new Error("O backend não retornou texto.");
+    }
+
+    lastUsedModel = data.modelUsed || selectedModel;
+    lastFallbackInfo = data.fallbackUsed ? "Fallback usado" : "Modelo principal";
+
+    localStorage.setItem("eb_last_used_model", lastUsedModel);
     localStorage.setItem("eb_last_fallback_info", lastFallbackInfo);
+
     updateAiModelInfo();
 
-    throw new Error(
-      "Nenhuma IA funcionou agora. Último erro: " +
-      (errors[errors.length - 1] || "erro desconhecido")
-    );
+    if (data.fallbackUsed) {
+      showToast(`Modelo principal não foi. Usando fallback: ${lastUsedModel}`);
+    }
+
+    return generated
+      .replace(/\r\n/g, "\n")
+      .replace(/\r/g, "\n")
+      .replace(/\n{2,}/g, "\n")
+      .trim();
   }
 
   aiGenerate.addEventListener("click", async () => {
@@ -1884,14 +1847,9 @@ ${activeDefaultInstructions || "- Nenhuma instrução default ativa."}${custom}`
       return;
     }
 
-    if (!OPENROUTER_API_KEY || OPENROUTER_API_KEY === "nada" || OPENROUTER_API_KEY === "SUA_CHAVE_OPENROUTER") {
-      showToast("Configure sua chave OpenRouter no content.js.");
-      return;
-    }
-
     aiGenerate.disabled = true;
     aiGenerate.textContent = "Gerando...";
-    showToast("Gerando texto com IA...");
+    showToast("Gerando texto pelo backend...");
 
     try {
       const generated = await generateGeminiText(prompt);
