@@ -1,1 +1,22 @@
-const a0_0x17a547=a0_0x4cb2;(function(_0x16c64c,_0x46770a){const _0x5008f5=a0_0x4cb2,_0x248e31=_0x16c64c();while(!![]){try{const _0x58c4af=parseInt(_0x5008f5(0x14b))/0x1+-parseInt(_0x5008f5(0x152))/0x2*(parseInt(_0x5008f5(0x14d))/0x3)+-parseInt(_0x5008f5(0x14e))/0x4*(-parseInt(_0x5008f5(0x141))/0x5)+-parseInt(_0x5008f5(0x14a))/0x6*(parseInt(_0x5008f5(0x153))/0x7)+-parseInt(_0x5008f5(0x143))/0x8+-parseInt(_0x5008f5(0x14f))/0x9+parseInt(_0x5008f5(0x150))/0xa;if(_0x58c4af===_0x46770a)break;else _0x248e31['push'](_0x248e31['shift']());}catch(_0x393ce8){_0x248e31['push'](_0x248e31['shift']());}}}(a0_0x55b1,0x444df));const statusBox=document[a0_0x17a547(0x14c)](a0_0x17a547(0x140));document['getElementById'](a0_0x17a547(0x142))[a0_0x17a547(0x144)](a0_0x17a547(0x151),async()=>{const _0x4c73d0=a0_0x17a547;statusBox[_0x4c73d0(0x154)]='Injetando...';try{const [_0x409cba]=await chrome[_0x4c73d0(0x146)][_0x4c73d0(0x148)]({'active':!![],'currentWindow':!![]});await chrome[_0x4c73d0(0x147)][_0x4c73d0(0x155)]({'target':{'tabId':_0x409cba['id']},'files':['content.js']}),statusBox[_0x4c73d0(0x154)]='Código\x20injetado!';}catch(_0x4c90ef){console[_0x4c73d0(0x145)](_0x4c90ef),statusBox[_0x4c73d0(0x154)]=_0x4c73d0(0x149);}});function a0_0x4cb2(_0x4c392b,_0x510ebe){_0x4c392b=_0x4c392b-0x140;const _0x55b1bb=a0_0x55b1();let _0x4cb251=_0x55b1bb[_0x4c392b];if(a0_0x4cb2['enHkik']===undefined){var _0x49a75f=function(_0x340459){const _0x2eddea='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x409cba='',_0x4c90ef='';for(let _0x130eaa=0x0,_0x5b9257,_0x464342,_0x5245ef=0x0;_0x464342=_0x340459['charAt'](_0x5245ef++);~_0x464342&&(_0x5b9257=_0x130eaa%0x4?_0x5b9257*0x40+_0x464342:_0x464342,_0x130eaa++%0x4)?_0x409cba+=String['fromCharCode'](0xff&_0x5b9257>>(-0x2*_0x130eaa&0x6)):0x0){_0x464342=_0x2eddea['indexOf'](_0x464342);}for(let _0x12f8cb=0x0,_0x16bebd=_0x409cba['length'];_0x12f8cb<_0x16bebd;_0x12f8cb++){_0x4c90ef+='%'+('00'+_0x409cba['charCodeAt'](_0x12f8cb)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x4c90ef);};a0_0x4cb2['wXmYbH']=_0x49a75f,a0_0x4cb2['NwFliu']={},a0_0x4cb2['enHkik']=!![];}const _0x431165=_0x55b1bb[0x0],_0x3d52a1=_0x4c392b+_0x431165,_0x22ec44=a0_0x4cb2['NwFliu'][_0x3d52a1];return!_0x22ec44?(_0x4cb251=a0_0x4cb2['wXmYbH'](_0x4cb251),a0_0x4cb2['NwFliu'][_0x3d52a1]=_0x4cb251):_0x4cb251=_0x22ec44,_0x4cb251;}function a0_0x55b1(){const _0x4ce752=['y2XPy2S','ngH6zeneAG','n0LkzKPgyG','Dgv4DenVBNrLBNq','zxHLy3v0zvnJCMLWDa','C3rHDhvZ','oty1u3rjsK1r','Aw5Qzwn0','mJm0mtG0ogvYB1zMsG','ywrKrxzLBNrmAxn0zw5LCG','zxjYB3i','DgfICW','C2nYAxb0Aw5N','CxvLCNK','rxjYBYbHBYbPBMPLDgfYlG','mJaYmJa3mMHSBvb5tG','nte1mda0Cvfyqvb5','z2v0rwXLBwvUDej5swq','nZyYmtG5DwzvqKfJ','odqXmNvZrxbJqG','ndK5nZq4nfLqChnoDG','mta1mJaZnZbvDuTIywS'];a0_0x55b1=function(){return _0x4ce752;};return a0_0x55b1();}
+const statusBox = document.getElementById("status");
+
+document.getElementById("inject").addEventListener("click", async () => {
+  statusBox.textContent = "Injetando...";
+
+  try {
+    const [tab] = await chrome.tabs.query({
+      active: true,
+      currentWindow: true
+    });
+
+    await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      files: ["content.js"]
+    });
+
+    statusBox.textContent = "Código injetado!";
+  } catch (err) {
+    console.error(err);
+    statusBox.textContent = "Erro ao injetar.";
+  }
+});
