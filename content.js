@@ -20,8 +20,8 @@
 
   const OPENROUTER_MODELS = [
     "nex-agi/nex-n2-pro:free",
-    "mistralai/mistral-small-3.2-24b-instruct:free",
-    "google/gemma-3-27b-it:free"
+    "nvidia/llama-nemotron-rerank-vl-1b-v2:free",
+    "nvidia/nemotron-3-ultra-550b-a55b:free"
   ];
 
   const DEFAULT_AI_INSTRUCTIONS = [
