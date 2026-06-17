@@ -761,6 +761,59 @@
         color: #8494aa !important;
       }
 
+
+      #eb-ai-progress-wrap {
+        width: 100% !important;
+        height: 10px !important;
+        background: rgba(255,255,255,.08) !important;
+        border-radius: 999px !important;
+        overflow: hidden !important;
+        margin: 8px 0 4px !important;
+      }
+
+      #eb-ai-progress-bar {
+        width: 0% !important;
+        height: 100% !important;
+        border-radius: 999px !important;
+        background: linear-gradient(90deg,#35a2ff,#4fb4ff) !important;
+        transition: width .25s ease !important;
+      }
+
+      #eb-ai-progress-text {
+        color: #9ccfff !important;
+        font-size: 11px !important;
+        font-weight: 900 !important;
+        margin-bottom: 10px !important;
+      }
+
+      #eb-ai-progress-wrap {
+  width: 100% !important;
+  height: 12px !important;
+  background: rgba(255,255,255,.08) !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  margin: 8px 0 6px !important;
+  border: 1px solid rgba(59,156,255,.22) !important;
+}
+
+#eb-ai-progress-bar {
+  display: block !important;
+  width: 0%;
+  min-width: 0 !important;
+  height: 100% !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg,#22c55e,#35a2ff,#4fb4ff) !important;
+  box-shadow: 0 0 14px rgba(53,162,255,.55) !important;
+  transition: width .45s ease !important;
+}
+
+      #eb-ai-progress-text{
+        color:#9ccfff;
+        font-size:11px;
+        font-weight:900;
+        margin-bottom:10px;
+      }
+
       .eb-ai-label {
         color: #dbeafe !important;
         font-size: 12px !important;
@@ -1349,6 +1402,11 @@
                 <b>Modelo atual:</b> carregando...
               </div>
 
+              <div id="eb-ai-progress-wrap">
+                <div id="eb-ai-progress-bar"></div>
+                </div>
+              <div id="eb-ai-progress-text">0%</div>
+
               <div class="eb-page-ai-scroll">
 
               <div class="eb-ai-label">Prompt</div>
@@ -1485,6 +1543,8 @@
   const aiInstructionsList = root.querySelector("#eb-ai-instructions-list");
   const aiCustomInstructionsBox = root.querySelector("#eb-ai-custom-instructions");
   const aiResetInstructions = root.querySelector("#eb-ai-reset-instructions");
+  const aiProgressBar = root.querySelector("#eb-ai-progress-bar");
+  const aiProgressText = root.querySelector("#eb-ai-progress-text");
 
   function applyScale() {
     panel.style.zoom = panelScale;
@@ -1793,6 +1853,66 @@ ${activeDefaultInstructions || "- Nenhuma instrução default ativa."}${custom}`
 
 
 
+
+  let fakeProgressInterval = null;
+  let fakeProgress = 0;
+
+function startFakeProgress() {
+  clearInterval(fakeProgressInterval);
+
+  fakeProgress = 0;
+
+  aiProgressBar.style.width = "0%";
+  aiProgressText.textContent = "0%";
+
+  fakeProgressInterval = setInterval(() => {
+
+    if (fakeProgress >= 95) return;
+
+    const remaining = 95 - fakeProgress;
+
+    fakeProgress += Math.max(
+      0.5,
+      remaining * 0.04
+    );
+
+    if (fakeProgress > 95) {
+      fakeProgress = 95;
+    }
+
+    aiProgressBar.style.setProperty(
+     "width",
+     fakeProgress.toFixed(1) + "%",
+     "important"
+    );
+
+    aiProgressText.textContent =
+      Math.floor(fakeProgress) + "%";
+
+  }, 650);
+  }
+
+  function finishFakeProgress() {
+  clearInterval(fakeProgressInterval);
+
+  aiProgressBar.style.width = "100%";
+  aiProgressText.textContent = "100%";
+
+  setTimeout(() => {
+    aiProgressBar.style.width = "0%";
+    aiProgressText.textContent = "0%";
+  }, 1500);
+  }
+
+  function resetFakeProgress() {
+    if (!aiProgressBar || !aiProgressText) return;
+
+    clearInterval(fakeProgressInterval);
+    aiProgressBar.style.width = "0%";
+    aiProgressText.textContent = "Erro";
+  }
+
+
   async function generateGeminiText(prompt) {
     const selectedModel = getPrimaryModel();
 
@@ -1850,13 +1970,16 @@ ${activeDefaultInstructions || "- Nenhuma instrução default ativa."}${custom}`
     aiGenerate.disabled = true;
     aiGenerate.textContent = "Gerando...";
     showToast("Gerando texto pelo backend...");
+    startFakeProgress();
 
     try {
       const generated = await generateGeminiText(prompt);
       aiResult.value = generated;
+      finishFakeProgress();
       showToast("Texto gerado!");
     } catch (err) {
       console.error(err);
+      resetFakeProgress();
       showToast(err.message || "Erro ao gerar com IA.");
     } finally {
       aiGenerate.disabled = false;
