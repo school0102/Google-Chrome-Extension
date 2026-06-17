@@ -16,7 +16,7 @@
   let typingSpeed = Number(localStorage.getItem("eb_typing_speed") || "50");
   let panelPos = JSON.parse(localStorage.getItem("eb_panel_pos") || "null");
 
-  const OPENROUTER_API_KEY = "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";
+  const OPENROUTER_API_KEY = "nada";
 
   const OPENROUTER_MODELS = [
     "nex-agi/nex-n2-pro:free",
