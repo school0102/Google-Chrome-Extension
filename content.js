@@ -1782,7 +1782,7 @@ ${activeDefaultInstructions || "- Nenhuma instrução default ativa."}${custom}`
   function openPanelAnimated() {
     panel.classList.remove("eb-closing");
     panel.classList.add("eb-show");
-    openPanel.textContent = "Fechar";
+    openPanel.textContent = "👀";
   }
 
   openPanel.addEventListener("click", () => {
