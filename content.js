@@ -166,21 +166,18 @@
         position: fixed !important;
         right: 22px !important;
         bottom: 22px !important;
-        z-index: 2147483646 !important;
-        width: 126px !important;
-        height: 46px !important;
-        border: 1px solid rgba(255,255,255,.16) !important;
-        border-radius: 999px !important;
-        background: linear-gradient(135deg,#176ed2,#35a2ff) !important;
-        color: white !important;
-        font-size: 15px !important;
-        font-weight: 900 !important;
-        cursor: pointer !important;
+        width: 52px !important;
+        height: 52px !important;
+        min-width: 52px !important;
+        min-height: 52px !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        font-size: 24px !important;
+        line-height: 1 !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        box-shadow: 0 14px 38px rgba(47,156,255,.38) !important;
-        transition: transform .18s ease, filter .18s ease, box-shadow .18s ease !important;
+        z-index: 2147483647 !important;
       }
 
       #eb-open-panel:hover {
@@ -790,25 +787,25 @@
       }
 
       #eb-ai-progress-wrap {
-  width: 100% !important;
-  height: 12px !important;
-  background: rgba(255,255,255,.08) !important;
-  border-radius: 999px !important;
-  overflow: hidden !important;
-  margin: 8px 0 6px !important;
-  border: 1px solid rgba(59,156,255,.22) !important;
-}
+        width: 100% !important;
+        height: 12px !important;
+        background: rgba(255,255,255,.08) !important;
+        border-radius: 999px !important;
+        overflow: hidden !important;
+        margin: 8px 0 6px !important;
+        border: 1px solid rgba(59,156,255,.22) !important;
+      }
 
-#eb-ai-progress-bar {
-  display: block !important;
-  width: 0%;
-  min-width: 0 !important;
-  height: 100% !important;
-  border-radius: 999px !important;
-  background: linear-gradient(90deg,#22c55e,#35a2ff,#4fb4ff) !important;
-  box-shadow: 0 0 14px rgba(53,162,255,.55) !important;
-  transition: width .45s ease !important;
-}
+      #eb-ai-progress-bar {
+        display: block !important;
+        width: 0%;
+        min-width: 0 !important;
+        height: 100% !important;
+        border-radius: 999px !important;
+        background: linear-gradient(90deg,#22c55e,#35a2ff,#4fb4ff) !important;
+        box-shadow: 0 0 14px rgba(53,162,255,.55) !important;
+        transition: width .45s ease !important;
+      }
 
       #eb-ai-progress-text{
         color:#9ccfff;
