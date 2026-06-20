@@ -1772,7 +1772,7 @@ ${activeDefaultInstructions || "- Nenhuma instrução default ativa."}${custom}`
 
     panel.classList.remove("eb-show");
     panel.classList.add("eb-closing");
-    openPanel.textContent = "Painel";
+    openPanel.textContent = "👀";
 
     setTimeout(() => {
       panel.classList.remove("eb-closing");
