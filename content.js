@@ -23,7 +23,7 @@
 
   const OPENROUTER_MODELS = [
     "nex-agi/nex-n2-pro:free",
-    "cohere/north-mini-code:free",
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
     "nvidia/nemotron-3-ultra-550b-a55b:free"
   ];
 
