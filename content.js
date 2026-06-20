@@ -1270,7 +1270,7 @@
       }
     </style>
 
-    <button id="eb-open-panel">Painel</button>
+    <button id="eb-open-panel">👀</button>
 
     <div id="eb-panel">
       <div class="eb-dragbar" id="eb-dragbar">ARRASTE PARA MOVER O PAINEL</div>
