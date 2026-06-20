@@ -1287,7 +1287,7 @@
           <div class="eb-nav-item" data-page="history"><div class="eb-nav-icon">📄</div><div>Histórico</div></div>
           <div class="eb-nav-item" data-page="settings"><div class="eb-nav-icon">⚙️</div><div>Configurações</div></div>
 
-          <div class="eb-version-simple">v1.5</div>
+          <div class="eb-version-simple">v2.2</div>
         </aside>
 
         <section class="eb-profile" id="eb-profile">
