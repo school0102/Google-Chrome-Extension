@@ -15,6 +15,9 @@
   let panelScale = Number(localStorage.getItem("eb_panel_scale") || "0.88");
   let typingSpeed = Number(localStorage.getItem("eb_typing_speed") || "50");
   let panelPos = JSON.parse(localStorage.getItem("eb_panel_pos") || "null");
+  let stopTypingRequested = false;
+  let typingActive = false;
+  let typingTimeout = null;
 
   const BACKEND_URL = "https://meulindobackend.onrender.com/generate";
 
@@ -1746,6 +1749,24 @@ ${activeDefaultInstructions || "- Nenhuma instrução default ativa."}${custom}`
     updateChars();
   });
 
+
+  function setTypingButtonState(isTyping) {
+    const startBtn = root.querySelector("#eb-start");
+    if (!startBtn) return;
+
+    if (isTyping) {
+      startBtn.innerHTML = "⛔ &nbsp; Parar";
+      startBtn.dataset.typing = "true";
+      startBtn.classList.remove("eb-start");
+      startBtn.classList.add("eb-clear");
+    } else {
+      startBtn.innerHTML = "▶ &nbsp; Iniciar";
+      startBtn.dataset.typing = "false";
+      startBtn.classList.remove("eb-clear");
+      startBtn.classList.add("eb-start");
+    }
+  }
+
   function closePanelAnimated() {
     if (!panel.classList.contains("eb-show")) return;
 
@@ -2093,39 +2114,71 @@ function startFakeProgress() {
       return;
     }
 
-    el.focus();
+    typingActive = true;
+    setTypingButtonState(true);
 
-    if ("value" in el) {
-      setNativeValue(el, "");
-    } else {
-      el.textContent = "";
-    }
+    try {
+      el.focus();
 
-    triggerInputEvents(el);
-
-    let currentValue = "";
-
-    for (let i = 0; i < text.length; i++) {
-      const char = text[i];
-
-      if (char === "\n") {
-        currentValue += "\n";
+      if ("value" in el) {
+        setNativeValue(el, "");
       } else {
-        currentValue += char;
+        el.textContent = "";
       }
 
-      setNativeValue(el, currentValue);
       triggerInputEvents(el);
 
-      progress.textContent = Math.round(((i + 1) / text.length) * 100) + "%";
+      let currentValue = "";
 
-      await sleep(getTypingDelay());
+      for (let i = 0; i < text.length; i++) {
+
+        if (stopTypingRequested) {
+          setStatus("Parado", "Nenhum", "Interrompido");
+          showToast("Escrita interrompida.");
+          return;
+        }
+
+        const char = text[i];
+
+        if (char === "\n") {
+          currentValue += "\n";
+        } else {
+          currentValue += char;
+        }
+
+        setNativeValue(el, currentValue);
+        triggerInputEvents(el);
+
+        progress.textContent =
+          Math.round(((i + 1) / text.length) * 100) + "%";
+
+        await sleep(getTypingDelay());
+      }
+
+      setStatus("Concluído", "Nenhum", "100%");
+
+    } finally {
+      typingActive = false;
+      stopTypingRequested = false;
+      setTypingButtonState(false);
     }
-
-    setStatus("Concluído", "Nenhum", "100%");
   }
 
   root.querySelector("#eb-start").addEventListener("click", () => {
+
+    if (typingActive) {
+      stopTypingRequested = true;
+
+      if (typingTimeout) {
+        clearTimeout(typingTimeout);
+        typingTimeout = null;
+        typingActive = false;
+        setTypingButtonState(false);
+      }
+
+      return;
+    }
+
     const text = textArea.value;
 
     if (!text.trim()) {
@@ -2139,13 +2192,18 @@ function startFakeProgress() {
       return;
     }
 
+    typingActive = true;
+    stopTypingRequested = false;
+    setTypingButtonState(true);
+
     showToast("Iniciando...");
     saveHistory(text);
     closePanelAnimated();
 
     setStatus("Aguardando...", "5 segundos", "0%");
 
-    setTimeout(() => {
+    typingTimeout = setTimeout(() => {
+      typingTimeout = null;
       setStatus("Digitando...", "Agora", "0%");
       typeText(text);
     }, 5000);
