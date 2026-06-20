@@ -1,1 +1,22 @@
-const a0_0x4c6c28=a0_0x5bf3;(function(_0x2e2874,_0x42f313){const _0x192c22=a0_0x5bf3,_0x4f3d4c=_0x2e2874();while(!![]){try{const _0x2b6be4=parseInt(_0x192c22(0xb7))/0x1*(-parseInt(_0x192c22(0xad))/0x2)+parseInt(_0x192c22(0xac))/0x3*(-parseInt(_0x192c22(0xb5))/0x4)+parseInt(_0x192c22(0xa9))/0x5+-parseInt(_0x192c22(0xb2))/0x6*(parseInt(_0x192c22(0xae))/0x7)+-parseInt(_0x192c22(0xb9))/0x8+-parseInt(_0x192c22(0xb0))/0x9+parseInt(_0x192c22(0xaf))/0xa;if(_0x2b6be4===_0x42f313)break;else _0x4f3d4c['push'](_0x4f3d4c['shift']());}catch(_0x239cb0){_0x4f3d4c['push'](_0x4f3d4c['shift']());}}}(a0_0x25e5,0xc50b4));const statusBox=document['getElementById']('status');function a0_0x25e5(){const _0x4fc96d=['8738148LauAdh','error','getElementById','13044jNLqhf','executeScript','17qMIsKR','tabs','3070088xlZfOg','textContent','4398195igLZRc','addEventListener','query','639qPbBfs','135852QDnpCd','7rWKVdC','39109820xgsaHx','2646675YUowAP','Erro\x20ao\x20injetar.'];a0_0x25e5=function(){return _0x4fc96d;};return a0_0x25e5();}function a0_0x5bf3(_0x308974,_0x33dacd){_0x308974=_0x308974-0xa9;const _0x25e5d7=a0_0x25e5();let _0x5bf397=_0x25e5d7[_0x308974];return _0x5bf397;}document[a0_0x4c6c28(0xb4)]('inject')[a0_0x4c6c28(0xaa)]('click',async()=>{const _0x1ea636=a0_0x4c6c28;statusBox['textContent']='Injetando...';try{const [_0x27cfd1]=await chrome[_0x1ea636(0xb8)][_0x1ea636(0xab)]({'active':!![],'currentWindow':!![]});await chrome['scripting'][_0x1ea636(0xb6)]({'target':{'tabId':_0x27cfd1['id']},'files':['content.js']}),statusBox[_0x1ea636(0xba)]='Código\x20injetado!';}catch(_0x3e3bc9){console[_0x1ea636(0xb3)](_0x3e3bc9),statusBox[_0x1ea636(0xba)]=_0x1ea636(0xb1);}});
+const statusBox = document.getElementById("status");
+
+document.getElementById("inject").addEventListener("click", async () => {
+  statusBox.textContent = "Injetando...";
+
+  try {
+    const [tab] = await chrome.tabs.query({
+      active: true,
+      currentWindow: true
+    });
+
+    await chrome.scripting.executeScript({
+      target: { tabId: tab.id },
+      files: ["content.js"]
+    });
+
+    statusBox.textContent = "Código injetado!";
+  } catch (err) {
+    console.error(err);
+    statusBox.textContent = "Erro ao injetar.";
+  }
+});
