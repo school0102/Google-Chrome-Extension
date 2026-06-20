@@ -1,1 +1,2211 @@
-function a0_0x380e(_0x54bcaf,_0x312e70){_0x54bcaf=_0x54bcaf-0x1d8;const _0x3330e1=a0_0x3330();let _0x380e8c=_0x3330e1[_0x54bcaf];return _0x380e8c;}function a0_0x3330(){const _0x9d80d=['label','Lentinha','important','.eb-nav-item','auto','Nenhum\x20texto\x20para\x20copiar.','clientX','input','#eb-profile','flex','left','5608jpEodG','querySelectorAll','text','eb_selected_model_index','eb_panel_scale','gramatica','60weatdg','#eb-open-panel','querySelector','Escrita\x20interrompida.','typing','clientY','#eb-speed-side','removeItem','1197vZTmPb','preventDefault','type','eb-show','Normal','Escreva\x20sempre\x20em\x20português\x20brasileiro.','Gerando...','eb-toast-hide','Sem\x20texto','length','date','135465uhrJHV','Texto\x20gerado!','appendChild','#eb-ai-model-muted','<div\x20class=\x22eb-history-date\x22>','eb_saved_text','<b>🤖\x20Modelo:</b>\x20','__ESCRITOR_BAIANO_INJETADO__','Painel','join','Pronto','fromEntries','✨\x20\x20Gerar\x20texto','innerWidth','#eb-ai-progress-text','page','mousedown','#eb-dragbar','floor','true','eb-panel','#eb-page-','right','style','Quando\x20o\x20usuário\x20pedir\x20uma\x20redação,\x20faça\x20introdução,\x20desenvolvimento\x20e\x20conclusão\x20de\x20forma\x20natural.','dispatchEvent','eb_panel_pos','getOwnPropertyDescriptor','classList','getBoundingClientRect','parse','className','Humanize\x20o\x20texto\x20e\x20escreva\x20como\x20uma\x20pessoa\x20real.','eb-closing','map','replace','eb_ai_custom_instructions','#eb-bottom-status','Muy\x20rápida','eb-ai-check','eb-start','#eb-start','#eb-chars','-\x20Nenhuma\x20instrução\x20default\x20ativa.','#eb-panel','Erro\x20ao\x20gerar\x20texto\x20pelo\x20backend.','eb-clear','dataset','clipboard','click','fallbackUsed','Nenhum','remove','toFixed','#eb-avatar','Clique\x20em\x20um\x20campo','Instruções\x20da\x20IA\x20resetadas.','getElementById','Não\x20foi\x20possível\x20copiar.','mousemove','slice','Rapidinha','setItem','paragrafos','100%','eb_history','<div\x20class=\x22eb-history-item\x22><div\x20class=\x22eb-history-date\x22>Vazio</div><div\x20class=\x22eb-history-text\x22>Nenhum\x20histórico\x20ainda.</div></div>','Humanizar\x20texto','#eb-ai-custom-instructions','tagName','src','error','2321700MOIgVR','option','div','549qNaoMQ','addEventListener','writeText','getItem','#eb-ai-result','415632UWefuR','#eb-side-status','Modelo\x20principal','2AiOVdX','stringify','max','eb-root','Modo\x20redação','checkbox','#eb-progress','Erro','toLowerCase','width','#eb-toast','createElement','redacao','json','eb_ai_instruction_states','innerHTML','\x20•\x20','null','Pronto\x20para\x20iniciar','Modelo\x20da\x20IA\x20atualizado.','#eb-waiting','eb-history-item','21470SMdfuH','#eb-ai-model-info','call','display','change','Insana','set','toggle','#eb-speed-value','filter','nex-agi/nex-n2-pro:free','nvidia/llama-nemotron-rerank-vl-1b-v2:free','eb_last_fallback_info','#eb-ai-prompt','Sem\x20campo','Não\x20use\x20markdown,\x20títulos\x20desnecessários,\x20listas\x20ou\x20tópicos\x20a\x20menos\x20que\x20o\x20usuário\x20peça.','.eb-page','target','6862713POiwyo','Rápida','Fechar','round','#eb-ai-model-select','none','add','checked','0.88','onerror','bottom','isContentEditable','#eb-ai-generate','writer','value','#eb-ai-progress-bar','Gerando\x20texto\x20pelo\x20backend...','Erro\x20ao\x20gerar\x20com\x20IA.','contains','eb-wide','\x0a\x20\x20\x20\x20<style>\x0a\x20\x20\x20\x20\x20\x20#eb-root,\x20#eb-root\x20*\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20box-sizing:\x20border-box\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Inter,\x20Arial,\x20Helvetica,\x20sans-serif\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20@keyframes\x20ebPanelOpen\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x200%\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(22px)\x20scale(.96);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20filter:\x20blur(3px);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20100%\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(0)\x20scale(1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20filter:\x20blur(0);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20@keyframes\x20ebPanelClose\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x200%\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(0)\x20scale(1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20filter:\x20blur(0);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20100%\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(24px)\x20scale(.96);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20filter:\x20blur(3px);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20@keyframes\x20ebFadeUp\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x200%\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(12px);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20100%\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(0);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20@keyframes\x20ebSoftPulse\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x200%,\x20100%\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x200\x200\x20rgba(59,156,255,0);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x2050%\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x200\x2022px\x20rgba(59,156,255,.34);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20@keyframes\x20ebAvatarGlow\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x200%,\x20100%\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x200\x2024px\x20rgba(59,156,255,.32);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x2050%\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x200\x2036px\x20rgba(59,156,255,.62);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20@keyframes\x20ebDotPulse\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x200%,\x20100%\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20scale(1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x2050%\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20scale(1.35);\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x20.7;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20@keyframes\x20ebButtonShine\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x200%\x20{\x20left:\x20-90%;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20100%\x20{\x20left:\x20130%;\x20}\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20@keyframes\x20ebToastIn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20from\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(14px)\x20scale(.97);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20to\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(0)\x20scale(1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20@keyframes\x20ebToastOut\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20from\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x201;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(0)\x20scale(1);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20to\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x200;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(14px)\x20scale(.97);\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-open-panel\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20right:\x2022px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20bottom:\x2022px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x202147483646\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20126px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2046px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(255,255,255,.16)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(135deg,#176ed2,#35a2ff)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20900\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x2014px\x2038px\x20rgba(47,156,255,.38)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20transform\x20.18s\x20ease,\x20filter\x20.18s\x20ease,\x20box-shadow\x20.18s\x20ease\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-open-panel:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(-2px)\x20scale(1.03)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20filter:\x20brightness(1.08)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x2018px\x2044px\x20rgba(47,156,255,.48)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-open-panel:active\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20scale(.96)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-panel\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20right:\x2024px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20bottom:\x2084px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x202147483645\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20min(920px,\x20calc(100vw\x20-\x2048px))\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x20min(590px,\x20calc(100vh\x20-\x20112px))\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-width:\x20720px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x20500px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20radial-gradient(circle\x20at\x2022%\x200%,rgba(47,156,255,.18),transparent\x2034%),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20radial-gradient(circle\x20at\x2090%\x2020%,rgba(34,197,94,.08),transparent\x2030%),\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20linear-gradient(135deg,#020817,#06142d\x2055%,#020817)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#f4f8ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(81,143,223,.32)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2018px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x2024px\x20100px\x20rgba(0,0,0,.62),\x20inset\x200\x201px\x200\x20rgba(255,255,255,.06)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20none;\x0a\x20\x20\x20\x20\x20\x20\x20\x20resize:\x20both\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-panel.eb-show\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20animation:\x20ebPanelOpen\x20.26s\x20cubic-bezier(.2,.9,.25,1)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-panel.eb-closing\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20animation:\x20ebPanelClose\x20.22s\x20ease\x20forwards\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-dragbar\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20left:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20top:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20right:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2026px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20move\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x205\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(3,12,30,.58)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-bottom:\x201px\x20solid\x20rgba(255,255,255,.07)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#7fc2ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20900\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20letter-spacing:\x20.8px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20background\x20.18s\x20ease,\x20color\x20.18s\x20ease\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-dragbar:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(12,35,78,.72)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#b9dcff\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-app\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding-top:\x2026px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20grid\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20grid-template-columns:\x20160px\x20205px\x20minmax(0,\x201fr)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-app.eb-wide\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20grid-template-columns:\x20160px\x20minmax(0,\x201fr)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-sidebar\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(2,10,24,.72)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-right:\x201px\x20solid\x20rgba(92,155,255,.17)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2022px\x2010px\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20transform\x20.16s\x20ease,\x20border-color\x20.16s\x20ease,\x20background\x20.16s\x20ease\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-stat-card:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(-2px)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(13,36,76,.88)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(59,156,255,.34)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-brand\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x208px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200\x200\x2024px\x204px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-feather\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2024px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20filter:\x20drop-shadow(0\x200\x2010px\x20rgba(59,156,255,.35))\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-brand-text\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2016px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20950\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20letter-spacing:\x20.3px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-brand-text\x20span\x20{\x20color:\x20#46a6ff\x20!important;\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-nav-item\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2040px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x208px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20850\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x208px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20user-select:\x20none\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20transform\x20.16s\x20ease,\x20background\x20.16s\x20ease,\x20box-shadow\x20.16s\x20ease,\x20filter\x20.16s\x20ease\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-nav-item:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(53,162,255,.11)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateX(3px)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-nav-item.eb-active\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(135deg,#176ed2,#2b72d8)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x2010px\x2024px\x20rgba(27,110,210,.26),\x20inset\x200\x201px\x200\x20rgba(255,255,255,.13)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-nav-icon\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2017px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x2020px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-version\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20left:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20right:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20bottom:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2058px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(92,155,255,.18)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(5,18,42,.72)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-version-simple\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20left:\x2018px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20bottom:\x2018px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#8fb7e8\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20800\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20opacity:\x20.9\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-info-circle\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x2030px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2030px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2050%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x202px\x20solid\x20#3b9cff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#3b9cff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20900\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-version\x20strong\x20{\x20color:\x20#35a2ff\x20!important;\x20font-size:\x2011px\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-version\x20p\x20{\x20margin-top:\x202px\x20!important;\x20color:\x20white\x20!important;\x20font-size:\x2011px\x20!important;\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-profile\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2014px\x200\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-width:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-profile-card\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20animation:\x20ebFadeUp\x20.32s\x20ease\x20both\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(81,143,223,.24)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2016px\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(180deg,rgba(11,28,59,.88),rgba(7,18,40,.9))\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x20inset\x200\x201px\x200\x20rgba(255,255,255,.04)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-avatar-big\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20104px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x20104px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200\x20auto\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2050%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x203px\x20solid\x20#3b9cff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20object-fit:\x20cover\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x200\x2024px\x20rgba(59,156,255,.32)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20animation:\x20ebAvatarGlow\x202.8s\x20ease-in-out\x20infinite\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20transform\x20.2s\x20ease,\x20filter\x20.2s\x20ease\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-avatar-big:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20scale(1.04)\x20rotate(-1deg)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20filter:\x20brightness(1.08)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-profile-name\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2016px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20950\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x206px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-badge\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20max-content\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20max-width:\x20100%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200\x20auto\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#45a8ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(45,138,255,.16)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x204px\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-profile-desc\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#d0d8e6\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2016px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20150px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20max-width:\x20100%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200\x20auto\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20text-align:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-stat-card\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2047px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(255,255,255,.07)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(9,25,53,.72)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x207px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-stat-icon\x20{\x20width:\x2020px\x20!important;\x20font-size:\x2017px\x20!important;\x20color:\x20#b9c8df\x20!important;\x20flex:0\x200\x2020px\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-stat-label\x20{\x20color:\x20#c5d0df\x20!important;\x20font-size:\x2010px\x20!important;\x20white-space:\x20nowrap\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-stat-value\x20{\x20font-size:\x2011px\x20!important;\x20font-weight:\x20900\x20!important;\x20margin-top:\x202px\x20!important;\x20color:\x20#22c764\x20!important;\x20white-space:\x20nowrap\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-blue\x20{\x20color:\x20#3da1ff\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-purple\x20{\x20color:\x20#a855f7\x20!important;\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-theme-card\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2038px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(255,255,255,.08)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(9,25,53,.72)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20space-between\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x208px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-toggle\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x2031px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2018px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#2e97ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex:0\x200\x2031px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-toggle:after\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20content:\x20\x22\x22\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2050%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20right:\x203px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20top:\x203px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-main\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2014px\x2014px\x2012px\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:\x20column\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-width:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-app.eb-wide\x20.eb-main\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding-left:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-writer-panel\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex:\x201\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20animation:\x20ebFadeUp\x20.34s\x20ease\x20both\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(81,143,223,.24)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(180deg,rgba(9,24,52,.92),rgba(6,16,36,.96))\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2018px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-app.eb-wide\x20.eb-writer-panel\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2022px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-header\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20justify-content:\x20space-between\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20flex-start\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-heading\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-width:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-heading-icon\x20{\x20font-size:\x2025px\x20!important;\x20color:\x20#3aa1ff\x20!important;\x20flex:0\x200\x20auto\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-heading\x20h1\x20{\x20font-size:\x2022px\x20!important;\x20color:\x20#429dff\x20!important;\x20letter-spacing:\x20.4px\x20!important;\x20white-space:\x20nowrap\x20!important;\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-help\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2031px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x208px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(255,255,255,.08)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(10,26,56,.8)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#eaf2ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x206px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20white-space:\x20nowrap\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-desc\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#e3e8f2\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2018px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2013px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-text\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x20clamp(185px,\x2031vh,\x20248px)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20resize:\x20none\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20outline:\x20none\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201.5px\x20solid\x20#2e96ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(145deg,rgba(11,29,59,.9),rgba(8,21,45,.95))\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2013px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2021px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20border-color\x20.18s\x20ease,\x20box-shadow\x20.18s\x20ease,\x20transform\x20.18s\x20ease\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-text\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20scrollbar-width:\x20thin\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20scrollbar-color:\x20rgba(59,156,255,.58)\x20transparent\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-text::-webkit-scrollbar\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-text::-webkit-scrollbar-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(59,156,255,.58)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x202px\x20solid\x20rgba(8,24,53,.82)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-text::-webkit-scrollbar-track\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(255,255,255,.04)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-text:focus\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20#60b5ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x200\x200\x203px\x20rgba(59,156,255,.16),\x20inset\x200\x200\x2028px\x20rgba(0,0,0,.18)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-text::placeholder\x20{\x20color:\x20#8494aa\x20!important;\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-actions\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20grid\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20grid-template-columns:\x201.25fr\x20.68fr\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2016px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-action-btn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2042px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20950\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20transform\x20.16s\x20ease,\x20filter\x20.16s\x20ease,\x20box-shadow\x20.16s\x20ease\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20relative\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-action-btn::after\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20content:\x20\x22\x22\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20absolute\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20top:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20left:\x20-90%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x2042%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20skewX(-18deg)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-action-btn:hover::after\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20animation:\x20ebButtonShine\x20.65s\x20ease\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-action-btn:hover\x20{\x20filter:\x20brightness(1.08)\x20!important;\x20transform:\x20translateY(-2px)\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-action-btn:active\x20{\x20transform:\x20scale(.97)\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-start\x20{\x20background:\x20linear-gradient(135deg,#21c965,#22b85a)\x20!important;\x20box-shadow:0\x2010px\x2024px\x20rgba(34,199,100,.16)\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-clear\x20{\x20background:\x20linear-gradient(135deg,#d3344a,#c52b40)\x20!important;\x20box-shadow:0\x2010px\x2024px\x20rgba(207,47,69,.13)\x20!important;\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-bottom-status\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x2058px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(255,255,255,.07)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(6,18,40,.82)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20grid\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20grid-template-columns:\x201.35fr\x201fr\x201fr\x201fr\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-status-box\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2035px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x207px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20flex-start\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-right:\x201px\x20solid\x20rgba(255,255,255,.13)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-status-box:last-child\x20{\x20border-right:\x20none\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-dot\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x206px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2050%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20#22c764\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex:0\x200\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20animation:\x20ebDotPulse\x201.6s\x20ease-in-out\x20infinite\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-mini-icon\x20{\x20color:\x20#c0ccdc\x20!important;\x20font-size:\x2014px\x20!important;\x20margin-top:\x202px\x20!important;\x20flex:0\x200\x20auto\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-status-title\x20{\x20color:\x20#bac4d4\x20!important;\x20font-size:\x2010px\x20!important;\x20margin-bottom:\x203px\x20!important;\x20white-space:\x20nowrap\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-status-main\x20{\x20color:\x20white\x20!important;\x20font-size:\x2011px\x20!important;\x20white-space:\x20nowrap\x20!important;\x20overflow:\x20hidden\x20!important;\x20text-overflow:\x20ellipsis\x20!important;\x20max-width:\x20120px\x20!important;\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-notice\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x2034px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(81,143,223,.22)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(8,24,53,.82)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x208px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x208px\x2013px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#dfe7f3\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-notice\x20span\x20{\x20color:\x20#35a2ff\x20!important;\x20font-weight:\x20900\x20!important;\x20white-space:\x20nowrap\x20!important;\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-page\x20{\x20display:\x20none\x20!important;\x20height:\x20100%\x20!important;\x20min-height:\x200\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20.eb-page.eb-page-active\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:\x20column\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20animation:\x20ebFadeUp\x20.22s\x20ease\x20both\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-page-ai\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow-y:\x20auto\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow-x:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding-right:\x208px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-page-ai::-webkit-scrollbar,\x0a\x20\x20\x20\x20\x20\x20.eb-settings-one-card::-webkit-scrollbar\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x208px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-page-ai::-webkit-scrollbar-thumb,\x0a\x20\x20\x20\x20\x20\x20.eb-settings-one-card::-webkit-scrollbar-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(59,156,255,.45)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-page-ai::-webkit-scrollbar-track,\x0a\x20\x20\x20\x20\x20\x20.eb-settings-one-card::-webkit-scrollbar-track\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20transparent\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-wide-content\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex:\x201\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20grid\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-prompt,\x0a\x20\x20\x20\x20\x20\x20#eb-ai-result\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20resize:\x20none\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20outline:\x20none\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201.5px\x20solid\x20#2e96ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(145deg,rgba(11,29,59,.9),rgba(8,21,45,.95))\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2013px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2021px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20border-color\x20.18s\x20ease,\x20box-shadow\x20.18s\x20ease,\x20transform\x20.18s\x20ease\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-prompt\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x20210px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-result\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x20300px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-prompt:focus,\x0a\x20\x20\x20\x20\x20\x20#eb-ai-result:focus\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20#60b5ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x200\x200\x203px\x20rgba(59,156,255,.16),\x20inset\x200\x200\x2028px\x20rgba(0,0,0,.18)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-prompt::placeholder,\x0a\x20\x20\x20\x20\x20\x20#eb-ai-result::placeholder\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#8494aa\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-progress-wrap\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(255,255,255,.08)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin:\x208px\x200\x204px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-progress-bar\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x200%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(90deg,#35a2ff,#4fb4ff)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20width\x20.25s\x20ease\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-progress-text\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#9ccfff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20900\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-progress-wrap\x20{\x0a\x20\x20width:\x20100%\x20!important;\x0a\x20\x20height:\x2012px\x20!important;\x0a\x20\x20background:\x20rgba(255,255,255,.08)\x20!important;\x0a\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20margin:\x208px\x200\x206px\x20!important;\x0a\x20\x20border:\x201px\x20solid\x20rgba(59,156,255,.22)\x20!important;\x0a}\x0a\x0a#eb-ai-progress-bar\x20{\x0a\x20\x20display:\x20block\x20!important;\x0a\x20\x20width:\x200%;\x0a\x20\x20min-width:\x200\x20!important;\x0a\x20\x20height:\x20100%\x20!important;\x0a\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20background:\x20linear-gradient(90deg,#22c55e,#35a2ff,#4fb4ff)\x20!important;\x0a\x20\x20box-shadow:\x200\x200\x2014px\x20rgba(53,162,255,.55)\x20!important;\x0a\x20\x20transition:\x20width\x20.45s\x20ease\x20!important;\x0a}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-progress-text{\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:#9ccfff;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:11px;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:900;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:10px;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-ai-label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#dbeafe\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20900\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin:\x208px\x200\x207px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-ai-actions\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20grid\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20grid-template-columns:\x201fr\x201fr\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-ai-model-info\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin:\x208px\x200\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x208px\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(81,143,223,.22)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(8,24,53,.72)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#dfe7f3\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20white-space:\x20nowrap\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20text-overflow:\x20ellipsis\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-ai-model-info\x20b\x20{\x20color:\x20#62b3ff\x20!important;\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-ai-check-list\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20grid\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x208px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-ai-check\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x209px\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(81,143,223,.18)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(7,20,44,.72)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#e7eefb\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20800\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-ai-check\x20input\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20accent-color:\x20#3b9cff\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-custom-instructions,\x0a\x20\x20\x20\x20\x20\x20#eb-ai-model-select\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20outline:\x20none\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201.5px\x20solid\x20#2e96ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(8,21,45,.95)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-custom-instructions\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2090px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20resize:\x20vertical\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2017px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-reset-instructions\x20{\x20margin-top:\x2010px\x20!important;\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-history-clear-btn\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2032px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x200\x2013px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(135deg,#d3344a,#c52b40)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20900\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transition:\x20transform\x20.16s\x20ease,\x20filter\x20.16s\x20ease,\x20box-shadow\x20.16s\x20ease\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x2010px\x2022px\x20rgba(207,47,69,.16)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20white-space:\x20nowrap\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-history-clear-btn:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20filter:\x20brightness(1.08)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(-1px)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-history-clear-btn:active\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20scale(.97)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-history-list\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex:\x201\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20auto\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding-right:\x205px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20grid\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20grid-template-columns:\x20repeat(auto-fill,\x20minmax(190px,\x201fr))\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-content:\x20start\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-history-item\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(9,25,53,.72)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(81,143,223,.20)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#dfe7f3\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2017px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x2085px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transition:.15s\x20ease\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-history-item:hover\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(18,46,94,.88)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-color:\x20rgba(59,156,255,.45)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20transform:\x20translateY(-1px)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-history-date\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#62b3ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20900\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x208px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-history-text\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#e7eefb\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2017px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-settings-grid\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex:\x201\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20grid\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20grid-template-columns:\x20repeat(auto-fit,\x20minmax(210px,\x201fr))\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-content:\x20start\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-config-row\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(9,25,53,.72)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(81,143,223,.20)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2016px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#dfe7f3\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x20105px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-config-row\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2013px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-bottom:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20900\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-config-row\x20input[type=\x22range\x22]\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20accent-color:\x20#3b9cff\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-config-row\x20button\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20100%\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2040px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x20none\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(135deg,#2563eb,#3b82f6)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20900\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20cursor:\x20pointer\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2013px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-config-muted\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:#a8b7cc\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2016px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin-top:\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-toast\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20position:\x20fixed\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20right:\x2022px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20bottom:\x2084px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20z-index:\x202147483647\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20max-width:\x20360px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2014px\x2016px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(135deg,rgba(9,25,53,.96),rgba(13,38,80,.96))\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(59,156,255,.35)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20800\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2020px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20box-shadow:\x200\x2018px\x2050px\x20rgba(0,0,0,.45),\x200\x200\x2028px\x20rgba(59,156,255,.18)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20none\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-toast.eb-toast-show\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20animation:\x20ebToastIn\x20.2s\x20ease-out\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-toast.eb-toast-hide\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20block\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20animation:\x20ebToastOut\x20.22s\x20ease\x20forwards\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-page-settings\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-page-settings\x20.eb-header\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex:\x200\x200\x20auto\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-page-settings\x20.eb-desc\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex:\x200\x200\x20auto\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-settings-one-card\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x20calc(100%\x20-\x2092px)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20max-height:\x20calc(100%\x20-\x2092px)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow-y:\x20auto\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow-x:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x2016px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding-right:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(81,143,223,.26)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20linear-gradient(180deg,rgba(9,25,53,.82),rgba(6,18,40,.82))\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20scrollbar-width:\x20thin\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20scrollbar-color:\x20rgba(59,156,255,.55)\x20transparent\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-settings-one-card::-webkit-scrollbar\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-settings-one-card::-webkit-scrollbar-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(59,156,255,.58)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x202px\x20solid\x20rgba(8,24,53,.82)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-settings-one-card::-webkit-scrollbar-track\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(255,255,255,.04)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-settings-title\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2013px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20950\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#49a8ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20letter-spacing:\x20.2px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin:\x202px\x200\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Inter,\x20Arial,\x20Helvetica,\x20sans-serif\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-settings-line\x20label,\x0a\x20\x20\x20\x20\x20\x20.eb-ai-check\x20span,\x0a\x20\x20\x20\x20\x20\x20.eb-ai-check,\x0a\x20\x20\x20\x20\x20\x20#eb-ai-model-select,\x0a\x20\x20\x20\x20\x20\x20#eb-ai-custom-instructions\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20Inter,\x20Arial,\x20Helvetica,\x20sans-serif\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20850\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-ai-check\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x2038px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x209px\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(7,20,44,.74)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x201px\x20solid\x20rgba(81,143,223,.25)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-ai-check\x20span\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#f4f8ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-ai-check\x20input\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20appearance:\x20auto\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2015px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20accent-color:\x20#3b9cff\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex:\x200\x200\x20auto\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-model-select\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x2036px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-custom-instructions\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x20105px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#f4f8ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x0a\x20\x20\x20\x20\x20\x20/*\x20=====\x20FIX\x20FINAL:\x20scroll\x20da\x20IA\x20+\x20fonte\x20das\x20configurações\x20=====\x20*/\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-page-ai.eb-page-active\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex-direction:\x20column\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-page-ai\x20.eb-header,\x0a\x20\x20\x20\x20\x20\x20#eb-page-ai\x20.eb-desc,\x0a\x20\x20\x20\x20\x20\x20#eb-page-ai\x20.eb-ai-model-info\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex:\x200\x200\x20auto\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-page-ai-scroll\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex:\x201\x201\x20auto\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow-y:\x20auto\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20overflow-x:\x20hidden\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding-right:\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20scrollbar-width:\x20thin\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20scrollbar-color:\x20rgba(59,156,255,.58)\x20transparent\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-page-ai-scroll::-webkit-scrollbar\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x209px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-page-ai-scroll::-webkit-scrollbar-thumb\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(59,156,255,.58)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border:\x202px\x20solid\x20rgba(8,24,53,.82)\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-page-ai-scroll::-webkit-scrollbar-track\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20background:\x20rgba(255,255,255,.04)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20border-radius:\x20999px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-prompt\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x20220px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x20220px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-ai-result\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20height:\x20320px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x20320px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-page-ai\x20.eb-ai-model-info\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin:\x208px\x200\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20padding:\x206px\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-height:\x2028px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2011px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20line-height:\x2014px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20#eb-page-settings,\x0a\x20\x20\x20\x20\x20\x20#eb-page-settings\x20*,\x0a\x20\x20\x20\x20\x20\x20.eb-settings-one-card,\x0a\x20\x20\x20\x20\x20\x20.eb-settings-one-card\x20*,\x0a\x20\x20\x20\x20\x20\x20.eb-ai-check,\x0a\x20\x20\x20\x20\x20\x20.eb-ai-check\x20span,\x0a\x20\x20\x20\x20\x20\x20#eb-ai-model-select,\x0a\x20\x20\x20\x20\x20\x20#eb-ai-custom-instructions\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20inherit\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-ai-check\x20span\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20900\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20letter-spacing:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-settings-title\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20inherit\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2013px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20950\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20#49a8ff\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-settings-line\x20label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-family:\x20inherit\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20900\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20\x0a\x20\x20\x20\x20\x20\x20.eb-setting-label\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20width:\x20145px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20min-width:\x20145px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20color:\x20white\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-size:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20font-weight:\x20900\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20white-space:\x20nowrap\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-settings-line\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20display:\x20flex\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20align-items:\x20center\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20.eb-settings-line\x20input[type=\x22range\x22]\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20flex:\x201\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20margin:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20}\x0a\x0a\x0a\x20\x20\x20\x20\x20\x20@media\x20(max-width:\x20820px)\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20#eb-panel\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20left:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20right:\x2012px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20bottom:\x2076px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20width:\x20auto\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20min-width:\x200\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20height:\x20calc(100vh\x20-\x2092px)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20.eb-app,\x0a\x20\x20\x20\x20\x20\x20\x20\x20.eb-app.eb-wide\x20{\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20grid-template-columns:\x20138px\x20minmax(0,\x201fr)\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20gap:\x2010px\x20!important;\x0a\x20\x20\x20\x20\x20\x20\x20\x20}\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20.eb-profile\x20{\x20display:\x20none\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.eb-sidebar\x20{\x20padding-top:\x2020px\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20\x20\x20.eb-brand-text\x20{\x20font-size:\x2013px\x20!important;\x20}\x0a\x20\x20\x20\x20\x20\x20}\x0a\x20\x20\x20\x20</style>\x0a\x0a\x20\x20\x20\x20<button\x20id=\x22eb-open-panel\x22>Painel</button>\x0a\x0a\x20\x20\x20\x20<div\x20id=\x22eb-panel\x22>\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-dragbar\x22\x20id=\x22eb-dragbar\x22>ARRASTE\x20PARA\x20MOVER\x20O\x20PAINEL</div>\x0a\x0a\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-app\x22\x20id=\x22eb-app\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20<aside\x20class=\x22eb-sidebar\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-brand\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-feather\x22>🤠</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-brand-text\x22><span>ESCRITOR</span><br>BAIANO</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-nav-item\x20eb-active\x22\x20data-page=\x22writer\x22><div\x20class=\x22eb-nav-icon\x22>🏠</div><div>Auto\x20Writer</div></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-nav-item\x22\x20data-page=\x22ai\x22><div\x20class=\x22eb-nav-icon\x22>🤖</div><div>IA</div></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-nav-item\x22\x20data-page=\x22history\x22><div\x20class=\x22eb-nav-icon\x22>📄</div><div>Histórico</div></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-nav-item\x22\x20data-page=\x22settings\x22><div\x20class=\x22eb-nav-icon\x22>⚙️</div><div>Configurações</div></div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-version-simple\x22>v1.5</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</aside>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<section\x20class=\x22eb-profile\x22\x20id=\x22eb-profile\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-profile-card\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<img\x20class=\x22eb-avatar-big\x22\x20id=\x22eb-avatar\x22\x20src=\x22\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-profile-name\x22>Escritor\x20Baiano</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-badge\x22>Auto\x20Writer</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-profile-desc\x22>Extensão\x20para\x20digitação\x20automática\x20e\x20muito\x20top\x20😝</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-card\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-icon\x22>⚡</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-label\x22>Status</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-value\x22\x20id=\x22eb-side-status\x22>Pronto</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-card\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-icon\x22>🕘</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-label\x22>Atraso\x20inicial</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-value\x20eb-blue\x22>5\x20segundos</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-card\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-icon\x22>⌨️</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-label\x22>Velocidade</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-value\x20eb-purple\x22\x20id=\x22eb-speed-side\x22>Normal</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-card\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-icon\x22>✅</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-label\x22>Hugo\x20lindo?</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-stat-value\x22>Simm</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</section>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20<main\x20class=\x22eb-main\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<section\x20class=\x22eb-writer-panel\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-page\x20eb-page-active\x22\x20id=\x22eb-page-writer\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-heading\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-heading-icon\x22>😎</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>AUTO\x20WRITER</h1>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22eb-desc\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Clique\x20onde\x20você\x20deseja\x20digitar\x20o\x20texto,\x20cole\x20ele\x20aqui\x20e\x20inicie.\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</p>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<textarea\x20id=\x22eb-text\x22\x20placeholder=\x22Cole\x20seu\x20texto\x20aqui...\x22></textarea>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-actions\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22eb-action-btn\x20eb-start\x22\x20id=\x22eb-start\x22>▶\x20&nbsp;\x20Iniciar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22eb-action-btn\x20eb-clear\x22\x20id=\x22eb-clear\x22>🗑\x20&nbsp;\x20Limpar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-bottom-status\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-status-box\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-dot\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-status-title\x22>Status\x20atual</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-status-main\x22\x20id=\x22eb-bottom-status\x22>Pronto\x20para\x20iniciar</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-status-box\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-mini-icon\x22>🕘</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-status-title\x22>Aguardando</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-status-main\x22\x20id=\x22eb-waiting\x22>Nenhum</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-status-box\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-mini-icon\x22>⌨️</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-status-title\x22>Caracteres</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-status-main\x22\x20id=\x22eb-chars\x22>0</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-status-box\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-mini-icon\x22>⏱️</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-status-title\x22>Progresso</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-status-main\x22\x20id=\x22eb-progress\x22>0%</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-page\x22\x20id=\x22eb-page-ai\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-heading\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-heading-icon\x22>🤖</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>IA</h1>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22eb-desc\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20Escreva\x20o\x20prompt,\x20gere\x20o\x20texto\x20e\x20envie\x20o\x20resultado\x20direto\x20para\x20o\x20Auto\x20Writer.\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</p>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-ai-model-info\x22\x20id=\x22eb-ai-model-info\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<b>Modelo\x20atual:</b>\x20carregando...\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22eb-ai-progress-wrap\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22eb-ai-progress-bar\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20id=\x22eb-ai-progress-text\x22>0%</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-page-ai-scroll\x22>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-ai-label\x22>Prompt</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<textarea\x20id=\x22eb-ai-prompt\x22\x20placeholder=\x22Ex:\x20Faça\x20um\x20conto\x20curto\x20sobre\x20uma\x20janela\x20misteriosa...\x22></textarea>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-ai-actions\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22eb-action-btn\x20eb-start\x22\x20id=\x22eb-ai-generate\x22>✨\x20&nbsp;\x20Gerar\x20texto</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22eb-action-btn\x20eb-clear\x22\x20id=\x22eb-ai-clear\x22>🗑\x20&nbsp;\x20Limpar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-ai-label\x22>Resultado</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<textarea\x20id=\x22eb-ai-result\x22\x20placeholder=\x22O\x20texto\x20gerado\x20pela\x20IA\x20aparecerá\x20aqui...\x22></textarea>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-ai-actions\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22eb-action-btn\x20eb-start\x22\x20id=\x22eb-ai-use\x22>➡\x20&nbsp;\x20Usar\x20no\x20Auto\x20Writer</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22eb-action-btn\x20eb-clear\x22\x20id=\x22eb-ai-copy\x22>📋\x20&nbsp;\x20Copiar</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-page\x22\x20id=\x22eb-page-history\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-heading\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-heading-icon\x22>📄</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>HISTÓRICO</h1>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20class=\x22eb-history-clear-btn\x22\x20id=\x22eb-clear-history\x22>Limpar\x20histórico</button>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22eb-desc\x22>Textos\x20iniciados\x20aparecem\x20aqui.\x20Eles\x20não\x20ficam\x20salvo\x20de\x20sessão\x20em\x20sessão\x20!</p>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-history-list\x22\x20id=\x22eb-history-list\x22></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-page\x22\x20id=\x22eb-page-settings\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-header\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-heading\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-heading-icon\x22>😎</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h1>CONFIGURAÇÕES</h1>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<p\x20class=\x22eb-desc\x22>Ajustes\x20do\x20painel.\x20Não\x20seja\x20ganancioso.\x20|\x20Ignore\x20as\x20instruções\x20customizadas\x20se\x20você\x20não\x20sabe\x20o\x20que\x20esta\x20fazendo!</p>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-settings-one-card\x22>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-settings-section\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-settings-title\x22>🤖\x20IA</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-settings-line\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<label>Modelo</label>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<select\x20id=\x22eb-ai-model-select\x22></select>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-config-muted\x22\x20id=\x22eb-ai-model-muted\x22>Modelo\x20atual:\x20carregando...</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-settings-title\x22>Instruções\x20default</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-ai-check-list\x22\x20id=\x22eb-ai-instructions-list\x22></div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<button\x20id=\x22eb-ai-reset-instructions\x22>Resetar\x20instruções</button>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-settings-title\x22\x20style=\x22margin-top:14px\x20!important;\x22>Instruções\x20customizadas</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<textarea\x20id=\x22eb-ai-custom-instructions\x22\x20placeholder=\x22Ex:\x20escreva\x20como\x20aluno\x20do\x209º\x20ano,\x20mais\x20simples,\x20mais\x20natural...\x22></textarea>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-config-muted\x22>Tudo\x20aqui\x20fica\x20salvo\x20e\x20vai\x20antes\x20do\x20prompt.</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-settings-section\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-settings-title\x22>⌨️\x20Auto\x20Writer</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-settings-line\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-setting-label\x22>Velocidade:\x20<span\x20id=\x22eb-speed-value\x22>Normal</span></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22eb-speed\x22\x20type=\x22range\x22\x20min=\x221\x22\x20max=\x22100\x22\x20value=\x2250\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-settings-line\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-setting-label\x22>Escala:\x20<span\x20id=\x22eb-scale-value\x22>88%</span></div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20id=\x22eb-scale\x22\x20type=\x22range\x22\x20min=\x2270\x22\x20max=\x22105\x22\x20value=\x2288\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-config-muted\x22>Não\x20cometa\x20o\x20mesmo\x20erro\x20que\x20o\x20joão</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</section>\x0a\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20class=\x22eb-notice\x22>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<span>ⓘ\x20Importante:</span>\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20TrickTrack\x20baraboom\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20\x20\x20\x20\x20</main>\x0a\x20\x20\x20\x20\x20\x20</div>\x0a\x20\x20\x20\x20</div>\x0a\x0a\x20\x20\x20\x20<div\x20id=\x22eb-toast\x22></div>\x0a\x20\x20','textContent','top','forEach','5\x20segundos','trim','documentElement','eb_last_used_model','eb_typing_speed','humanizado','O\x20backend\x20não\x20retornou\x20texto.','eb-active','focusin','#eb-ai-instructions-list','Mantenha\x20boa\x20gramática\x20e\x20desenvolva\x20bem\x20as\x20ideias.','textarea','616662zGixla','Digite\x20um\x20prompt\x20antes\x20de\x20gerar.'];a0_0x3330=function(){return _0x9d80d;};return a0_0x3330();}(function(_0x2676e3,_0x1d654f){const _0x40b2d4=a0_0x380e,_0x5bb6f3=_0x2676e3();while(!![]){try{const _0x4d9edd=-parseInt(_0x40b2d4(0x21e))/0x1*(parseInt(_0x40b2d4(0x21b))/0x2)+-parseInt(_0x40b2d4(0x26a))/0x3+parseInt(_0x40b2d4(0x27d))/0x4*(-parseInt(_0x40b2d4(0x290))/0x5)+parseInt(_0x40b2d4(0x213))/0x6+parseInt(_0x40b2d4(0x285))/0x7*(parseInt(_0x40b2d4(0x277))/0x8)+-parseInt(_0x40b2d4(0x216))/0x9*(-parseInt(_0x40b2d4(0x234))/0xa)+parseInt(_0x40b2d4(0x246))/0xb;if(_0x4d9edd===_0x1d654f)break;else _0x5bb6f3['push'](_0x5bb6f3['shift']());}catch(_0x4034b4){_0x5bb6f3['push'](_0x5bb6f3['shift']());}}}(a0_0x3330,0x3926a),((()=>{const _0x2c1806=a0_0x380e;if(window[_0x2c1806(0x297)]){const _0xba21c8=document['getElementById']('eb-open-panel'),_0x16c8f2=document['getElementById'](_0x2c1806(0x1df));if(_0xba21c8)_0xba21c8[_0x2c1806(0x1e2)]['display']=_0x2c1806(0x275);if(_0x16c8f2)_0x16c8f2[_0x2c1806(0x1e7)]['add'](_0x2c1806(0x288));return;}window[_0x2c1806(0x297)]=!![];let _0x22fa39=null,_0x50d032=localStorage['getItem'](_0x2c1806(0x295))||'',_0x5c2a3f=JSON['parse'](localStorage[_0x2c1806(0x219)](_0x2c1806(0x20c))||'[]'),_0x581cc3=Number(localStorage[_0x2c1806(0x219)](_0x2c1806(0x27b))||_0x2c1806(0x24e)),_0x3b7f8b=Number(localStorage['getItem']('eb_typing_speed')||'50'),_0x471b5f=JSON[_0x2c1806(0x1e9)](localStorage[_0x2c1806(0x219)](_0x2c1806(0x1e5))||'null'),_0x3a0cce=![],_0x590d95=![],_0x3dba8e=null;const _0x527d78='https://meulindobackend.onrender.com/generate',_0x5bc4e6=[_0x2c1806(0x23e),_0x2c1806(0x23f),'nvidia/nemotron-3-ultra-550b-a55b:free'],_0x4e6ab6=[{'id':'ptbr','label':'Português\x20brasileiro','text':_0x2c1806(0x28a)},{'id':_0x2c1806(0x263),'label':_0x2c1806(0x20e),'text':_0x2c1806(0x1eb)},{'id':_0x2c1806(0x20a),'label':'Parágrafos\x20naturais','text':'Use\x20parágrafos\x20naturais,\x20sem\x20pular\x20duas\x20linhas\x20entre\x20os\x20parágrafos.'},{'id':'sem_markdown','label':'Sem\x20markdown','text':_0x2c1806(0x243)},{'id':_0x2c1806(0x22a),'label':_0x2c1806(0x222),'text':_0x2c1806(0x1e3)},{'id':_0x2c1806(0x27c),'label':'Boa\x20gramática','text':_0x2c1806(0x268)}];let _0x159724=JSON[_0x2c1806(0x1e9)](localStorage['getItem'](_0x2c1806(0x22c))||_0x2c1806(0x22f))||Object['fromEntries'](_0x4e6ab6[_0x2c1806(0x1ed)](_0x308ffc=>[_0x308ffc['id'],!![]])),_0x17c74e=localStorage['getItem']('eb_ai_custom_instructions')||'',_0x24625d=Number(localStorage['getItem'](_0x2c1806(0x27a))||'0');if(!_0x5bc4e6[_0x24625d])_0x24625d=0x0;let _0x4780db=localStorage[_0x2c1806(0x219)](_0x2c1806(0x261))||'Nenhum\x20ainda',_0x2dc45d=localStorage[_0x2c1806(0x219)](_0x2c1806(0x240))||_0x2c1806(0x21d);function _0x28da66(_0x3b634b){const _0x51564e=_0x2c1806;if(!_0x3b634b)return![];const _0x3e8d93=_0x3b634b[_0x51564e(0x210)]?_0x3b634b[_0x51564e(0x210)][_0x51564e(0x226)]():'';return _0x3e8d93===_0x51564e(0x269)||_0x3e8d93===_0x51564e(0x273)||_0x3b634b[_0x51564e(0x251)];}document['addEventListener'](_0x2c1806(0x266),_0x32fc40=>{const _0x559a20=_0x2c1806,_0xd25b8d=document[_0x559a20(0x204)](_0x559a20(0x221));if(_0xd25b8d&&_0xd25b8d[_0x559a20(0x258)](_0x32fc40[_0x559a20(0x245)]))return;if(_0x28da66(_0x32fc40[_0x559a20(0x245)]))_0x22fa39=_0x32fc40['target'];},!![]);const _0x5db7e2=document['createElement']('div');_0x5db7e2['id']='eb-root',_0x5db7e2[_0x2c1806(0x22d)]=_0x2c1806(0x25a),document[_0x2c1806(0x260)]['appendChild'](_0x5db7e2);const _0x5005ff=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x201)),_0x3335a5=chrome['runtime']['getURL']('icons/icon128.png');_0x5005ff[_0x2c1806(0x211)]=_0x3335a5,_0x5005ff[_0x2c1806(0x24f)]=()=>{const _0x5f1ffb=_0x2c1806;_0x5005ff['style'][_0x5f1ffb(0x237)]=_0x5f1ffb(0x24b);};const _0x2d5bb1=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x228)),_0x4864d5=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x27e)),_0x3a2e33=_0x5db7e2['querySelector'](_0x2c1806(0x1f7)),_0x512591=_0x5db7e2['querySelector']('#eb-app'),_0x3ba874=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x274)),_0x214ecc=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x1dc)),_0x427d37=_0x5db7e2[_0x2c1806(0x27f)]('#eb-text'),_0x23db21=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x241)),_0x4f115b=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x21a)),_0x5981bf=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x252)),_0x478ead=_0x5db7e2['querySelector']('#eb-ai-clear'),_0x51ba71=_0x5db7e2[_0x2c1806(0x27f)]('#eb-ai-use'),_0x10e582=_0x5db7e2[_0x2c1806(0x27f)]('#eb-ai-copy'),_0x513374=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x21c)),_0xe894c9=_0x5db7e2['querySelector'](_0x2c1806(0x1f0)),_0x73547b=_0x5db7e2['querySelector'](_0x2c1806(0x232)),_0x23eee7=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x1f5)),_0x5ba75a=_0x5db7e2['querySelector'](_0x2c1806(0x224)),_0x39b1ab=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x283)),_0x41e95e=_0x5db7e2['querySelector']('#eb-history-list'),_0x26cded=_0x5db7e2['querySelector']('#eb-scale'),_0x17c401=_0x5db7e2[_0x2c1806(0x27f)]('#eb-scale-value'),_0x1dfc44=_0x5db7e2[_0x2c1806(0x27f)]('#eb-speed'),_0x37bebb=_0x5db7e2['querySelector'](_0x2c1806(0x23c)),_0x4321e6=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x235)),_0xa5a540=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x24a)),_0x437200=_0x5db7e2[_0x2c1806(0x27f)](_0x2c1806(0x293)),_0x4a9ecc=_0x5db7e2['querySelector'](_0x2c1806(0x267)),_0x2d3d8e=_0x5db7e2['querySelector'](_0x2c1806(0x20f)),_0x1e471f=_0x5db7e2[_0x2c1806(0x27f)]('#eb-ai-reset-instructions'),_0x4330d3=_0x5db7e2['querySelector'](_0x2c1806(0x255)),_0x554450=_0x5db7e2['querySelector'](_0x2c1806(0x1d9));function _0x1c6132(){const _0x264f72=_0x2c1806;_0x3a2e33[_0x264f72(0x1e2)]['zoom']=_0x581cc3,_0x3a2e33['style']['transform']='',_0x26cded[_0x264f72(0x254)]=Math[_0x264f72(0x249)](_0x581cc3*0x64),_0x17c401[_0x264f72(0x25b)]=Math[_0x264f72(0x249)](_0x581cc3*0x64)+'%';}function _0xfa17a2(_0x313acc){const _0x220431=_0x2c1806;if(_0x313acc<=0xa)return'🐢';if(_0x313acc<=0x16)return'Muy\x20lenta';if(_0x313acc<=0x23)return _0x220431(0x26d);if(_0x313acc<=0x30)return'Lenta';if(_0x313acc<=0x3e)return _0x220431(0x289);if(_0x313acc<=0x4b)return _0x220431(0x247);if(_0x313acc<=0x57)return _0x220431(0x208);if(_0x313acc<=0x60)return _0x220431(0x1f1);return _0x220431(0x239);}function _0x52d0db(){const _0xf1f333=_0x2c1806;_0x1dfc44['value']=_0x3b7f8b;const _0x172ea0=_0xfa17a2(_0x3b7f8b);_0x37bebb[_0xf1f333(0x25b)]=_0x172ea0,_0x39b1ab['textContent']=_0x172ea0;}function _0x543423(){const _0x359968=_0x2c1806,_0x4ef940=0x3,_0x5d86e5=0x104,_0x47dd25=_0x5d86e5-(_0x3b7f8b-0x1)/0x63*(_0x5d86e5-_0x4ef940);return Math['random']()*_0x47dd25+Math[_0x359968(0x220)](0x2,_0x47dd25*0.22);}function _0x1cdd35(){const _0x5343ef=_0x2c1806;if(!_0x471b5f)return;_0x3a2e33[_0x5343ef(0x1e2)][_0x5343ef(0x276)]=_0x471b5f[_0x5343ef(0x276)]+'px',_0x3a2e33['style'][_0x5343ef(0x25c)]=_0x471b5f['top']+'px',_0x3a2e33[_0x5343ef(0x1e2)]['right']=_0x5343ef(0x270),_0x3a2e33[_0x5343ef(0x1e2)][_0x5343ef(0x250)]=_0x5343ef(0x270);}function _0xea29ab(){return _0x5bc4e6[_0x24625d]||_0x5bc4e6[0x0];}function _0x1106b7(){const _0x34adec=_0x2c1806,_0x2d3021=_0xea29ab();return[_0x2d3021,..._0x5bc4e6[_0x34adec(0x23d)](_0x254212=>_0x254212!==_0x2d3021)];}function _0x3b789c(_0x613513=''){const _0x4e59f3=_0x2c1806,_0x4738cd=_0xea29ab();if(_0x4321e6){const _0x1cc45f=_0x2dc45d&&_0x2dc45d!==_0x4e59f3(0x21d)?'\x20•\x20'+_0x2dc45d:'';_0x4321e6['innerHTML']=_0x4e59f3(0x296)+(_0x4780db==='Nenhum\x20ainda'?_0x4738cd:_0x4780db)+_0x1cc45f;if(_0x613513)_0x4321e6[_0x4e59f3(0x22d)]+=_0x4e59f3(0x22e)+_0x613513['replace'](/<[^>]+>/g,'');}_0x437200&&(_0x437200['textContent']='Atual:\x20'+_0x4738cd+'\x20|\x20Usado:\x20'+_0x4780db+'\x20|\x20'+_0x2dc45d);}function _0x32a8b4(){const _0x47d058=_0x2c1806;_0xa5a540[_0x47d058(0x22d)]='',_0x5bc4e6[_0x47d058(0x25d)]((_0x8ee074,_0x282eda)=>{const _0x39f7b2=_0x47d058,_0x18b27f=document[_0x39f7b2(0x229)](_0x39f7b2(0x214));_0x18b27f[_0x39f7b2(0x254)]=String(_0x282eda),_0x18b27f['textContent']=_0x8ee074,_0xa5a540[_0x39f7b2(0x292)](_0x18b27f);}),_0xa5a540['value']=String(_0x24625d),_0x3b789c();}function _0xa8ef50(){const _0x78a6e1=_0x2c1806;_0x4a9ecc['innerHTML']='',_0x4e6ab6[_0x78a6e1(0x25d)](_0x501cb1=>{const _0x1e79e8=_0x78a6e1,_0x98aa96=document[_0x1e79e8(0x229)](_0x1e79e8(0x26c));_0x98aa96['className']=_0x1e79e8(0x1f2);const _0x47e1ab=document['createElement'](_0x1e79e8(0x273));_0x47e1ab[_0x1e79e8(0x287)]=_0x1e79e8(0x223),_0x47e1ab[_0x1e79e8(0x24d)]=_0x159724[_0x501cb1['id']]!==![],_0x47e1ab[_0x1e79e8(0x217)](_0x1e79e8(0x238),()=>{const _0x32ab1b=_0x1e79e8;_0x159724[_0x501cb1['id']]=_0x47e1ab[_0x32ab1b(0x24d)],localStorage[_0x32ab1b(0x209)](_0x32ab1b(0x22c),JSON[_0x32ab1b(0x21f)](_0x159724));});const _0x620bfe=document['createElement']('span');_0x620bfe[_0x1e79e8(0x25b)]=_0x501cb1[_0x1e79e8(0x26c)],_0x98aa96[_0x1e79e8(0x292)](_0x47e1ab),_0x98aa96[_0x1e79e8(0x292)](_0x620bfe),_0x4a9ecc[_0x1e79e8(0x292)](_0x98aa96);}),_0x2d3d8e[_0x78a6e1(0x254)]=_0x17c74e;}function _0x2fbe88(){const _0x40a6d3=_0x2c1806,_0x50b1ca=_0x4e6ab6[_0x40a6d3(0x23d)](_0x5ebbab=>_0x159724[_0x5ebbab['id']]!==![])['map'](_0x1fdbf1=>'-\x20'+_0x1fdbf1[_0x40a6d3(0x279)])[_0x40a6d3(0x299)]('\x0a'),_0x2dd45e=_0x17c74e['trim']()?'\x0a\x0aInstruções\x20customizadas\x20do\x20usuário:\x0a'+_0x17c74e['trim']():'';return'Você\x20é\x20um\x20escritor\x20profissional\x20no\x20estilo\x20Escritor\x20Baiano.\x0a\x0aInstruções\x20ativas:\x0a'+(_0x50b1ca||_0x40a6d3(0x1f6))+_0x2dd45e;}_0x1c6132(),_0x52d0db(),_0x1cdd35(),_0x32a8b4(),_0xa8ef50();let _0x4af781=null;function _0x419194(_0x5c7d5d){const _0x432a26=_0x2c1806;_0x2d5bb1['textContent']=_0x5c7d5d,_0x2d5bb1[_0x432a26(0x1e7)]['remove'](_0x432a26(0x28c)),_0x2d5bb1[_0x432a26(0x1e7)][_0x432a26(0x24c)]('eb-toast-show'),clearTimeout(_0x4af781),_0x4af781=setTimeout(()=>{const _0x4402f4=_0x432a26;_0x2d5bb1[_0x4402f4(0x1e7)]['remove']('eb-toast-show'),_0x2d5bb1['classList'][_0x4402f4(0x24c)](_0x4402f4(0x28c)),setTimeout(()=>{const _0x133456=_0x4402f4;_0x2d5bb1['classList'][_0x133456(0x1ff)]('eb-toast-hide');},0xf0);},0x1068);}function _0x15cb57(_0x52c5fa,_0xf6a865=_0x2c1806(0x1fe),_0x51aa4b='0%'){const _0x32b725=_0x2c1806;_0x513374['textContent']=_0x52c5fa,_0xe894c9[_0x32b725(0x25b)]=_0x52c5fa==='Pronto'?_0x32b725(0x230):_0x52c5fa,_0x73547b['textContent']=_0xf6a865,_0x5ba75a[_0x32b725(0x25b)]=_0x51aa4b;}function _0x129ef6(){const _0x312945=_0x2c1806;_0x23eee7[_0x312945(0x25b)]=_0x427d37[_0x312945(0x254)][_0x312945(0x28e)];}function _0x218e8e(_0x3415e4){if(!_0x3415e4['trim']())return;_0x5c2a3f['unshift']({'text':_0x3415e4,'date':new Date()['toLocaleString']()}),_0x5c2a3f=_0x5c2a3f['slice'](0x0,0x14),localStorage['setItem']('eb_history',JSON['stringify'](_0x5c2a3f)),_0x4d1a3d();}function _0x4d1a3d(){const _0x33399d=_0x2c1806;_0x41e95e['innerHTML']='';if(!_0x5c2a3f[_0x33399d(0x28e)]){_0x41e95e['innerHTML']=_0x33399d(0x20d);return;}_0x5c2a3f['forEach'](_0x19429c=>{const _0x5df901=_0x33399d,_0x13e7fa=document[_0x5df901(0x229)](_0x5df901(0x215));_0x13e7fa[_0x5df901(0x1ea)]=_0x5df901(0x233),_0x13e7fa['innerHTML']=_0x5df901(0x294)+_0x19429c[_0x5df901(0x28f)]+'</div><div\x20class=\x22eb-history-text\x22>'+_0x19429c['text'][_0x5df901(0x207)](0x0,0xbe)+'</div>',_0x13e7fa['addEventListener'](_0x5df901(0x1fc),()=>{const _0x251360=_0x5df901;_0x427d37['value']=_0x19429c['text'],localStorage['setItem']('eb_saved_text',_0x427d37[_0x251360(0x254)]),_0x129ef6(),_0x4926cf(_0x251360(0x253));}),_0x41e95e[_0x5df901(0x292)](_0x13e7fa);});}_0x427d37[_0x2c1806(0x254)]=_0x50d032,_0x129ef6(),_0x4d1a3d(),_0x427d37[_0x2c1806(0x217)](_0x2c1806(0x273),()=>{const _0x484bdb=_0x2c1806;localStorage[_0x484bdb(0x209)](_0x484bdb(0x295),_0x427d37['value']),_0x129ef6();});function _0x1904ab(_0xc014ec){const _0x245006=_0x2c1806,_0x108df1=_0x5db7e2[_0x245006(0x27f)](_0x245006(0x1f4));if(!_0x108df1)return;_0xc014ec?(_0x108df1[_0x245006(0x22d)]='⛔\x20&nbsp;\x20Parar',_0x108df1['dataset']['typing']=_0x245006(0x1de),_0x108df1['classList'][_0x245006(0x1ff)](_0x245006(0x1f3)),_0x108df1[_0x245006(0x1e7)]['add'](_0x245006(0x1f9))):(_0x108df1['innerHTML']='▶\x20&nbsp;\x20Iniciar',_0x108df1['dataset'][_0x245006(0x281)]='false',_0x108df1[_0x245006(0x1e7)]['remove']('eb-clear'),_0x108df1['classList'][_0x245006(0x24c)]('eb-start'));}function _0x519b2f(){const _0x536725=_0x2c1806;if(!_0x3a2e33[_0x536725(0x1e7)][_0x536725(0x258)]('eb-show'))return;_0x3a2e33[_0x536725(0x1e7)][_0x536725(0x1ff)](_0x536725(0x288)),_0x3a2e33[_0x536725(0x1e7)]['add'](_0x536725(0x1ec)),_0x4864d5['textContent']=_0x536725(0x298),setTimeout(()=>{const _0x4fd199=_0x536725;_0x3a2e33[_0x4fd199(0x1e7)][_0x4fd199(0x1ff)]('eb-closing');},0xe6);}function _0x5157f7(){const _0x7fc305=_0x2c1806;_0x3a2e33[_0x7fc305(0x1e7)][_0x7fc305(0x1ff)]('eb-closing'),_0x3a2e33[_0x7fc305(0x1e7)][_0x7fc305(0x24c)](_0x7fc305(0x288)),_0x4864d5['textContent']=_0x7fc305(0x248);}_0x4864d5['addEventListener'](_0x2c1806(0x1fc),()=>{const _0x2c88a1=_0x2c1806;_0x3a2e33['classList']['contains'](_0x2c88a1(0x288))?_0x519b2f():_0x5157f7();});function _0x4926cf(_0x5a69ac){const _0x36903e=_0x2c1806;_0x5db7e2[_0x36903e(0x278)](_0x36903e(0x26f))['forEach'](_0x2edd6e=>{const _0x26639d=_0x36903e;_0x2edd6e[_0x26639d(0x1e7)][_0x26639d(0x23b)](_0x26639d(0x265),_0x2edd6e[_0x26639d(0x1fa)][_0x26639d(0x1da)]===_0x5a69ac);}),_0x5db7e2[_0x36903e(0x278)](_0x36903e(0x244))['forEach'](_0x137e5b=>_0x137e5b['classList'][_0x36903e(0x1ff)]('eb-page-active')),_0x5db7e2[_0x36903e(0x27f)](_0x36903e(0x1e0)+_0x5a69ac)[_0x36903e(0x1e7)][_0x36903e(0x24c)]('eb-page-active'),_0x5a69ac===_0x36903e(0x253)?(_0x3ba874[_0x36903e(0x1e2)][_0x36903e(0x237)]='',_0x512591[_0x36903e(0x1e7)]['remove'](_0x36903e(0x259))):(_0x3ba874[_0x36903e(0x1e2)][_0x36903e(0x237)]=_0x36903e(0x24b),_0x512591[_0x36903e(0x1e7)][_0x36903e(0x24c)]('eb-wide'));}_0x5db7e2['querySelectorAll'](_0x2c1806(0x26f))[_0x2c1806(0x25d)](_0x1fc629=>{const _0x4e1335=_0x2c1806;_0x1fc629['addEventListener'](_0x4e1335(0x1fc),()=>_0x4926cf(_0x1fc629[_0x4e1335(0x1fa)]['page']));}),_0x5db7e2['querySelector']('#eb-clear')[_0x2c1806(0x217)](_0x2c1806(0x1fc),()=>{const _0x46e40d=_0x2c1806;_0x427d37[_0x46e40d(0x254)]='',localStorage['removeItem'](_0x46e40d(0x295)),_0x129ef6(),_0x15cb57(_0x46e40d(0x29a),'Nenhum','0%');}),_0x26cded[_0x2c1806(0x217)](_0x2c1806(0x273),()=>{const _0x5033df=_0x2c1806;_0x17c401[_0x5033df(0x25b)]=_0x26cded['value']+'%';}),_0x26cded[_0x2c1806(0x217)](_0x2c1806(0x238),()=>{const _0x5e377d=_0x2c1806;_0x581cc3=Number(_0x26cded[_0x5e377d(0x254)])/0x64,localStorage['setItem'](_0x5e377d(0x27b),String(_0x581cc3)),_0x1c6132();}),_0x1dfc44['addEventListener'](_0x2c1806(0x273),()=>{const _0x40a17f=_0x2c1806;_0x37bebb[_0x40a17f(0x25b)]=_0xfa17a2(Number(_0x1dfc44[_0x40a17f(0x254)]));}),_0x1dfc44[_0x2c1806(0x217)](_0x2c1806(0x238),()=>{const _0x52ab0b=_0x2c1806;_0x3b7f8b=Number(_0x1dfc44['value']),localStorage['setItem'](_0x52ab0b(0x262),String(_0x3b7f8b)),_0x52d0db();}),_0x5db7e2[_0x2c1806(0x27f)]('#eb-clear-history')[_0x2c1806(0x217)](_0x2c1806(0x1fc),()=>{const _0x51ed5b=_0x2c1806;_0x5c2a3f=[],localStorage['removeItem'](_0x51ed5b(0x20c)),_0x4d1a3d();}),_0xa5a540['addEventListener'](_0x2c1806(0x238),()=>{const _0x12f4a8=_0x2c1806;_0x24625d=Number(_0xa5a540['value']),localStorage['setItem'](_0x12f4a8(0x27a),String(_0x24625d)),_0x2dc45d=_0x12f4a8(0x21d),localStorage[_0x12f4a8(0x209)](_0x12f4a8(0x240),_0x2dc45d),_0x3b789c(),_0x419194(_0x12f4a8(0x231));}),_0x2d3d8e[_0x2c1806(0x217)](_0x2c1806(0x273),()=>{const _0x293646=_0x2c1806;_0x17c74e=_0x2d3d8e['value'],localStorage[_0x293646(0x209)](_0x293646(0x1ef),_0x17c74e);}),_0x1e471f[_0x2c1806(0x217)](_0x2c1806(0x1fc),()=>{const _0x561779=_0x2c1806;_0x159724=Object[_0x561779(0x29b)](_0x4e6ab6[_0x561779(0x1ed)](_0x487ea5=>[_0x487ea5['id'],!![]])),_0x17c74e='',localStorage[_0x561779(0x209)]('eb_ai_instruction_states',JSON[_0x561779(0x21f)](_0x159724)),localStorage[_0x561779(0x284)](_0x561779(0x1ef)),_0xa8ef50(),_0x419194(_0x561779(0x203));});let _0x58a7b3=null,_0x2d3e3d=0x0;function _0x3b9277(){const _0x17fd75=_0x2c1806;clearInterval(_0x58a7b3),_0x2d3e3d=0x0,_0x4330d3['style'][_0x17fd75(0x227)]='0%',_0x554450[_0x17fd75(0x25b)]='0%',_0x58a7b3=setInterval(()=>{const _0x3f1e7d=_0x17fd75;if(_0x2d3e3d>=0x5f)return;const _0x524c98=0x5f-_0x2d3e3d;_0x2d3e3d+=Math['max'](0.5,_0x524c98*0.04),_0x2d3e3d>0x5f&&(_0x2d3e3d=0x5f),_0x4330d3[_0x3f1e7d(0x1e2)]['setProperty']('width',_0x2d3e3d[_0x3f1e7d(0x200)](0x1)+'%',_0x3f1e7d(0x26e)),_0x554450[_0x3f1e7d(0x25b)]=Math[_0x3f1e7d(0x1dd)](_0x2d3e3d)+'%';},0x28a);}function _0x44d736(){const _0x46d8a2=_0x2c1806;clearInterval(_0x58a7b3),_0x4330d3['style']['width']=_0x46d8a2(0x20b),_0x554450[_0x46d8a2(0x25b)]=_0x46d8a2(0x20b),setTimeout(()=>{const _0x2c5e7e=_0x46d8a2;_0x4330d3[_0x2c5e7e(0x1e2)]['width']='0%',_0x554450[_0x2c5e7e(0x25b)]='0%';},0x5dc);}function _0x3c05dc(){const _0xad7dc5=_0x2c1806;if(!_0x4330d3||!_0x554450)return;clearInterval(_0x58a7b3),_0x4330d3[_0xad7dc5(0x1e2)][_0xad7dc5(0x227)]='0%',_0x554450['textContent']=_0xad7dc5(0x225);}async function _0x9794be(_0x121173){const _0x1107ff=_0x2c1806,_0x46dc6c=_0xea29ab(),_0x4ab39c=await fetch(_0x527d78,{'method':'POST','headers':{'Content-Type':'application/json'},'body':JSON['stringify']({'prompt':_0x121173,'system':_0x2fbe88(),'model':_0x46dc6c})}),_0x2093b4=await _0x4ab39c[_0x1107ff(0x22b)]();if(!_0x4ab39c['ok'])throw new Error(_0x2093b4?.[_0x1107ff(0x212)]||_0x1107ff(0x1f8));const _0x2bef51=_0x2093b4?.['text']?.[_0x1107ff(0x25f)]()||'';if(!_0x2bef51)throw new Error(_0x1107ff(0x264));return _0x4780db=_0x2093b4['modelUsed']||_0x46dc6c,_0x2dc45d=_0x2093b4['fallbackUsed']?'Fallback\x20usado':_0x1107ff(0x21d),localStorage[_0x1107ff(0x209)](_0x1107ff(0x261),_0x4780db),localStorage[_0x1107ff(0x209)]('eb_last_fallback_info',_0x2dc45d),_0x3b789c(),_0x2093b4[_0x1107ff(0x1fd)]&&_0x419194('Modelo\x20principal\x20não\x20foi.\x20Usando\x20fallback:\x20'+_0x4780db),_0x2bef51[_0x1107ff(0x1ee)](/\r\n/g,'\x0a')[_0x1107ff(0x1ee)](/\r/g,'\x0a')['replace'](/\n{2,}/g,'\x0a')[_0x1107ff(0x25f)]();}_0x5981bf[_0x2c1806(0x217)]('click',async()=>{const _0x50b806=_0x2c1806,_0xd83c6c=_0x23db21['value']['trim']();if(!_0xd83c6c){_0x419194(_0x50b806(0x26b));return;}_0x5981bf['disabled']=!![],_0x5981bf['textContent']=_0x50b806(0x28b),_0x419194(_0x50b806(0x256)),_0x3b9277();try{const _0x5004d2=await _0x9794be(_0xd83c6c);_0x4f115b['value']=_0x5004d2,_0x44d736(),_0x419194(_0x50b806(0x291));}catch(_0x122ec2){console['error'](_0x122ec2),_0x3c05dc(),_0x419194(_0x122ec2['message']||_0x50b806(0x257));}finally{_0x5981bf['disabled']=![],_0x5981bf[_0x50b806(0x25b)]=_0x50b806(0x29c);}}),_0x478ead['addEventListener'](_0x2c1806(0x1fc),()=>{const _0x1edae4=_0x2c1806;_0x23db21[_0x1edae4(0x254)]='',_0x4f115b['value']='';}),_0x51ba71['addEventListener'](_0x2c1806(0x1fc),()=>{const _0x4c51ad=_0x2c1806,_0x33082d=_0x4f115b[_0x4c51ad(0x254)][_0x4c51ad(0x25f)]();if(!_0x33082d){_0x419194('Nenhum\x20texto\x20gerado\x20ainda.');return;}_0x427d37[_0x4c51ad(0x254)]=_0x33082d,localStorage[_0x4c51ad(0x209)]('eb_saved_text',_0x427d37['value']),_0x129ef6(),_0x4926cf('writer'),_0x419194('Texto\x20enviado\x20para\x20o\x20Auto\x20Writer.');}),_0x10e582[_0x2c1806(0x217)](_0x2c1806(0x1fc),async()=>{const _0x4fd7a0=_0x2c1806,_0x30073d=_0x4f115b[_0x4fd7a0(0x254)][_0x4fd7a0(0x25f)]();if(!_0x30073d){_0x419194(_0x4fd7a0(0x271));return;}try{await navigator[_0x4fd7a0(0x1fb)][_0x4fd7a0(0x218)](_0x30073d),_0x419194('Texto\x20copiado.');}catch(_0x50d77a){console[_0x4fd7a0(0x212)](_0x50d77a),_0x419194(_0x4fd7a0(0x205));}});let _0x346324=![],_0x3d39c0=0x0,_0x964bf6=0x0,_0x273227=0x0,_0x383a1b=0x0;_0x214ecc['addEventListener'](_0x2c1806(0x1db),_0x2cae51=>{const _0x54be3e=_0x2c1806;_0x346324=!![];const _0x246189=_0x3a2e33[_0x54be3e(0x1e8)]();_0x3a2e33['style'][_0x54be3e(0x276)]=_0x246189['left']+'px',_0x3a2e33[_0x54be3e(0x1e2)][_0x54be3e(0x25c)]=_0x246189['top']+'px',_0x3a2e33[_0x54be3e(0x1e2)][_0x54be3e(0x1e1)]='auto',_0x3a2e33[_0x54be3e(0x1e2)][_0x54be3e(0x250)]=_0x54be3e(0x270),_0x3d39c0=_0x2cae51['clientX'],_0x964bf6=_0x2cae51[_0x54be3e(0x282)],_0x273227=_0x246189['left'],_0x383a1b=_0x246189['top'],_0x2cae51[_0x54be3e(0x286)]();}),document[_0x2c1806(0x217)](_0x2c1806(0x206),_0x488181=>{const _0x58fb00=_0x2c1806;if(!_0x346324)return;const _0x1c1eed=Math[_0x58fb00(0x220)](0x0,Math['min'](window[_0x58fb00(0x1d8)]-0x50,_0x273227+(_0x488181[_0x58fb00(0x272)]-_0x3d39c0))),_0x408e28=Math[_0x58fb00(0x220)](0x0,Math['min'](window['innerHeight']-0x3c,_0x383a1b+(_0x488181[_0x58fb00(0x282)]-_0x964bf6)));_0x3a2e33[_0x58fb00(0x1e2)][_0x58fb00(0x276)]=_0x1c1eed+'px',_0x3a2e33['style']['top']=_0x408e28+'px',_0x471b5f={'left':_0x1c1eed,'top':_0x408e28},localStorage[_0x58fb00(0x209)](_0x58fb00(0x1e5),JSON[_0x58fb00(0x21f)](_0x471b5f));}),document['addEventListener']('mouseup',()=>{_0x346324=![];});function _0xb95cae(_0x46a4db){return new Promise(_0x3c44ce=>setTimeout(_0x3c44ce,_0x46a4db));}function _0x236005(_0x3e987a,_0x58e0fd){const _0x14a49e=_0x2c1806,_0x2f721b=Object[_0x14a49e(0x1e6)](_0x3e987a['__proto__'],_0x14a49e(0x254))?.[_0x14a49e(0x23a)],_0x344462=Object['getPrototypeOf'](_0x3e987a),_0x271b6b=Object[_0x14a49e(0x1e6)](_0x344462,'value')?.['set'];if(_0x271b6b&&_0x2f721b!==_0x271b6b)_0x271b6b[_0x14a49e(0x236)](_0x3e987a,_0x58e0fd);else{if(_0x2f721b)_0x2f721b[_0x14a49e(0x236)](_0x3e987a,_0x58e0fd);else _0x14a49e(0x254)in _0x3e987a?_0x3e987a['value']=_0x58e0fd:_0x3e987a['textContent']=_0x58e0fd;}}function _0x4197f4(_0x1ea195){const _0x42dc9c=_0x2c1806;_0x1ea195['dispatchEvent'](new Event(_0x42dc9c(0x273),{'bubbles':!![]})),_0x1ea195[_0x42dc9c(0x1e4)](new Event(_0x42dc9c(0x238),{'bubbles':!![]}));}async function _0xc24ee(_0x1a23fb){const _0x30eee1=_0x2c1806,_0x2baa72=_0x22fa39;if(!_0x2baa72){_0x15cb57(_0x30eee1(0x242),_0x30eee1(0x202),'0%'),_0x419194('Clique\x20na\x20area\x20de\x20texto\x20e\x20pressione\x20iniciar\x20novamente.');return;}_0x590d95=!![],_0x1904ab(!![]);try{_0x2baa72['focus']();_0x30eee1(0x254)in _0x2baa72?_0x236005(_0x2baa72,''):_0x2baa72[_0x30eee1(0x25b)]='';_0x4197f4(_0x2baa72);let _0x52aab1='';for(let _0x3c8132=0x0;_0x3c8132<_0x1a23fb[_0x30eee1(0x28e)];_0x3c8132++){if(_0x3a0cce){_0x15cb57('Parado','Nenhum','Interrompido'),_0x419194(_0x30eee1(0x280));return;}const _0x376df8=_0x1a23fb[_0x3c8132];_0x376df8==='\x0a'?_0x52aab1+='\x0a':_0x52aab1+=_0x376df8,_0x236005(_0x2baa72,_0x52aab1),_0x4197f4(_0x2baa72),_0x5ba75a['textContent']=Math['round']((_0x3c8132+0x1)/_0x1a23fb[_0x30eee1(0x28e)]*0x64)+'%',await _0xb95cae(_0x543423());}_0x15cb57('Concluído','Nenhum','100%');}finally{_0x590d95=![],_0x3a0cce=![],_0x1904ab(![]);}}_0x5db7e2[_0x2c1806(0x27f)]('#eb-start')['addEventListener'](_0x2c1806(0x1fc),()=>{const _0x4969b4=_0x2c1806;if(_0x590d95){_0x3a0cce=!![];_0x3dba8e&&(clearTimeout(_0x3dba8e),_0x3dba8e=null,_0x590d95=![],_0x1904ab(![]));return;}const _0x1d9ff6=_0x427d37[_0x4969b4(0x254)];if(!_0x1d9ff6['trim']()){_0x15cb57(_0x4969b4(0x28d),_0x4969b4(0x1fe),'0%');return;}if(!_0x22fa39){_0x15cb57(_0x4969b4(0x242),_0x4969b4(0x202),'0%'),_0x419194('Clique\x20na\x20area\x20de\x20texto\x20e\x20pressione\x20iniciar\x20novamente.');return;}_0x590d95=!![],_0x3a0cce=![],_0x1904ab(!![]),_0x419194('Iniciando...'),_0x218e8e(_0x1d9ff6),_0x519b2f(),_0x15cb57('Aguardando...',_0x4969b4(0x25e),'0%'),_0x3dba8e=setTimeout(()=>{_0x3dba8e=null,_0x15cb57('Digitando...','Agora','0%'),_0xc24ee(_0x1d9ff6);},0x1388);});})()));
+(() => {
+  if (window.__ESCRITOR_BAIANO_INJETADO__) {
+    const btn = document.getElementById("eb-open-panel");
+    const panel = document.getElementById("eb-panel");
+    if (btn) btn.style.display = "flex";
+    if (panel) panel.classList.add("eb-show");
+    return;
+  }
+
+  window.__ESCRITOR_BAIANO_INJETADO__ = true;
+
+  let lastFocusedElement = null;
+  let savedText = localStorage.getItem("eb_saved_text") || "";
+  let history = JSON.parse(localStorage.getItem("eb_history") || "[]");
+  let panelScale = Number(localStorage.getItem("eb_panel_scale") || "0.88");
+  let typingSpeed = Number(localStorage.getItem("eb_typing_speed") || "50");
+  let panelPos = JSON.parse(localStorage.getItem("eb_panel_pos") || "null");
+  let stopTypingRequested = false;
+  let typingActive = false;
+  let typingTimeout = null;
+
+  const BACKEND_URL = "https://meulindobackend.onrender.com/generate";
+
+  const OPENROUTER_MODELS = [
+    "nex-agi/nex-n2-pro:free",
+    "nvidia/llama-nemotron-rerank-vl-1b-v2:free",
+    "nvidia/nemotron-3-ultra-550b-a55b:free"
+  ];
+
+  const DEFAULT_AI_INSTRUCTIONS = [
+    { id: "ptbr", label: "Português brasileiro", text: "Escreva sempre em português brasileiro." },
+    { id: "humanizado", label: "Humanizar texto", text: "Humanize o texto e escreva como uma pessoa real." },
+    { id: "paragrafos", label: "Parágrafos naturais", text: "Use parágrafos naturais, sem pular duas linhas entre os parágrafos." },
+    { id: "sem_markdown", label: "Sem markdown", text: "Não use markdown, títulos desnecessários, listas ou tópicos a menos que o usuário peça." },
+    { id: "redacao", label: "Modo redação", text: "Quando o usuário pedir uma redação, faça introdução, desenvolvimento e conclusão de forma natural." },
+    { id: "gramatica", label: "Boa gramática", text: "Mantenha boa gramática e desenvolva bem as ideias." }
+  ];
+
+  let aiInstructionStates = JSON.parse(localStorage.getItem("eb_ai_instruction_states") || "null")
+    || Object.fromEntries(DEFAULT_AI_INSTRUCTIONS.map(item => [item.id, true]));
+
+  let aiCustomInstructions = localStorage.getItem("eb_ai_custom_instructions") || "";
+
+  let selectedModelIndex = Number(localStorage.getItem("eb_selected_model_index") || "0");
+  if (!OPENROUTER_MODELS[selectedModelIndex]) selectedModelIndex = 0;
+
+  let lastUsedModel = localStorage.getItem("eb_last_used_model") || "Nenhum ainda";
+  let lastFallbackInfo = localStorage.getItem("eb_last_fallback_info") || "Modelo principal";
+
+  function isEditable(el) {
+    if (!el) return false;
+    const tag = el.tagName ? el.tagName.toLowerCase() : "";
+    return tag === "textarea" || tag === "input" || el.isContentEditable;
+  }
+
+  document.addEventListener("focusin", (e) => {
+    const root = document.getElementById("eb-root");
+    if (root && root.contains(e.target)) return;
+    if (isEditable(e.target)) lastFocusedElement = e.target;
+  }, true);
+
+  const root = document.createElement("div");
+  root.id = "eb-root";
+
+  root.innerHTML = `
+    <style>
+      #eb-root, #eb-root * {
+        box-sizing: border-box !important;
+        font-family: Inter, Arial, Helvetica, sans-serif !important;
+      }
+
+      @keyframes ebPanelOpen {
+        0% {
+          opacity: 0;
+          transform: translateY(22px) scale(.96);
+          filter: blur(3px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          filter: blur(0);
+        }
+      }
+
+      @keyframes ebPanelClose {
+        0% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          filter: blur(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(24px) scale(.96);
+          filter: blur(3px);
+        }
+      }
+
+      @keyframes ebFadeUp {
+        0% {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes ebSoftPulse {
+        0%, 100% {
+          box-shadow: 0 0 0 rgba(59,156,255,0);
+        }
+        50% {
+          box-shadow: 0 0 22px rgba(59,156,255,.34);
+        }
+      }
+
+      @keyframes ebAvatarGlow {
+        0%, 100% {
+          box-shadow: 0 0 24px rgba(59,156,255,.32);
+        }
+        50% {
+          box-shadow: 0 0 36px rgba(59,156,255,.62);
+        }
+      }
+
+      @keyframes ebDotPulse {
+        0%, 100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.35);
+          opacity: .7;
+        }
+      }
+
+      @keyframes ebButtonShine {
+        0% { left: -90%; }
+        100% { left: 130%; }
+      }
+
+      @keyframes ebToastIn {
+        from {
+          opacity: 0;
+          transform: translateY(14px) scale(.97);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @keyframes ebToastOut {
+        from {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+        to {
+          opacity: 0;
+          transform: translateY(14px) scale(.97);
+        }
+      }
+
+      #eb-open-panel {
+        position: fixed !important;
+        right: 22px !important;
+        bottom: 22px !important;
+        z-index: 2147483646 !important;
+        width: 126px !important;
+        height: 46px !important;
+        border: 1px solid rgba(255,255,255,.16) !important;
+        border-radius: 999px !important;
+        background: linear-gradient(135deg,#176ed2,#35a2ff) !important;
+        color: white !important;
+        font-size: 15px !important;
+        font-weight: 900 !important;
+        cursor: pointer !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        box-shadow: 0 14px 38px rgba(47,156,255,.38) !important;
+        transition: transform .18s ease, filter .18s ease, box-shadow .18s ease !important;
+      }
+
+      #eb-open-panel:hover {
+        transform: translateY(-2px) scale(1.03) !important;
+        filter: brightness(1.08) !important;
+        box-shadow: 0 18px 44px rgba(47,156,255,.48) !important;
+      }
+
+      #eb-open-panel:active {
+        transform: scale(.96) !important;
+      }
+
+      #eb-panel {
+        position: fixed !important;
+        right: 24px !important;
+        bottom: 84px !important;
+        z-index: 2147483645 !important;
+        width: min(920px, calc(100vw - 48px)) !important;
+        height: min(590px, calc(100vh - 112px)) !important;
+        min-width: 720px !important;
+        min-height: 500px !important;
+        background:
+          radial-gradient(circle at 22% 0%,rgba(47,156,255,.18),transparent 34%),
+          radial-gradient(circle at 90% 20%,rgba(34,197,94,.08),transparent 30%),
+          linear-gradient(135deg,#020817,#06142d 55%,#020817) !important;
+        color: #f4f8ff !important;
+        border: 1px solid rgba(81,143,223,.32) !important;
+        border-radius: 18px !important;
+        overflow: hidden !important;
+        box-shadow: 0 24px 100px rgba(0,0,0,.62), inset 0 1px 0 rgba(255,255,255,.06) !important;
+        display: none;
+        resize: both !important;
+      }
+
+      #eb-panel.eb-show {
+        display: block !important;
+        animation: ebPanelOpen .26s cubic-bezier(.2,.9,.25,1) !important;
+      }
+
+      #eb-panel.eb-closing {
+        display: block !important;
+        animation: ebPanelClose .22s ease forwards !important;
+      }
+
+      .eb-dragbar {
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        right: 0 !important;
+        height: 26px !important;
+        cursor: move !important;
+        z-index: 5 !important;
+        background: rgba(3,12,30,.58) !important;
+        border-bottom: 1px solid rgba(255,255,255,.07) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        color: #7fc2ff !important;
+        font-size: 11px !important;
+        font-weight: 900 !important;
+        letter-spacing: .8px !important;
+        transition: background .18s ease, color .18s ease !important;
+      }
+
+      .eb-dragbar:hover {
+        background: rgba(12,35,78,.72) !important;
+        color: #b9dcff !important;
+      }
+
+      .eb-app {
+        width: 100% !important;
+        height: 100% !important;
+        padding-top: 26px !important;
+        display: grid !important;
+        grid-template-columns: 160px 205px minmax(0, 1fr) !important;
+        gap: 14px !important;
+      }
+
+      .eb-app.eb-wide {
+        grid-template-columns: 160px minmax(0, 1fr) !important;
+      }
+
+      .eb-sidebar {
+        background: rgba(2,10,24,.72) !important;
+        border-right: 1px solid rgba(92,155,255,.17) !important;
+        padding: 22px 10px 10px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        transition: transform .16s ease, border-color .16s ease, background .16s ease !important;
+      }
+
+      .eb-stat-card:hover {
+        transform: translateY(-2px) !important;
+        background: rgba(13,36,76,.88) !important;
+        border-color: rgba(59,156,255,.34) !important;
+      }
+
+      .eb-brand {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin: 0 0 24px 4px !important;
+      }
+
+      .eb-feather {
+        font-size: 24px !important;
+        filter: drop-shadow(0 0 10px rgba(59,156,255,.35)) !important;
+      }
+
+      .eb-brand-text {
+        font-size: 15px !important;
+        line-height: 16px !important;
+        font-weight: 950 !important;
+        color: white !important;
+        letter-spacing: .3px !important;
+      }
+
+      .eb-brand-text span { color: #46a6ff !important; }
+
+      .eb-nav-item {
+        height: 40px !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding: 0 10px !important;
+        border-radius: 10px !important;
+        color: white !important;
+        font-size: 12px !important;
+        font-weight: 850 !important;
+        margin-bottom: 8px !important;
+        cursor: pointer !important;
+        user-select: none !important;
+        transition: transform .16s ease, background .16s ease, box-shadow .16s ease, filter .16s ease !important;
+      }
+
+      .eb-nav-item:hover {
+        background: rgba(53,162,255,.11) !important;
+        transform: translateX(3px) !important;
+      }
+
+      .eb-nav-item.eb-active {
+        background: linear-gradient(135deg,#176ed2,#2b72d8) !important;
+        box-shadow: 0 10px 24px rgba(27,110,210,.26), inset 0 1px 0 rgba(255,255,255,.13) !important;
+      }
+
+      .eb-nav-icon {
+        font-size: 17px !important;
+        width: 20px !important;
+        text-align: center !important;
+      }
+
+      .eb-version {
+        position: absolute !important;
+        left: 10px !important;
+        right: 10px !important;
+        bottom: 10px !important;
+        padding: 10px !important;
+        height: 58px !important;
+        border: 1px solid rgba(92,155,255,.18) !important;
+        border-radius: 12px !important;
+        background: rgba(5,18,42,.72) !important;
+        display: flex !important;
+        gap: 9px !important;
+        align-items: center !important;
+        color: white !important;
+      }
+
+
+      .eb-version-simple {
+        position: absolute !important;
+        left: 18px !important;
+        bottom: 18px !important;
+        color: #8fb7e8 !important;
+        font-size: 12px !important;
+        font-weight: 800 !important;
+        opacity: .9 !important;
+      }
+
+      .eb-info-circle {
+        width: 30px !important;
+        height: 30px !important;
+        border-radius: 50% !important;
+        border: 2px solid #3b9cff !important;
+        color: #3b9cff !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-weight: 900 !important;
+        font-size: 16px !important;
+      }
+
+      .eb-version strong { color: #35a2ff !important; font-size: 11px !important; }
+      .eb-version p { margin-top: 2px !important; color: white !important; font-size: 11px !important; }
+
+      .eb-profile {
+        padding: 14px 0 14px !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
+      }
+
+      .eb-profile-card {
+        height: 100% !important;
+        animation: ebFadeUp .32s ease both !important;
+        border: 1px solid rgba(81,143,223,.24) !important;
+        border-radius: 14px !important;
+        padding: 16px 12px !important;
+        background: linear-gradient(180deg,rgba(11,28,59,.88),rgba(7,18,40,.9)) !important;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.04) !important;
+        overflow: hidden !important;
+      }
+
+      .eb-avatar-big {
+        display: block !important;
+        width: 104px !important;
+        height: 104px !important;
+        margin: 0 auto 11px !important;
+        border-radius: 50% !important;
+        border: 3px solid #3b9cff !important;
+        object-fit: cover !important;
+        box-shadow: 0 0 24px rgba(59,156,255,.32) !important;
+        animation: ebAvatarGlow 2.8s ease-in-out infinite !important;
+        transition: transform .2s ease, filter .2s ease !important;
+      }
+
+      .eb-avatar-big:hover {
+        transform: scale(1.04) rotate(-1deg) !important;
+        filter: brightness(1.08) !important;
+      }
+
+      .eb-profile-name {
+        text-align: center !important;
+        font-size: 16px !important;
+        font-weight: 950 !important;
+        margin-bottom: 6px !important;
+        color: white !important;
+      }
+
+      .eb-badge {
+        width: max-content !important;
+        max-width: 100% !important;
+        margin: 0 auto 10px !important;
+        color: #45a8ff !important;
+        background: rgba(45,138,255,.16) !important;
+        padding: 4px 9px !important;
+        border-radius: 999px !important;
+        font-size: 11px !important;
+      }
+
+      .eb-profile-desc {
+        color: #d0d8e6 !important;
+        line-height: 16px !important;
+        font-size: 11px !important;
+        width: 150px !important;
+        max-width: 100% !important;
+        margin: 0 auto 10px !important;
+        text-align: center !important;
+      }
+
+      .eb-stat-card {
+        height: 47px !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(255,255,255,.07) !important;
+        background: rgba(9,25,53,.72) !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 9px !important;
+        padding: 0 10px !important;
+        margin-bottom: 7px !important;
+        overflow: hidden !important;
+      }
+
+      .eb-stat-icon { width: 20px !important; font-size: 17px !important; color: #b9c8df !important; flex:0 0 20px !important; }
+      .eb-stat-label { color: #c5d0df !important; font-size: 10px !important; white-space: nowrap !important; }
+      .eb-stat-value { font-size: 11px !important; font-weight: 900 !important; margin-top: 2px !important; color: #22c764 !important; white-space: nowrap !important; }
+      .eb-blue { color: #3da1ff !important; }
+      .eb-purple { color: #a855f7 !important; }
+
+      .eb-theme-card {
+        height: 38px !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(255,255,255,.08) !important;
+        background: rgba(9,25,53,.72) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 0 9px !important;
+        margin-top: 8px !important;
+        font-size: 10px !important;
+        overflow: hidden !important;
+      }
+
+      .eb-toggle {
+        width: 31px !important;
+        height: 18px !important;
+        background: #2e97ff !important;
+        border-radius: 999px !important;
+        position: relative !important;
+        flex:0 0 31px !important;
+      }
+
+      .eb-toggle:after {
+        content: "" !important;
+        width: 12px !important;
+        height: 12px !important;
+        background: white !important;
+        border-radius: 50% !important;
+        position: absolute !important;
+        right: 3px !important;
+        top: 3px !important;
+      }
+
+      .eb-main {
+        padding: 14px 14px 12px 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
+      }
+
+      .eb-app.eb-wide .eb-main {
+        padding-left: 0 !important;
+      }
+
+      .eb-writer-panel {
+        flex: 1 !important;
+        animation: ebFadeUp .34s ease both !important;
+        min-height: 0 !important;
+        border-radius: 14px !important;
+        border: 1px solid rgba(81,143,223,.24) !important;
+        background: linear-gradient(180deg,rgba(9,24,52,.92),rgba(6,16,36,.96)) !important;
+        padding: 18px !important;
+        overflow: hidden !important;
+      }
+
+      .eb-app.eb-wide .eb-writer-panel {
+        padding: 22px !important;
+      }
+
+      .eb-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+        margin-bottom: 12px !important;
+      }
+
+      .eb-heading {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        min-width: 0 !important;
+      }
+
+      .eb-heading-icon { font-size: 25px !important; color: #3aa1ff !important; flex:0 0 auto !important; }
+      .eb-heading h1 { font-size: 22px !important; color: #429dff !important; letter-spacing: .4px !important; white-space: nowrap !important; }
+
+      .eb-help {
+        height: 31px !important;
+        padding: 0 10px !important;
+        border-radius: 8px !important;
+        border: 1px solid rgba(255,255,255,.08) !important;
+        background: rgba(10,26,56,.8) !important;
+        color: #eaf2ff !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        font-size: 11px !important;
+        white-space: nowrap !important;
+      }
+
+      .eb-desc {
+        color: #e3e8f2 !important;
+        font-size: 12px !important;
+        line-height: 18px !important;
+        margin-bottom: 13px !important;
+      }
+
+      #eb-text {
+        width: 100% !important;
+        height: clamp(185px, 31vh, 248px) !important;
+        resize: none !important;
+        outline: none !important;
+        border-radius: 12px !important;
+        border: 1.5px solid #2e96ff !important;
+        color: white !important;
+        background: linear-gradient(145deg,rgba(11,29,59,.9),rgba(8,21,45,.95)) !important;
+        padding: 13px !important;
+        font-size: 14px !important;
+        line-height: 21px !important;
+        transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease !important;
+      }
+
+      #eb-text {
+        scrollbar-width: thin !important;
+        scrollbar-color: rgba(59,156,255,.58) transparent !important;
+      }
+
+      #eb-text::-webkit-scrollbar {
+        width: 9px !important;
+      }
+
+      #eb-text::-webkit-scrollbar-thumb {
+        background: rgba(59,156,255,.58) !important;
+        border-radius: 999px !important;
+        border: 2px solid rgba(8,24,53,.82) !important;
+      }
+
+      #eb-text::-webkit-scrollbar-track {
+        background: rgba(255,255,255,.04) !important;
+        border-radius: 999px !important;
+      }
+
+      #eb-text:focus {
+        border-color: #60b5ff !important;
+        box-shadow: 0 0 0 3px rgba(59,156,255,.16), inset 0 0 28px rgba(0,0,0,.18) !important;
+      }
+
+      #eb-text::placeholder { color: #8494aa !important; }
+
+      .eb-actions {
+        display: grid !important;
+        grid-template-columns: 1.25fr .68fr !important;
+        gap: 16px !important;
+        margin-top: 15px !important;
+      }
+
+      .eb-action-btn {
+        height: 42px !important;
+        border: none !important;
+        border-radius: 10px !important;
+        font-size: 15px !important;
+        font-weight: 950 !important;
+        color: white !important;
+        cursor: pointer !important;
+        transition: transform .16s ease, filter .16s ease, box-shadow .16s ease !important;
+        position: relative !important;
+        overflow: hidden !important;
+      }
+
+      .eb-action-btn::after {
+        content: "" !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: -90% !important;
+        width: 42% !important;
+        height: 100% !important;
+        background: linear-gradient(90deg,transparent,rgba(255,255,255,.28),transparent) !important;
+        transform: skewX(-18deg) !important;
+      }
+
+      .eb-action-btn:hover::after {
+        animation: ebButtonShine .65s ease !important;
+      }
+
+      .eb-action-btn:hover { filter: brightness(1.08) !important; transform: translateY(-2px) !important; }
+      .eb-action-btn:active { transform: scale(.97) !important; }
+      .eb-start { background: linear-gradient(135deg,#21c965,#22b85a) !important; box-shadow:0 10px 24px rgba(34,199,100,.16) !important; }
+      .eb-clear { background: linear-gradient(135deg,#d3344a,#c52b40) !important; box-shadow:0 10px 24px rgba(207,47,69,.13) !important; }
+
+      .eb-bottom-status {
+        margin-top: 15px !important;
+        min-height: 58px !important;
+        border: 1px solid rgba(255,255,255,.07) !important;
+        background: rgba(6,18,40,.82) !important;
+        border-radius: 12px !important;
+        display: grid !important;
+        grid-template-columns: 1.35fr 1fr 1fr 1fr !important;
+        align-items: center !important;
+        overflow: hidden !important;
+      }
+
+      .eb-status-box {
+        height: 35px !important;
+        padding: 0 10px !important;
+        display: flex !important;
+        gap: 7px !important;
+        align-items: flex-start !important;
+        border-right: 1px solid rgba(255,255,255,.13) !important;
+        overflow: hidden !important;
+      }
+
+      .eb-status-box:last-child { border-right: none !important; }
+      .eb-dot {
+        width: 9px !important;
+        height: 9px !important;
+        margin-top: 6px !important;
+        border-radius: 50% !important;
+        background: #22c764 !important;
+        flex:0 0 9px !important;
+        animation: ebDotPulse 1.6s ease-in-out infinite !important;
+      }
+      .eb-mini-icon { color: #c0ccdc !important; font-size: 14px !important; margin-top: 2px !important; flex:0 0 auto !important; }
+      .eb-status-title { color: #bac4d4 !important; font-size: 10px !important; margin-bottom: 3px !important; white-space: nowrap !important; }
+      .eb-status-main { color: white !important; font-size: 11px !important; white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important; max-width: 120px !important; }
+
+      .eb-notice {
+        margin-top: 10px !important;
+        min-height: 34px !important;
+        border: 1px solid rgba(81,143,223,.22) !important;
+        border-radius: 11px !important;
+        background: rgba(8,24,53,.82) !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        padding: 8px 13px !important;
+        color: #dfe7f3 !important;
+        font-size: 11px !important;
+        line-height: 15px !important;
+      }
+
+      .eb-notice span { color: #35a2ff !important; font-weight: 900 !important; white-space: nowrap !important; }
+
+      .eb-page { display: none !important; height: 100% !important; min-height: 0 !important; }
+      .eb-page.eb-page-active {
+        display: flex !important;
+        flex-direction: column !important;
+        animation: ebFadeUp .22s ease both !important;
+      }
+
+      #eb-page-ai {
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        padding-right: 8px !important;
+      }
+
+      #eb-page-ai::-webkit-scrollbar,
+      .eb-settings-one-card::-webkit-scrollbar {
+        width: 8px !important;
+      }
+
+      #eb-page-ai::-webkit-scrollbar-thumb,
+      .eb-settings-one-card::-webkit-scrollbar-thumb {
+        background: rgba(59,156,255,.45) !important;
+        border-radius: 999px !important;
+      }
+
+      #eb-page-ai::-webkit-scrollbar-track,
+      .eb-settings-one-card::-webkit-scrollbar-track {
+        background: transparent !important;
+      }
+
+      .eb-wide-content {
+        flex: 1 !important;
+        min-height: 0 !important;
+        display: grid !important;
+        gap: 14px !important;
+      }
+
+      #eb-ai-prompt,
+      #eb-ai-result {
+        width: 100% !important;
+        resize: none !important;
+        outline: none !important;
+        border-radius: 12px !important;
+        border: 1.5px solid #2e96ff !important;
+        color: white !important;
+        background: linear-gradient(145deg,rgba(11,29,59,.9),rgba(8,21,45,.95)) !important;
+        padding: 13px !important;
+        font-size: 14px !important;
+        line-height: 21px !important;
+        transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease !important;
+      }
+
+      #eb-ai-prompt {
+        height: 210px !important;
+      }
+
+      #eb-ai-result {
+        height: 300px !important;
+        margin-top: 10px !important;
+      }
+
+      #eb-ai-prompt:focus,
+      #eb-ai-result:focus {
+        border-color: #60b5ff !important;
+        box-shadow: 0 0 0 3px rgba(59,156,255,.16), inset 0 0 28px rgba(0,0,0,.18) !important;
+      }
+
+      #eb-ai-prompt::placeholder,
+      #eb-ai-result::placeholder {
+        color: #8494aa !important;
+      }
+
+
+      #eb-ai-progress-wrap {
+        width: 100% !important;
+        height: 10px !important;
+        background: rgba(255,255,255,.08) !important;
+        border-radius: 999px !important;
+        overflow: hidden !important;
+        margin: 8px 0 4px !important;
+      }
+
+      #eb-ai-progress-bar {
+        width: 0% !important;
+        height: 100% !important;
+        border-radius: 999px !important;
+        background: linear-gradient(90deg,#35a2ff,#4fb4ff) !important;
+        transition: width .25s ease !important;
+      }
+
+      #eb-ai-progress-text {
+        color: #9ccfff !important;
+        font-size: 11px !important;
+        font-weight: 900 !important;
+        margin-bottom: 10px !important;
+      }
+
+      #eb-ai-progress-wrap {
+  width: 100% !important;
+  height: 12px !important;
+  background: rgba(255,255,255,.08) !important;
+  border-radius: 999px !important;
+  overflow: hidden !important;
+  margin: 8px 0 6px !important;
+  border: 1px solid rgba(59,156,255,.22) !important;
+}
+
+#eb-ai-progress-bar {
+  display: block !important;
+  width: 0%;
+  min-width: 0 !important;
+  height: 100% !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg,#22c55e,#35a2ff,#4fb4ff) !important;
+  box-shadow: 0 0 14px rgba(53,162,255,.55) !important;
+  transition: width .45s ease !important;
+}
+
+      #eb-ai-progress-text{
+        color:#9ccfff;
+        font-size:11px;
+        font-weight:900;
+        margin-bottom:10px;
+      }
+
+      .eb-ai-label {
+        color: #dbeafe !important;
+        font-size: 12px !important;
+        font-weight: 900 !important;
+        margin: 8px 0 7px !important;
+      }
+
+      .eb-ai-actions {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 14px !important;
+        margin-top: 14px !important;
+      }
+
+
+      .eb-ai-model-info {
+        margin: 8px 0 12px !important;
+        padding: 8px 10px !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(81,143,223,.22) !important;
+        background: rgba(8,24,53,.72) !important;
+        color: #dfe7f3 !important;
+        font-size: 11px !important;
+        line-height: 15px !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+
+      .eb-ai-model-info b { color: #62b3ff !important; }
+
+      .eb-ai-check-list {
+        display: grid !important;
+        gap: 8px !important;
+      }
+
+      .eb-ai-check {
+        display: flex !important;
+        align-items: center !important;
+        gap: 9px !important;
+        padding: 9px 10px !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(81,143,223,.18) !important;
+        background: rgba(7,20,44,.72) !important;
+        color: #e7eefb !important;
+        font-size: 12px !important;
+        font-weight: 800 !important;
+        cursor: pointer !important;
+      }
+
+      .eb-ai-check input {
+        width: 15px !important;
+        height: 15px !important;
+        accent-color: #3b9cff !important;
+      }
+
+      #eb-ai-custom-instructions,
+      #eb-ai-model-select {
+        width: 100% !important;
+        outline: none !important;
+        border-radius: 10px !important;
+        border: 1.5px solid #2e96ff !important;
+        color: white !important;
+        background: rgba(8,21,45,.95) !important;
+        padding: 10px !important;
+        font-size: 12px !important;
+      }
+
+      #eb-ai-custom-instructions {
+        height: 90px !important;
+        resize: vertical !important;
+        line-height: 17px !important;
+      }
+
+      #eb-ai-reset-instructions { margin-top: 10px !important; }
+
+      .eb-history-clear-btn {
+        height: 32px !important;
+        padding: 0 13px !important;
+        border: none !important;
+        border-radius: 9px !important;
+        background: linear-gradient(135deg,#d3344a,#c52b40) !important;
+        color: white !important;
+        font-size: 12px !important;
+        font-weight: 900 !important;
+        cursor: pointer !important;
+        transition: transform .16s ease, filter .16s ease, box-shadow .16s ease !important;
+        box-shadow: 0 10px 22px rgba(207,47,69,.16) !important;
+        white-space: nowrap !important;
+      }
+
+      .eb-history-clear-btn:hover {
+        filter: brightness(1.08) !important;
+        transform: translateY(-1px) !important;
+      }
+
+      .eb-history-clear-btn:active {
+        transform: scale(.97) !important;
+      }
+
+      .eb-history-list {
+        flex: 1 !important;
+        min-height: 0 !important;
+        overflow: auto !important;
+        padding-right: 5px !important;
+        display: grid !important;
+        grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)) !important;
+        gap: 12px !important;
+        align-content: start !important;
+      }
+
+      .eb-history-item {
+        background: rgba(9,25,53,.72) !important;
+        border: 1px solid rgba(81,143,223,.20) !important;
+        border-radius: 12px !important;
+        padding: 12px !important;
+        color: #dfe7f3 !important;
+        font-size: 12px !important;
+        line-height: 17px !important;
+        cursor: pointer !important;
+        min-height: 85px !important;
+        overflow: hidden !important;
+        transition:.15s ease !important;
+      }
+
+      .eb-history-item:hover {
+        background: rgba(18,46,94,.88) !important;
+        border-color: rgba(59,156,255,.45) !important;
+        transform: translateY(-1px) !important;
+      }
+
+      .eb-history-date {
+        color: #62b3ff !important;
+        font-weight: 900 !important;
+        font-size: 11px !important;
+        margin-bottom: 8px !important;
+      }
+
+      .eb-history-text {
+        color: #e7eefb !important;
+        font-size: 12px !important;
+        line-height: 17px !important;
+      }
+
+      .eb-settings-grid {
+        flex: 1 !important;
+        min-height: 0 !important;
+        display: grid !important;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)) !important;
+        gap: 14px !important;
+        align-content: start !important;
+      }
+
+      .eb-config-row {
+        background: rgba(9,25,53,.72) !important;
+        border: 1px solid rgba(81,143,223,.20) !important;
+        border-radius: 14px !important;
+        padding: 16px !important;
+        color: #dfe7f3 !important;
+        min-height: 105px !important;
+        overflow: hidden !important;
+      }
+
+      .eb-config-row label {
+        display: block !important;
+        font-size: 13px !important;
+        margin-bottom: 12px !important;
+        font-weight: 900 !important;
+        color: white !important;
+      }
+
+      .eb-config-row input[type="range"] {
+        width: 100% !important;
+        accent-color: #3b9cff !important;
+      }
+
+      .eb-config-row button {
+        width: 100% !important;
+        height: 40px !important;
+        border: none !important;
+        border-radius: 10px !important;
+        background: linear-gradient(135deg,#2563eb,#3b82f6) !important;
+        color: white !important;
+        font-weight: 900 !important;
+        cursor: pointer !important;
+        font-size: 13px !important;
+      }
+
+      .eb-config-muted {
+        color:#a8b7cc !important;
+        font-size: 11px !important;
+        line-height: 16px !important;
+        margin-top: 9px !important;
+      }
+
+
+      #eb-toast {
+        position: fixed !important;
+        right: 22px !important;
+        bottom: 84px !important;
+        z-index: 2147483647 !important;
+        max-width: 360px !important;
+        padding: 14px 16px !important;
+        border-radius: 14px !important;
+        background: linear-gradient(135deg,rgba(9,25,53,.96),rgba(13,38,80,.96)) !important;
+        border: 1px solid rgba(59,156,255,.35) !important;
+        color: white !important;
+        font-size: 14px !important;
+        font-weight: 800 !important;
+        line-height: 20px !important;
+        box-shadow: 0 18px 50px rgba(0,0,0,.45), 0 0 28px rgba(59,156,255,.18) !important;
+        display: none !important;
+      }
+
+      #eb-toast.eb-toast-show {
+        display: block !important;
+        animation: ebToastIn .2s ease-out !important;
+      }
+
+
+      #eb-toast.eb-toast-hide {
+        display: block !important;
+        animation: ebToastOut .22s ease forwards !important;
+      }
+
+      #eb-page-settings {
+        overflow: hidden !important;
+        min-height: 0 !important;
+      }
+
+      #eb-page-settings .eb-header {
+        flex: 0 0 auto !important;
+      }
+
+      #eb-page-settings .eb-desc {
+        flex: 0 0 auto !important;
+      }
+
+      .eb-settings-one-card {
+        height: calc(100% - 92px) !important;
+        max-height: calc(100% - 92px) !important;
+        min-height: 0 !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        padding: 16px !important;
+        padding-right: 10px !important;
+        border-radius: 14px !important;
+        border: 1px solid rgba(81,143,223,.26) !important;
+        background: linear-gradient(180deg,rgba(9,25,53,.82),rgba(6,18,40,.82)) !important;
+        scrollbar-width: thin !important;
+        scrollbar-color: rgba(59,156,255,.55) transparent !important;
+      }
+
+      .eb-settings-one-card::-webkit-scrollbar {
+        width: 9px !important;
+      }
+
+      .eb-settings-one-card::-webkit-scrollbar-thumb {
+        background: rgba(59,156,255,.58) !important;
+        border-radius: 999px !important;
+        border: 2px solid rgba(8,24,53,.82) !important;
+      }
+
+      .eb-settings-one-card::-webkit-scrollbar-track {
+        background: rgba(255,255,255,.04) !important;
+        border-radius: 999px !important;
+      }
+
+      .eb-settings-title {
+        font-size: 13px !important;
+        font-weight: 950 !important;
+        color: #49a8ff !important;
+        letter-spacing: .2px !important;
+        margin: 2px 0 10px !important;
+        font-family: Inter, Arial, Helvetica, sans-serif !important;
+      }
+
+      .eb-settings-line label,
+      .eb-ai-check span,
+      .eb-ai-check,
+      #eb-ai-model-select,
+      #eb-ai-custom-instructions {
+        font-family: Inter, Arial, Helvetica, sans-serif !important;
+        font-weight: 850 !important;
+      }
+
+      .eb-ai-check {
+        min-height: 38px !important;
+        border-radius: 11px !important;
+        padding: 9px 11px !important;
+        background: rgba(7,20,44,.74) !important;
+        border: 1px solid rgba(81,143,223,.25) !important;
+      }
+
+      .eb-ai-check span {
+        color: #f4f8ff !important;
+        font-size: 12px !important;
+      }
+
+      .eb-ai-check input {
+        appearance: auto !important;
+        width: 15px !important;
+        height: 15px !important;
+        accent-color: #3b9cff !important;
+        flex: 0 0 auto !important;
+      }
+
+      #eb-ai-model-select {
+        height: 36px !important;
+        font-size: 12px !important;
+      }
+
+      #eb-ai-custom-instructions {
+        min-height: 105px !important;
+        font-size: 12px !important;
+        color: #f4f8ff !important;
+      }
+
+
+      /* ===== FIX FINAL: scroll da IA + fonte das configurações ===== */
+
+      #eb-page-ai.eb-page-active {
+        display: flex !important;
+        flex-direction: column !important;
+        min-height: 0 !important;
+        overflow: hidden !important;
+      }
+
+      #eb-page-ai .eb-header,
+      #eb-page-ai .eb-desc,
+      #eb-page-ai .eb-ai-model-info {
+        flex: 0 0 auto !important;
+      }
+
+      .eb-page-ai-scroll {
+        flex: 1 1 auto !important;
+        min-height: 0 !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        padding-right: 9px !important;
+        scrollbar-width: thin !important;
+        scrollbar-color: rgba(59,156,255,.58) transparent !important;
+      }
+
+      .eb-page-ai-scroll::-webkit-scrollbar {
+        width: 9px !important;
+      }
+
+      .eb-page-ai-scroll::-webkit-scrollbar-thumb {
+        background: rgba(59,156,255,.58) !important;
+        border-radius: 999px !important;
+        border: 2px solid rgba(8,24,53,.82) !important;
+      }
+
+      .eb-page-ai-scroll::-webkit-scrollbar-track {
+        background: rgba(255,255,255,.04) !important;
+        border-radius: 999px !important;
+      }
+
+      #eb-ai-prompt {
+        height: 220px !important;
+        min-height: 220px !important;
+      }
+
+      #eb-ai-result {
+        height: 320px !important;
+        min-height: 320px !important;
+      }
+
+      #eb-page-ai .eb-ai-model-info {
+        margin: 8px 0 12px !important;
+        padding: 6px 10px !important;
+        min-height: 28px !important;
+        font-size: 11px !important;
+        line-height: 14px !important;
+      }
+
+      #eb-page-settings,
+      #eb-page-settings *,
+      .eb-settings-one-card,
+      .eb-settings-one-card *,
+      .eb-ai-check,
+      .eb-ai-check span,
+      #eb-ai-model-select,
+      #eb-ai-custom-instructions {
+        font-family: inherit !important;
+      }
+
+      .eb-ai-check span {
+        color: white !important;
+        font-size: 12px !important;
+        font-weight: 900 !important;
+        letter-spacing: 0 !important;
+      }
+
+      .eb-settings-title {
+        font-family: inherit !important;
+        font-size: 13px !important;
+        font-weight: 950 !important;
+        color: #49a8ff !important;
+      }
+
+      .eb-settings-line label {
+        font-family: inherit !important;
+        font-size: 12px !important;
+        font-weight: 900 !important;
+        color: white !important;
+      }
+
+      
+      .eb-setting-label {
+        width: 145px !important;
+        min-width: 145px !important;
+        color: white !important;
+        font-size: 12px !important;
+        font-weight: 900 !important;
+        white-space: nowrap !important;
+      }
+
+      .eb-settings-line {
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+      }
+
+      .eb-settings-line input[type="range"] {
+        flex: 1 !important;
+        margin: 0 !important;
+      }
+
+
+      @media (max-width: 820px) {
+        #eb-panel {
+          left: 12px !important;
+          right: 12px !important;
+          bottom: 76px !important;
+          width: auto !important;
+          min-width: 0 !important;
+          height: calc(100vh - 92px) !important;
+        }
+
+        .eb-app,
+        .eb-app.eb-wide {
+          grid-template-columns: 138px minmax(0, 1fr) !important;
+          gap: 10px !important;
+        }
+
+        .eb-profile { display: none !important; }
+        .eb-sidebar { padding-top: 20px !important; }
+        .eb-brand-text { font-size: 13px !important; }
+      }
+    </style>
+
+    <button id="eb-open-panel">Painel</button>
+
+    <div id="eb-panel">
+      <div class="eb-dragbar" id="eb-dragbar">ARRASTE PARA MOVER O PAINEL</div>
+
+      <div class="eb-app" id="eb-app">
+        <aside class="eb-sidebar">
+          <div class="eb-brand">
+            <div class="eb-feather">🤠</div>
+            <div class="eb-brand-text"><span>ESCRITOR</span><br>BAIANO</div>
+          </div>
+
+          <div class="eb-nav-item eb-active" data-page="writer"><div class="eb-nav-icon">🏠</div><div>Auto Writer</div></div>
+          <div class="eb-nav-item" data-page="ai"><div class="eb-nav-icon">🤖</div><div>IA</div></div>
+          <div class="eb-nav-item" data-page="history"><div class="eb-nav-icon">📄</div><div>Histórico</div></div>
+          <div class="eb-nav-item" data-page="settings"><div class="eb-nav-icon">⚙️</div><div>Configurações</div></div>
+
+          <div class="eb-version-simple">v1.5</div>
+        </aside>
+
+        <section class="eb-profile" id="eb-profile">
+          <div class="eb-profile-card">
+            <img class="eb-avatar-big" id="eb-avatar" src="">
+            <div class="eb-profile-name">Escritor Baiano</div>
+            <div class="eb-badge">Auto Writer</div>
+            <div class="eb-profile-desc">Extensão para digitação automática e muito top 😝</div>
+
+            <div class="eb-stat-card">
+              <div class="eb-stat-icon">⚡</div>
+              <div>
+                <div class="eb-stat-label">Status</div>
+                <div class="eb-stat-value" id="eb-side-status">Pronto</div>
+              </div>
+            </div>
+
+            <div class="eb-stat-card">
+              <div class="eb-stat-icon">🕘</div>
+              <div>
+                <div class="eb-stat-label">Atraso inicial</div>
+                <div class="eb-stat-value eb-blue">5 segundos</div>
+              </div>
+            </div>
+
+            <div class="eb-stat-card">
+              <div class="eb-stat-icon">⌨️</div>
+              <div>
+                <div class="eb-stat-label">Velocidade</div>
+                <div class="eb-stat-value eb-purple" id="eb-speed-side">Normal</div>
+              </div>
+            </div>
+
+            <div class="eb-stat-card">
+              <div class="eb-stat-icon">✅</div>
+              <div>
+                <div class="eb-stat-label">Hugo lindo?</div>
+                <div class="eb-stat-value">Simm</div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <main class="eb-main">
+          <section class="eb-writer-panel">
+            <div class="eb-page eb-page-active" id="eb-page-writer">
+              <div class="eb-header">
+                <div class="eb-heading">
+                  <div class="eb-heading-icon">😎</div>
+                  <h1>AUTO WRITER</h1>
+                </div>
+              </div>
+
+              <p class="eb-desc">
+                Clique onde você deseja digitar o texto, cole ele aqui e inicie.
+              </p>
+
+              <textarea id="eb-text" placeholder="Cole seu texto aqui..."></textarea>
+
+              <div class="eb-actions">
+                <button class="eb-action-btn eb-start" id="eb-start">▶ &nbsp; Iniciar</button>
+                <button class="eb-action-btn eb-clear" id="eb-clear">🗑 &nbsp; Limpar</button>
+              </div>
+
+              <div class="eb-bottom-status">
+                <div class="eb-status-box">
+                  <div class="eb-dot"></div>
+                  <div>
+                    <div class="eb-status-title">Status atual</div>
+                    <div class="eb-status-main" id="eb-bottom-status">Pronto para iniciar</div>
+                  </div>
+                </div>
+
+                <div class="eb-status-box">
+                  <div class="eb-mini-icon">🕘</div>
+                  <div>
+                    <div class="eb-status-title">Aguardando</div>
+                    <div class="eb-status-main" id="eb-waiting">Nenhum</div>
+                  </div>
+                </div>
+
+                <div class="eb-status-box">
+                  <div class="eb-mini-icon">⌨️</div>
+                  <div>
+                    <div class="eb-status-title">Caracteres</div>
+                    <div class="eb-status-main" id="eb-chars">0</div>
+                  </div>
+                </div>
+
+                <div class="eb-status-box">
+                  <div class="eb-mini-icon">⏱️</div>
+                  <div>
+                    <div class="eb-status-title">Progresso</div>
+                    <div class="eb-status-main" id="eb-progress">0%</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="eb-page" id="eb-page-ai">
+              <div class="eb-header">
+                <div class="eb-heading">
+                  <div class="eb-heading-icon">🤖</div>
+                  <h1>IA</h1>
+                </div>
+              </div>
+
+              <p class="eb-desc">
+                Escreva o prompt, gere o texto e envie o resultado direto para o Auto Writer.
+              </p>
+
+              <div class="eb-ai-model-info" id="eb-ai-model-info">
+                <b>Modelo atual:</b> carregando...
+              </div>
+
+              <div id="eb-ai-progress-wrap">
+                <div id="eb-ai-progress-bar"></div>
+                </div>
+              <div id="eb-ai-progress-text">0%</div>
+
+              <div class="eb-page-ai-scroll">
+
+              <div class="eb-ai-label">Prompt</div>
+              <textarea id="eb-ai-prompt" placeholder="Ex: Faça um conto curto sobre uma janela misteriosa..."></textarea>
+
+              <div class="eb-ai-actions">
+                <button class="eb-action-btn eb-start" id="eb-ai-generate">✨ &nbsp; Gerar texto</button>
+                <button class="eb-action-btn eb-clear" id="eb-ai-clear">🗑 &nbsp; Limpar</button>
+              </div>
+
+              <div class="eb-ai-label">Resultado</div>
+              <textarea id="eb-ai-result" placeholder="O texto gerado pela IA aparecerá aqui..."></textarea>
+
+              <div class="eb-ai-actions">
+                <button class="eb-action-btn eb-start" id="eb-ai-use">➡ &nbsp; Usar no Auto Writer</button>
+                <button class="eb-action-btn eb-clear" id="eb-ai-copy">📋 &nbsp; Copiar</button>
+              </div>
+              </div>
+            </div>
+
+            <div class="eb-page" id="eb-page-history">
+              <div class="eb-header">
+                <div class="eb-heading">
+                  <div class="eb-heading-icon">📄</div>
+                  <h1>HISTÓRICO</h1>
+                </div>
+                <button class="eb-history-clear-btn" id="eb-clear-history">Limpar histórico</button>
+              </div>
+              <p class="eb-desc">Textos iniciados aparecem aqui. Eles não ficam salvo de sessão em sessão !</p>
+              <div class="eb-history-list" id="eb-history-list"></div>
+            </div>
+
+            <div class="eb-page" id="eb-page-settings">
+              <div class="eb-header">
+                <div class="eb-heading">
+                  <div class="eb-heading-icon">😎</div>
+                  <h1>CONFIGURAÇÕES</h1>
+                </div>
+              </div>
+              <p class="eb-desc">Ajustes do painel. Não seja ganancioso. | Ignore as instruções customizadas se você não sabe o que esta fazendo!</p>
+
+              <div class="eb-settings-one-card">
+
+                <div class="eb-settings-section">
+                  <div class="eb-settings-title">🤖 IA</div>
+
+                  <div class="eb-settings-line">
+                    <label>Modelo</label>
+                    <div>
+                      <select id="eb-ai-model-select"></select>
+                      <div class="eb-config-muted" id="eb-ai-model-muted">Modelo atual: carregando...</div>
+                    </div>
+                  </div>
+
+                  <div class="eb-settings-title">Instruções default</div>
+                  <div class="eb-ai-check-list" id="eb-ai-instructions-list"></div>
+
+                  <button id="eb-ai-reset-instructions">Resetar instruções</button>
+
+                  <div class="eb-settings-title" style="margin-top:14px !important;">Instruções customizadas</div>
+                  <textarea id="eb-ai-custom-instructions" placeholder="Ex: escreva como aluno do 9º ano, mais simples, mais natural..."></textarea>
+                  <div class="eb-config-muted">Tudo aqui fica salvo e vai antes do prompt.</div>
+                </div>
+
+                <div class="eb-settings-section">
+                  <div class="eb-settings-title">⌨️ Auto Writer</div>
+
+                  <div class="eb-settings-line">
+                    <div class="eb-setting-label">Velocidade: <span id="eb-speed-value">Normal</span></div>
+                    <input id="eb-speed" type="range" min="1" max="100" value="50">
+                  </div>
+
+                  <div class="eb-settings-line">
+                    <div class="eb-setting-label">Escala: <span id="eb-scale-value">88%</span></div>
+                    <input id="eb-scale" type="range" min="70" max="105" value="88">
+                  </div>
+
+                  <div class="eb-config-muted">Não cometa o mesmo erro que o joão</div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <div class="eb-notice">
+            <span>ⓘ Importante:</span>
+            TrickTrack baraboom
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <div id="eb-toast"></div>
+  `;
+
+  document.documentElement.appendChild(root);
+
+  const avatar = root.querySelector("#eb-avatar");
+  const avatarUrl = chrome.runtime.getURL("icons/icon128.png");
+  avatar.src = avatarUrl;
+  avatar.onerror = () => {
+    avatar.style.display = "none";
+  };
+
+  const toast = root.querySelector("#eb-toast");
+  const openPanel = root.querySelector("#eb-open-panel");
+  const panel = root.querySelector("#eb-panel");
+  const app = root.querySelector("#eb-app");
+  const profile = root.querySelector("#eb-profile");
+  const dragbar = root.querySelector("#eb-dragbar");
+  const textArea = root.querySelector("#eb-text");
+  const aiPrompt = root.querySelector("#eb-ai-prompt");
+  const aiResult = root.querySelector("#eb-ai-result");
+  const aiGenerate = root.querySelector("#eb-ai-generate");
+  const aiClear = root.querySelector("#eb-ai-clear");
+  const aiUse = root.querySelector("#eb-ai-use");
+  const aiCopy = root.querySelector("#eb-ai-copy");
+
+  const sideStatus = root.querySelector("#eb-side-status");
+  const bottomStatus = root.querySelector("#eb-bottom-status");
+  const waiting = root.querySelector("#eb-waiting");
+  const chars = root.querySelector("#eb-chars");
+  const progress = root.querySelector("#eb-progress");
+  const speedSide = root.querySelector("#eb-speed-side");
+
+  const historyList = root.querySelector("#eb-history-list");
+  const scaleInput = root.querySelector("#eb-scale");
+  const scaleValue = root.querySelector("#eb-scale-value");
+  const speedInput = root.querySelector("#eb-speed");
+  const speedValue = root.querySelector("#eb-speed-value");
+  const aiModelInfo = root.querySelector("#eb-ai-model-info");
+  const aiModelSelect = root.querySelector("#eb-ai-model-select");
+  const aiModelMuted = root.querySelector("#eb-ai-model-muted");
+  const aiInstructionsList = root.querySelector("#eb-ai-instructions-list");
+  const aiCustomInstructionsBox = root.querySelector("#eb-ai-custom-instructions");
+  const aiResetInstructions = root.querySelector("#eb-ai-reset-instructions");
+  const aiProgressBar = root.querySelector("#eb-ai-progress-bar");
+  const aiProgressText = root.querySelector("#eb-ai-progress-text");
+
+  function applyScale() {
+    panel.style.zoom = panelScale;
+    panel.style.transform = "";
+    scaleInput.value = Math.round(panelScale * 100);
+    scaleValue.textContent = Math.round(panelScale * 100) + "%";
+  }
+
+  function getSpeedLabel(value) {
+    if (value <= 10) return "🐢";
+    if (value <= 22) return "Muy lenta";
+    if (value <= 35) return "Lentinha";
+    if (value <= 48) return "Lenta";
+    if (value <= 62) return "Normal";
+    if (value <= 75) return "Rápida";
+    if (value <= 87) return "Rapidinha";
+    if (value <= 96) return "Muy rápida";
+    return "Insana";
+  }
+
+  function applySpeed() {
+    speedInput.value = typingSpeed;
+    const label = getSpeedLabel(typingSpeed);
+    speedValue.textContent = label;
+    speedSide.textContent = label;
+  }
+
+  function getTypingDelay() {
+    const minDelay = 3;
+    const maxDelay = 260;
+    const base = maxDelay - ((typingSpeed - 1) / 99) * (maxDelay - minDelay);
+    return Math.random() * base + Math.max(2, base * 0.22);
+  }
+
+  function applyPosition() {
+    if (!panelPos) return;
+    panel.style.left = panelPos.left + "px";
+    panel.style.top = panelPos.top + "px";
+    panel.style.right = "auto";
+    panel.style.bottom = "auto";
+  }
+
+
+  function getPrimaryModel() {
+    return OPENROUTER_MODELS[selectedModelIndex] || OPENROUTER_MODELS[0];
+  }
+
+  function getModelFallbackList() {
+    const primary = getPrimaryModel();
+    return [primary, ...OPENROUTER_MODELS.filter(model => model !== primary)];
+  }
+
+  function updateAiModelInfo(extra = "") {
+    const current = getPrimaryModel();
+
+    if (aiModelInfo) {
+      const suffix = lastFallbackInfo && lastFallbackInfo !== "Modelo principal"
+        ? ` • ${lastFallbackInfo}`
+        : "";
+      aiModelInfo.innerHTML = `<b>🤖 Modelo:</b> ${lastUsedModel === "Nenhum ainda" ? current : lastUsedModel}${suffix}`;
+      if (extra) aiModelInfo.innerHTML += ` • ${extra.replace(/<[^>]+>/g, "")}`;
+    }
+
+    if (aiModelMuted) {
+      aiModelMuted.textContent = `Atual: ${current} | Usado: ${lastUsedModel} | ${lastFallbackInfo}`;
+    }
+  }
+
+  function renderAiModelSelect() {
+    aiModelSelect.innerHTML = "";
+
+    OPENROUTER_MODELS.forEach((model, index) => {
+      const option = document.createElement("option");
+      option.value = String(index);
+      option.textContent = model;
+      aiModelSelect.appendChild(option);
+    });
+
+    aiModelSelect.value = String(selectedModelIndex);
+    updateAiModelInfo();
+  }
+
+  function renderAiInstructionSettings() {
+    aiInstructionsList.innerHTML = "";
+
+    DEFAULT_AI_INSTRUCTIONS.forEach((item) => {
+      const label = document.createElement("label");
+      label.className = "eb-ai-check";
+
+      const input = document.createElement("input");
+      input.type = "checkbox";
+      input.checked = aiInstructionStates[item.id] !== false;
+
+      input.addEventListener("change", () => {
+        aiInstructionStates[item.id] = input.checked;
+        localStorage.setItem("eb_ai_instruction_states", JSON.stringify(aiInstructionStates));
+      });
+
+      const span = document.createElement("span");
+      span.textContent = item.label;
+
+      label.appendChild(input);
+      label.appendChild(span);
+      aiInstructionsList.appendChild(label);
+    });
+
+    aiCustomInstructionsBox.value = aiCustomInstructions;
+  }
+
+  function buildSystemInstructions() {
+    const activeDefaultInstructions = DEFAULT_AI_INSTRUCTIONS
+      .filter(item => aiInstructionStates[item.id] !== false)
+      .map(item => "- " + item.text)
+      .join("\n");
+
+    const custom = aiCustomInstructions.trim()
+      ? "\n\nInstruções customizadas do usuário:\n" + aiCustomInstructions.trim()
+      : "";
+
+    return `Você é um escritor profissional no estilo Escritor Baiano.
+
+Instruções ativas:
+${activeDefaultInstructions || "- Nenhuma instrução default ativa."}${custom}`;
+  }
+
+
+
+  applyScale();
+  applySpeed();
+  applyPosition();
+  renderAiModelSelect();
+  renderAiInstructionSettings();
+
+  let toastTimer = null;
+
+  function showToast(message) {
+    toast.textContent = message;
+    toast.classList.remove("eb-toast-hide");
+    toast.classList.add("eb-toast-show");
+
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove("eb-toast-show");
+      toast.classList.add("eb-toast-hide");
+
+      setTimeout(() => {
+        toast.classList.remove("eb-toast-hide");
+      }, 240);
+    }, 4200);
+  }
+
+  function setStatus(status, waitText = "Nenhum", prog = "0%") {
+    sideStatus.textContent = status;
+    bottomStatus.textContent = status === "Pronto" ? "Pronto para iniciar" : status;
+    waiting.textContent = waitText;
+    progress.textContent = prog;
+  }
+
+  function updateChars() {
+    chars.textContent = textArea.value.length;
+  }
+
+  function saveHistory(item) {
+    if (!item.trim()) return;
+    history.unshift({ text: item, date: new Date().toLocaleString() });
+    history = history.slice(0, 20);
+    localStorage.setItem("eb_history", JSON.stringify(history));
+    renderHistory();
+  }
+
+  function renderHistory() {
+    historyList.innerHTML = "";
+
+    if (!history.length) {
+      historyList.innerHTML = `<div class="eb-history-item"><div class="eb-history-date">Vazio</div><div class="eb-history-text">Nenhum histórico ainda.</div></div>`;
+      return;
+    }
+
+    history.forEach((item) => {
+      const div = document.createElement("div");
+      div.className = "eb-history-item";
+      div.innerHTML = `<div class="eb-history-date">${item.date}</div><div class="eb-history-text">${item.text.slice(0, 190)}</div>`;
+      div.addEventListener("click", () => {
+        textArea.value = item.text;
+        localStorage.setItem("eb_saved_text", textArea.value);
+        updateChars();
+        goPage("writer");
+      });
+      historyList.appendChild(div);
+    });
+  }
+
+  textArea.value = savedText;
+  updateChars();
+  renderHistory();
+
+  textArea.addEventListener("input", () => {
+    localStorage.setItem("eb_saved_text", textArea.value);
+    updateChars();
+  });
+
+
+  function setTypingButtonState(isTyping) {
+    const startBtn = root.querySelector("#eb-start");
+    if (!startBtn) return;
+
+    if (isTyping) {
+      startBtn.innerHTML = "⛔ &nbsp; Parar";
+      startBtn.dataset.typing = "true";
+      startBtn.classList.remove("eb-start");
+      startBtn.classList.add("eb-clear");
+    } else {
+      startBtn.innerHTML = "▶ &nbsp; Iniciar";
+      startBtn.dataset.typing = "false";
+      startBtn.classList.remove("eb-clear");
+      startBtn.classList.add("eb-start");
+    }
+  }
+
+  function closePanelAnimated() {
+    if (!panel.classList.contains("eb-show")) return;
+
+    panel.classList.remove("eb-show");
+    panel.classList.add("eb-closing");
+    openPanel.textContent = "Painel";
+
+    setTimeout(() => {
+      panel.classList.remove("eb-closing");
+    }, 230);
+  }
+
+  function openPanelAnimated() {
+    panel.classList.remove("eb-closing");
+    panel.classList.add("eb-show");
+    openPanel.textContent = "Fechar";
+  }
+
+  openPanel.addEventListener("click", () => {
+    if (panel.classList.contains("eb-show")) {
+      closePanelAnimated();
+    } else {
+      openPanelAnimated();
+    }
+  });
+
+  function goPage(page) {
+    root.querySelectorAll(".eb-nav-item").forEach(item => {
+      item.classList.toggle("eb-active", item.dataset.page === page);
+    });
+
+    root.querySelectorAll(".eb-page").forEach(p => p.classList.remove("eb-page-active"));
+    root.querySelector(`#eb-page-${page}`).classList.add("eb-page-active");
+
+    if (page === "writer") {
+      profile.style.display = "";
+      app.classList.remove("eb-wide");
+    } else {
+      profile.style.display = "none";
+      app.classList.add("eb-wide");
+    }
+  }
+
+  root.querySelectorAll(".eb-nav-item").forEach(item => {
+    item.addEventListener("click", () => goPage(item.dataset.page));
+  });
+
+  root.querySelector("#eb-clear").addEventListener("click", () => {
+    textArea.value = "";
+    localStorage.removeItem("eb_saved_text");
+    updateChars();
+    setStatus("Pronto", "Nenhum", "0%");
+  });
+
+  scaleInput.addEventListener("input", () => {
+    scaleValue.textContent = scaleInput.value + "%";
+  });
+
+  scaleInput.addEventListener("change", () => {
+    panelScale = Number(scaleInput.value) / 100;
+    localStorage.setItem("eb_panel_scale", String(panelScale));
+    applyScale();
+  });
+
+  speedInput.addEventListener("input", () => {
+    speedValue.textContent = getSpeedLabel(Number(speedInput.value));
+  });
+
+  speedInput.addEventListener("change", () => {
+    typingSpeed = Number(speedInput.value);
+    localStorage.setItem("eb_typing_speed", String(typingSpeed));
+    applySpeed();
+  });
+
+  root.querySelector("#eb-clear-history").addEventListener("click", () => {
+    history = [];
+    localStorage.removeItem("eb_history");
+    renderHistory();
+  });
+
+
+  aiModelSelect.addEventListener("change", () => {
+    selectedModelIndex = Number(aiModelSelect.value);
+    localStorage.setItem("eb_selected_model_index", String(selectedModelIndex));
+    lastFallbackInfo = "Modelo principal";
+    localStorage.setItem("eb_last_fallback_info", lastFallbackInfo);
+    updateAiModelInfo();
+    showToast("Modelo da IA atualizado.");
+  });
+
+  aiCustomInstructionsBox.addEventListener("input", () => {
+    aiCustomInstructions = aiCustomInstructionsBox.value;
+    localStorage.setItem("eb_ai_custom_instructions", aiCustomInstructions);
+  });
+
+  aiResetInstructions.addEventListener("click", () => {
+    aiInstructionStates = Object.fromEntries(DEFAULT_AI_INSTRUCTIONS.map(item => [item.id, true]));
+    aiCustomInstructions = "";
+    localStorage.setItem("eb_ai_instruction_states", JSON.stringify(aiInstructionStates));
+    localStorage.removeItem("eb_ai_custom_instructions");
+    renderAiInstructionSettings();
+    showToast("Instruções da IA resetadas.");
+  });
+
+
+
+
+
+  let fakeProgressInterval = null;
+  let fakeProgress = 0;
+
+function startFakeProgress() {
+  clearInterval(fakeProgressInterval);
+
+  fakeProgress = 0;
+
+  aiProgressBar.style.width = "0%";
+  aiProgressText.textContent = "0%";
+
+  fakeProgressInterval = setInterval(() => {
+
+    if (fakeProgress >= 95) return;
+
+    const remaining = 95 - fakeProgress;
+
+    fakeProgress += Math.max(
+      0.5,
+      remaining * 0.04
+    );
+
+    if (fakeProgress > 95) {
+      fakeProgress = 95;
+    }
+
+    aiProgressBar.style.setProperty(
+     "width",
+     fakeProgress.toFixed(1) + "%",
+     "important"
+    );
+
+    aiProgressText.textContent =
+      Math.floor(fakeProgress) + "%";
+
+  }, 650);
+  }
+
+  function finishFakeProgress() {
+  clearInterval(fakeProgressInterval);
+
+  aiProgressBar.style.width = "100%";
+  aiProgressText.textContent = "100%";
+
+  setTimeout(() => {
+    aiProgressBar.style.width = "0%";
+    aiProgressText.textContent = "0%";
+  }, 1500);
+  }
+
+  function resetFakeProgress() {
+    if (!aiProgressBar || !aiProgressText) return;
+
+    clearInterval(fakeProgressInterval);
+    aiProgressBar.style.width = "0%";
+    aiProgressText.textContent = "Erro";
+  }
+
+
+  async function generateGeminiText(prompt) {
+    const selectedModel = getPrimaryModel();
+
+    const res = await fetch(BACKEND_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        prompt,
+        system: buildSystemInstructions(),
+        model: selectedModel
+      })
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data?.error || "Erro ao gerar texto pelo backend.");
+    }
+
+    const generated = data?.text?.trim() || "";
+
+    if (!generated) {
+      throw new Error("O backend não retornou texto.");
+    }
+
+    lastUsedModel = data.modelUsed || selectedModel;
+    lastFallbackInfo = data.fallbackUsed ? "Fallback usado" : "Modelo principal";
+
+    localStorage.setItem("eb_last_used_model", lastUsedModel);
+    localStorage.setItem("eb_last_fallback_info", lastFallbackInfo);
+
+    updateAiModelInfo();
+
+    if (data.fallbackUsed) {
+      showToast(`Modelo principal não foi. Usando fallback: ${lastUsedModel}`);
+    }
+
+    return generated
+      .replace(/\r\n/g, "\n")
+      .replace(/\r/g, "\n")
+      .replace(/\n{2,}/g, "\n")
+      .trim();
+  }
+
+  aiGenerate.addEventListener("click", async () => {
+    const prompt = aiPrompt.value.trim();
+
+    if (!prompt) {
+      showToast("Digite um prompt antes de gerar.");
+      return;
+    }
+
+    aiGenerate.disabled = true;
+    aiGenerate.textContent = "Gerando...";
+    showToast("Gerando texto pelo backend...");
+    startFakeProgress();
+
+    try {
+      const generated = await generateGeminiText(prompt);
+      aiResult.value = generated;
+      finishFakeProgress();
+      showToast("Texto gerado!");
+    } catch (err) {
+      console.error(err);
+      resetFakeProgress();
+      showToast(err.message || "Erro ao gerar com IA.");
+    } finally {
+      aiGenerate.disabled = false;
+      aiGenerate.textContent = "✨  Gerar texto";
+    }
+  });
+
+  aiClear.addEventListener("click", () => {
+    aiPrompt.value = "";
+    aiResult.value = "";
+  });
+
+  aiUse.addEventListener("click", () => {
+    const generated = aiResult.value.trim();
+
+    if (!generated) {
+      showToast("Nenhum texto gerado ainda.");
+      return;
+    }
+
+    textArea.value = generated;
+    localStorage.setItem("eb_saved_text", textArea.value);
+    updateChars();
+    goPage("writer");
+    showToast("Texto enviado para o Auto Writer.");
+  });
+
+  aiCopy.addEventListener("click", async () => {
+    const generated = aiResult.value.trim();
+
+    if (!generated) {
+      showToast("Nenhum texto para copiar.");
+      return;
+    }
+
+    try {
+      await navigator.clipboard.writeText(generated);
+      showToast("Texto copiado.");
+    } catch (err) {
+      console.error(err);
+      showToast("Não foi possível copiar.");
+    }
+  });
+
+  let dragging = false;
+  let startX = 0;
+  let startY = 0;
+  let startLeft = 0;
+  let startTop = 0;
+
+  dragbar.addEventListener("mousedown", (e) => {
+    dragging = true;
+    const rect = panel.getBoundingClientRect();
+    panel.style.left = rect.left + "px";
+    panel.style.top = rect.top + "px";
+    panel.style.right = "auto";
+    panel.style.bottom = "auto";
+    startX = e.clientX;
+    startY = e.clientY;
+    startLeft = rect.left;
+    startTop = rect.top;
+    e.preventDefault();
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (!dragging) return;
+
+    const newLeft = Math.max(0, Math.min(window.innerWidth - 80, startLeft + (e.clientX - startX)));
+    const newTop = Math.max(0, Math.min(window.innerHeight - 60, startTop + (e.clientY - startY)));
+
+    panel.style.left = newLeft + "px";
+    panel.style.top = newTop + "px";
+
+    panelPos = { left: newLeft, top: newTop };
+    localStorage.setItem("eb_panel_pos", JSON.stringify(panelPos));
+  });
+
+  document.addEventListener("mouseup", () => { dragging = false; });
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  function setNativeValue(element, value) {
+    const valueSetter = Object.getOwnPropertyDescriptor(element.__proto__, "value")?.set;
+    const prototype = Object.getPrototypeOf(element);
+    const prototypeValueSetter = Object.getOwnPropertyDescriptor(prototype, "value")?.set;
+
+    if (prototypeValueSetter && valueSetter !== prototypeValueSetter) {
+      prototypeValueSetter.call(element, value);
+    } else if (valueSetter) {
+      valueSetter.call(element, value);
+    } else if ("value" in element) {
+      element.value = value;
+    } else {
+      element.textContent = value;
+    }
+  }
+
+  function triggerInputEvents(el) {
+    el.dispatchEvent(new Event("input", { bubbles: true }));
+    el.dispatchEvent(new Event("change", { bubbles: true }));
+  }
+
+  async function typeText(text) {
+    const el = lastFocusedElement;
+
+    if (!el) {
+      setStatus("Sem campo", "Clique em um campo", "0%");
+      showToast("Clique na area de texto e pressione iniciar novamente.");
+      return;
+    }
+
+    typingActive = true;
+    setTypingButtonState(true);
+
+    try {
+      el.focus();
+
+      if ("value" in el) {
+        setNativeValue(el, "");
+      } else {
+        el.textContent = "";
+      }
+
+      triggerInputEvents(el);
+
+      let currentValue = "";
+
+      for (let i = 0; i < text.length; i++) {
+
+        if (stopTypingRequested) {
+          setStatus("Parado", "Nenhum", "Interrompido");
+          showToast("Escrita interrompida.");
+          return;
+        }
+
+        const char = text[i];
+
+        if (char === "\n") {
+          currentValue += "\n";
+        } else {
+          currentValue += char;
+        }
+
+        setNativeValue(el, currentValue);
+        triggerInputEvents(el);
+
+        progress.textContent =
+          Math.round(((i + 1) / text.length) * 100) + "%";
+
+        await sleep(getTypingDelay());
+      }
+
+      setStatus("Concluído", "Nenhum", "100%");
+
+    } finally {
+      typingActive = false;
+      stopTypingRequested = false;
+      setTypingButtonState(false);
+    }
+  }
+
+  root.querySelector("#eb-start").addEventListener("click", () => {
+
+    if (typingActive) {
+      stopTypingRequested = true;
+
+      if (typingTimeout) {
+        clearTimeout(typingTimeout);
+        typingTimeout = null;
+        typingActive = false;
+        setTypingButtonState(false);
+      }
+
+      return;
+    }
+
+    const text = textArea.value;
+
+    if (!text.trim()) {
+      setStatus("Sem texto", "Nenhum", "0%");
+      return;
+    }
+
+    if (!lastFocusedElement) {
+      setStatus("Sem campo", "Clique em um campo", "0%");
+      showToast("Clique na area de texto e pressione iniciar novamente.");
+      return;
+    }
+
+    typingActive = true;
+    stopTypingRequested = false;
+    setTypingButtonState(true);
+
+    showToast("Iniciando...");
+    saveHistory(text);
+    closePanelAnimated();
+
+    setStatus("Aguardando...", "5 segundos", "0%");
+
+    typingTimeout = setTimeout(() => {
+      typingTimeout = null;
+      setStatus("Digitando...", "Agora", "0%");
+      typeText(text);
+    }, 5000);
+  });
+})();
