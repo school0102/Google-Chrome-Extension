@@ -21,10 +21,10 @@
 
   const BACKEND_URL = "https://meulindobackend.onrender.com/generate";
 
-  const OPENROUTER_MODELS = [
-    "nex-agi/nex-n2-pro:free",
-    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
-    "nvidia/nemotron-3-ultra-550b-a55b:free"
+  const GEMINI_MODELS = [
+    "gemini-2.5-flash",
+    "gemini-2.5-pro",
+    "gemini-2.0-flash"
   ];
 
   const DEFAULT_AI_INSTRUCTIONS = [
