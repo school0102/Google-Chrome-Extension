@@ -22,9 +22,9 @@
   const BACKEND_URL = "https://meulindobackend.onrender.com/generate";
 
   const GEMINI_MODELS = [
-    "gemini-2.0-flash-lite",
-    "gemini-2.0-flash"
-  ];
+  "gemini-2.0-flash",
+  "gemini-1.5-flash"
+];
 
   const DEFAULT_AI_INSTRUCTIONS = [
     { id: "ptbr", label: "Português brasileiro", text: "Escreva sempre em português brasileiro." },
