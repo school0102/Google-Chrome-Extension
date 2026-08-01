@@ -42,7 +42,7 @@
   let aiCustomInstructions = localStorage.getItem("eb_ai_custom_instructions") || "";
 
   let selectedModelIndex = Number(localStorage.getItem("eb_selected_model_index") || "0");
-  if (!OPENROUTER_MODELS[selectedModelIndex]) selectedModelIndex = 0;
+  if (!GEMINI_MODELS[selectedModelIndex]) selectedModelIndex = 0;
 
   let lastUsedModel = localStorage.getItem("eb_last_used_model") || "Nenhum ainda";
   let lastFallbackInfo = localStorage.getItem("eb_last_fallback_info") || "Modelo principal";
@@ -1589,12 +1589,12 @@
 
 
   function getPrimaryModel() {
-    return OPENROUTER_MODELS[selectedModelIndex] || OPENROUTER_MODELS[0];
+    return GEMINI_MODELS[selectedModelIndex] || GEMINI_MODELS[0];
   }
 
   function getModelFallbackList() {
     const primary = getPrimaryModel();
-    return [primary, ...OPENROUTER_MODELS.filter(model => model !== primary)];
+    return [primary, ...GEMINI_MODELS.filter(model => model !== primary)];
   }
 
   function updateAiModelInfo(extra = "") {
@@ -1616,7 +1616,7 @@
   function renderAiModelSelect() {
     aiModelSelect.innerHTML = "";
 
-    OPENROUTER_MODELS.forEach((model, index) => {
+    GEMINI_MODELS.forEach((model, index) => {
       const option = document.createElement("option");
       option.value = String(index);
       option.textContent = model;
